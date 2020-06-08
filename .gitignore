@@ -116,3 +116,7 @@ build
 
 # tests
 *.testresults.json
+
+# This project uses Yarn
+# ignore package-lock.json
+package-lock.json
