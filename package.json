@@ -22,7 +22,7 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "predeploy": "npm run build:storybook",
     "deploy": "gh-pages -d build/",
-    "lint": "yarn prettier; yarn stylelint",
+    "lint": "yarn stylelint",
     "ncu": "npx npm-check-updates -u; yarn lerna exec 'npx npm-check-updates -u -x \"/^@evernest/.*$/\"'",
     "prettier": "prettier '{atoms,molecules,organisms,utils}/**/*.[jt]s(x)?'",
     "spj": "npx sort-package-json; lerna exec npx sort-package-json",
@@ -30,9 +30,8 @@
     "storybook": "start-storybook -p 3000",
     "stylelint": "stylelint '**/*.{ts,tsx}'",
     "test": "nyc jest",
-    "pretest:generate-output": "yarn build",
+    "pretest": "yarn lint",
     "test:generate-output": "lerna run test:generate-output --parallel",
-    "pretest:watch": "yarn build",
     "test:watch": "lerna run test --parallel"
   },
   "lint-staged": {
