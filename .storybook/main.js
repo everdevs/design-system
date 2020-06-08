@@ -40,6 +40,10 @@ module.exports = {
 				},
 			],
 		});
+
+		config.resolve.alias = config.resolve.alias || {};
+		config.resolve.alias["@evernest/storybook"] = path.resolve(__dirname, '../utils/storybook/src');
+		config.resolve.alias["@evernest/icons"] = path.resolve(__dirname, '../atoms/icons/src');
 		config.resolve.extensions.push(".ts", ".tsx");
 		return config;
 	},
