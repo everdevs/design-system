@@ -5,7 +5,7 @@ module.exports = {
 	setupFilesAfterEnv: ["jest-enzyme"],
 	testEnvironment: "enzyme",
 	moduleNameMapper: {
-		"^@evernest/(.*)": "<rootDir>/atoms/$1/src",
+		"^@evernest/icons": "<rootDir>/../../atoms/icons/src",
 	},
 	transformIgnorePatterns: [
 		"node_modules/(?!(jest-)?react-native|react-(native|universal|navigation)-(.*)|@react-native-community/(.*)|@react-navigation/(.*)|bs-platform)",
