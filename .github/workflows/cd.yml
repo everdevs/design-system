@@ -1,9 +1,9 @@
-name: CI
+name: CD
 
 on:
     push:
         branches:
-            - "**"
+            - master
 
 jobs:
     tests:
@@ -32,5 +32,11 @@ jobs:
             - name: Install dependencies
               run: yarn install
 
-            - name: Run Tests
-              run: yarn test
+            - name: Predeploy
+              run: yarn predeploy
+
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./build
