@@ -30,7 +30,7 @@
     "prestorybook": "yarn test:generate-output",
     "storybook": "start-storybook -p 3000",
     "stylelint": "stylelint '**/*.{ts,tsx}'",
-    "test": "nyc jest",
+    "test": "jest --coverage",
     "pretest": "yarn lint",
     "test:generate-output": "lerna run test:generate-output --parallel",
     "test:watch": "lerna run test --parallel"
@@ -94,7 +94,6 @@
     "jest-enzyme": "^7.1.2",
     "lerna": "^3.22.0",
     "lint-staged": "^10.2.9",
-    "nyc": "^15.1.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
