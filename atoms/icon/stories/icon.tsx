@@ -45,10 +45,7 @@ export const allSizes: React.FC = () => {
 				.filter(([, value]) => typeof value === "number")
 				.map(([size]) => {
 					return (
-						<>
-							<h3>{size}</h3>
-							<Icon icon={icon} size={Size[size]} />
-						</>
+						<Icon icon={icon} size={Size[size]} />
 					);
 				})}
 		</Wrapper>

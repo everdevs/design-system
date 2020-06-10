@@ -19,11 +19,12 @@
 		"test:generate-output": "jest --json --outputFile=stories/button.testresults.json"
 	},
 	"dependencies": {
-		"@emotion/core": "^10.0.28",
-		"@emotion/styled": "^10.0.27",
-		"@types/react": "^16.9.35",
-		"react": "^16.13.1"
-	},
+    "@emotion/styled": "^11.0.0-next.12",
+    "@emotion/react": "^11.0.0-next.12",
+    "@evernest/tokens": "^0.0.0",
+    "@types/react": "^16.9.35",
+    "react": "^16.13.1"
+  },
 	"devDependencies": {
 		"@evernest/storybook": "^0.0.0",
 		"@evernest/toolchain": "^0.0.0"

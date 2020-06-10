@@ -1,5 +1,5 @@
 {
-  "name": "@evernest/storybook",
+  "name": "@evernest/theme",
   "version": "0.0.0",
   "license": "MIT",
   "author": {
@@ -19,11 +19,7 @@
     "watch": "rollup -cw"
   },
   "dependencies": {
-    "@emotion/styled": "^11.0.0-next.12",
-    "@emotion/react": "^11.0.0-next.12",
-    "@evernest/theme": "^0.0.0",
-    "@types/react": "^16.9.35",
-    "react": "^16.13.1"
+    "@evernest/tokens": "^0.0.0"
   },
   "devDependencies": {
     "@evernest/toolchain": "^0.0.0"

@@ -1,10 +1,13 @@
 const path = require("path");
 
 function makeAlias(dir, names) {
-	return names.reduce((previousValue, name) => ({
-		...previousValue,
-		[`@evernest/${name}`]: path.resolve(__dirname, `../${dir}/${name}/src`),
-	}), {});
+	return names.reduce(
+		(previousValue, name) => ({
+			...previousValue,
+			[`@evernest/${name}`]: path.resolve(__dirname, `../${dir}/${name}/src`),
+		}),
+		{}
+	);
 }
 
 module.exports = {
@@ -37,7 +40,7 @@ module.exports = {
 			alias: {
 				...(config.resolve.alias || {}),
 				// make sure the local packages can be found without building them
-				...makeAlias("utils", ["storybook"]),
+				...makeAlias("utils", ["storybook", "theme", "tokens"]),
 				...makeAlias("atoms", ["icons", "icon", "button"]),
 			},
 		},

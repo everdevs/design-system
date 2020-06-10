@@ -18,7 +18,7 @@ yarn build
 ### Develop
 
 ```bash
-yarn storybook
+yarn dev
 ```
 
 ### Test

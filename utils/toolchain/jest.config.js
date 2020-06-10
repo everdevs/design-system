@@ -14,6 +14,7 @@ module.exports = {
 	setupFilesAfterEnv: ["jest-enzyme"],
 	testEnvironment: "enzyme",
 	moduleNameMapper: {
+		...makeAlias("utils", ["storybook", "theme", "tokens"]),
 		...makeAlias("atoms", ["icons", "icon", "button"]),
 	},
 	transformIgnorePatterns: [

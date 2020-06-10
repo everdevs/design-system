@@ -1,18 +1,22 @@
-import { IconCollection } from "@evernest/icons";
 import React from "react";
+import { Theme } from "@evernest/theme";
+import { Token, button } from "@evernest/tokens";
 
 export enum Size {
 	small = "small",
 	medium = "medium",
-	large = "large",
 }
 
-export type IconName = keyof IconCollection;
+export type ButtonAttributes = Pick<
+	React.ButtonHTMLAttributes<HTMLButtonElement>,
+	"className" | "disabled" | "name" | "type"
+>;
 
-export interface ButtonProps
-	extends Pick<
-		React.ButtonHTMLAttributes<HTMLButtonElement>,
-		"className" | "disabled" | "name" | "type"
-	> {
+export interface ButtonProps extends ButtonAttributes {
+	/** The size of the button */
 	size?: Size;
+	/** The theme is injected via a ThemeProvider */
+	theme?: Theme;
+	/** A custom button-token */
+	token?: Token<button.ButtonObject>;
 }
