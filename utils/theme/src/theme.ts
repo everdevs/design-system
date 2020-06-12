@@ -1,14 +1,18 @@
-import { color } from "@evernest/tokens";
+import {
+	colorBlack as black,
+	colorGreen as green,
+	colorGrey as grey,
+	colorRed as red,
+	colorWhite as white,
+} from "@evernest/tokens";
 import { Breakpoints, Colors, Mediaqueries, Palette, Spaces, Theme } from "./types";
-
-const {red, green, black, white, grey} = color;
 
 const palette: Palette = {
 	red,
 	green,
 	black,
 	white,
-	grey
+	grey,
 };
 
 const colors: Colors = {

@@ -1,20 +1,20 @@
 import { Token } from "@evernest/tokens";
-import { color } from "@evernest/tokens";
+import { ColorObject } from "@evernest/tokens";
 
 export interface Palette {
-	red: Token<color.ColorObject>;
-	green: Token<color.ColorObject>;
-	black: Token<color.ColorObject>;
-	white: Token<color.ColorObject>;
-	grey: Token<color.ColorObject>;
+	red: Token<ColorObject>;
+	green: Token<ColorObject>;
+	black: Token<ColorObject>;
+	white: Token<ColorObject>;
+	grey: Token<ColorObject>;
 }
 
 export interface Colors {
-	primary: Token<color.ColorObject>;
-	secondary: Token<color.ColorObject>;
-	tertiary: Token<color.ColorObject>;
-	lightText: Token<color.ColorObject>;
-	darkText: Token<color.ColorObject>;
+	primary: Token<ColorObject>;
+	secondary: Token<ColorObject>;
+	tertiary: Token<ColorObject>;
+	lightText: Token<ColorObject>;
+	darkText: Token<ColorObject>;
 }
 
 export interface Space {

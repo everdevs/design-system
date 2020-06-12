@@ -1,7 +1,7 @@
 {
-  "extends": "@evernest/toolchain/tsconfig.json",
-  "compilerOptions": {
-    "outDir": "dist",
-    "declarationDir": "dist"
-  }
+	"extends": "@evernest/toolchain/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"declarationDir": "dist"
+	}
 }

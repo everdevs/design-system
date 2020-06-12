@@ -1,5 +1,5 @@
 import { icons } from "@evernest/icons";
-import styled  from "@emotion/styled";
+import styled from "@emotion/styled";
 import humanize from "humanize-string";
 import React from "react";
 import { IconProps, Size } from "./types";

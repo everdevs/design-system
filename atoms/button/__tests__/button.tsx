@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { Button } from "../src";
-import {Wrapper} from "@evernest/storybook";
+import { Wrapper } from "@evernest/storybook";
 
 test("Button renders children", () => {
 	const text = "Hello Button";

@@ -1,15 +1,11 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import React from "react";
-import { ButtonAttributes, ButtonProps, Size } from "./types";
-import { button, color, radius } from "@evernest/tokens";
+import { ButtonProps } from "./types";
+import { buttonBase, getColor, getRadius, px } from "@evernest/tokens";
 
-const ButtonBase: React.FC<ButtonAttributes> = ({ children, ...props }) => (
-	<button {...props}>{children}</button>
-);
-
-const Button = styled(ButtonBase, {
-	shouldForwardProp: (propName: string) => !["size", "token"].includes(propName),
+const Button = styled("button", {
+	shouldForwardProp: (propName: string) => !["token"].includes(propName),
 })<ButtonProps>`
 	cursor: pointer;
 	border: 0;
@@ -17,40 +13,22 @@ const Button = styled(ButtonBase, {
 		token: {
 			value: {
 				spaces,
-				colors: {
-					text: {
-						value: { type: textType, value: textValue },
-					},
-					background: {
-						value: { type: backgroundType, value: backgroundValue },
-					},
-				},
+				colors: { text, background },
 				font: { value: font },
-				radius: {
-					value: { type: radiusType, value: radiusValue },
-				},
-				shadow: {
-					value: {
-						spread,
-						blur,
-						offset,
-						color: {
-							value: { type: colorType, value: colorValue },
-						},
-					},
-				},
+				radius,
+				shadow: { value: shadow },
 			},
 		},
 	}) =>
 		css`
-			padding: ${spaces.map(space => `${space}px`).join(" ")};
-			background: ${color.getColor(backgroundType, backgroundValue)};
-			color: ${color.getColor(textType, textValue)};
-			box-shadow: ${offset.map(dir => `${dir}px`).join(" ")} ${blur}px ${spread}px
-				${color.getColor(colorType, colorValue)};
-			border-radius: ${radius.getRadius(radiusType, radiusValue)};
+			padding: ${spaces.map(x => px(x)).join(" ")};
+			background: ${getColor(background)};
+			color: ${getColor(text)};
+			box-shadow: ${shadow.offset.map(x => px(x)).join(" ")} ${px(shadow.blur)}
+				${px(shadow.spread)} ${getColor(shadow.color)};
+			border-radius: ${getRadius(radius)};
 			font-family: ${font.family};
-			font-size: ${font.size}px;
+			font-size: ${px(font.size)};
 			font-weight: ${font.weight};
 			font-style: ${font.style};
 			&:focus {
@@ -60,9 +38,8 @@ const Button = styled(ButtonBase, {
 `;
 
 Button.defaultProps = {
-	size: Size.medium,
 	type: "button",
-	token: button.base,
+	token: buttonBase,
 };
 
 export { Button };

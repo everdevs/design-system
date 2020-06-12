@@ -1,7 +1,8 @@
-import { RadiusType, RadiusValue } from "./types";
+import { RadiusType, RadiusObject } from "./types";
 import { percent, px } from "../../utils";
+import { Token } from "../../types";
 
-export const getRadius = (type: RadiusType, value: RadiusValue): string => {
+export const getRadius = ({ value: { value, type } }: Token<RadiusObject>): string => {
 	switch (type) {
 		case RadiusType.percent:
 			return value.map(v => percent(v)).join(" ");

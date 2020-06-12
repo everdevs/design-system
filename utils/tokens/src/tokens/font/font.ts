@@ -1,7 +1,7 @@
 import { createToken } from "../../utils";
 import { FontObject } from "./types";
 
-export const sans = createToken<FontObject>(
+export const fontSans = createToken<FontObject>(
 	"Sans Serif",
 	{
 		family: "sans-serif",

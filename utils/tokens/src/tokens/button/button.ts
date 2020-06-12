@@ -1,63 +1,87 @@
-import { black, grey, white } from "../color";
-import { m as radius } from "../radius";
-import { m as shadow } from "../shadow";
-import { sans } from "../font";
+import { colorBlack, colorGrey, colorWhite } from "../color";
+import { radiusM as radius } from "../radius";
+import { shadowM as shadow } from "../shadow";
+import { fontSans as font } from "../font";
 import { createToken } from "../../utils";
 import { ButtonObject } from "./types";
 import { Token } from "../../types";
 
-export const base = createToken<ButtonObject>(
+export const buttonBase = createToken<ButtonObject>(
 	"Button Base",
 	{
 		spaces: [20, 24],
 		colors: {
-			background: grey,
-			text: black,
+			background: colorGrey,
+			text: colorBlack,
 		},
-		font: sans,
+		font,
 		radius,
 		shadow,
 	},
 	"Button"
 );
 
-export const s: Token<ButtonObject> = createToken<ButtonObject>(
+export const buttonS: Token<ButtonObject> = createToken<ButtonObject>(
 	"Button S",
 	{
-		extends: base,
+		extends: buttonBase,
 		spaces: [10, 24],
 	},
 	"Small Button"
 );
 
-export const m = createToken<ButtonObject>(
+export const buttonM = createToken<ButtonObject>(
 	"Button M",
 	{
-		extends: base,
+		extends: buttonBase,
 	},
 	"Medium Button"
 );
 
-export const secondary = createToken<ButtonObject>(
+export const buttonSecondary = createToken<ButtonObject>(
 	"Button Secondary",
 	{
-		extends: base,
+		extends: buttonBase,
 		colors: {
-			background: white,
-			text: black,
+			background: colorWhite,
+			text: colorBlack,
 		},
 	},
 	"Secondary Button"
 );
 
-export const primary = createToken<ButtonObject>(
+export const buttonPrimary = createToken<ButtonObject>(
 	"Button Primary",
 	{
-		extends: base,
+		extends: buttonBase,
 		colors: {
-			background: black,
-			text: white,
+			background: colorBlack,
+			text: colorWhite,
 		},
 	},
 	"Primary Button"
+);
+
+export const buttonSecondaryS = createToken<ButtonObject>(
+	"Button Secondary S",
+	{
+		extends: buttonS,
+		colors: {
+			background: colorWhite,
+			text: colorBlack,
+		},
+	},
+	"Small Secondary Button"
+);
+
+export const buttonPrimaryS = createToken<ButtonObject>(
+	"Button Primary S",
+	{
+		extends: buttonS,
+		colors: {
+			background: colorBlack,
+			text: colorWhite,
+		},
+	},
+	"Small Primary Button"
 );

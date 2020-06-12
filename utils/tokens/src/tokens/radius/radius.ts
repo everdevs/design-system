@@ -1,7 +1,7 @@
 import { createToken } from "../../utils";
 import { RadiusObject, RadiusType } from "./types";
 
-export const s = createToken<RadiusObject>(
+export const radiusS = createToken<RadiusObject>(
 	"Radius S",
 	{
 		type: RadiusType.px,
@@ -10,7 +10,7 @@ export const s = createToken<RadiusObject>(
 	"Small radius"
 );
 
-export const m = createToken<RadiusObject>(
+export const radiusM = createToken<RadiusObject>(
 	"Radius M",
 	{
 		type: RadiusType.px,
@@ -19,7 +19,7 @@ export const m = createToken<RadiusObject>(
 	"Medium radius"
 );
 
-export const l = createToken<RadiusObject>(
+export const radiusL = createToken<RadiusObject>(
 	"Radius L",
 	{
 		type: RadiusType.px,
