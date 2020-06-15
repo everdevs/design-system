@@ -1,8 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import React from "react";
 import { ButtonProps } from "./types";
-import { buttonBase, getColor, getRadius, px } from "@evernest/tokens";
+import { buttonBase, getColor, getRadius, getBoxShadow, px } from "@evernest/tokens";
 
 const Button = styled("button", {
 	shouldForwardProp: (propName: string) => !["token"].includes(propName),
@@ -16,7 +15,7 @@ const Button = styled("button", {
 				colors: { text, background },
 				font: { value: font },
 				radius,
-				shadow: { value: shadow },
+				shadow,
 			},
 		},
 	}) =>
@@ -24,8 +23,7 @@ const Button = styled("button", {
 			padding: ${spaces.map(x => px(x)).join(" ")};
 			background: ${getColor(background)};
 			color: ${getColor(text)};
-			box-shadow: ${shadow.offset.map(x => px(x)).join(" ")} ${px(shadow.blur)}
-				${px(shadow.spread)} ${getColor(shadow.color)};
+			box-shadow: ${getBoxShadow(shadow)};
 			border-radius: ${getRadius(radius)};
 			font-family: ${font.family};
 			font-size: ${px(font.size)};

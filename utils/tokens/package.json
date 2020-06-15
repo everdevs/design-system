@@ -12,17 +12,14 @@
 	"files": [
 		"dist",
 		"index.js"
-  ],
+	],
 	"scripts": {
-		"clean": "rimraf dist",
 		"build": "rollup -c",
+		"clean": "rimraf dist",
 		"watch": "rollup -cw"
 	},
 	"dependencies": {
 		"@types/lodash.omit": "^4.5.6",
 		"lodash.omit": "^4.5.0"
-	},
-	"devDependencies": {
-		"@evernest/toolchain": "^0.0.0"
 	}
 }

@@ -1,5 +1,5 @@
 {
-	"name": "@evernest/theme",
+	"name": "@evernest/icons",
 	"version": "0.0.0",
 	"license": "MIT",
 	"author": {
@@ -15,11 +15,6 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
-		"clean": "rimraf dist",
-		"watch": "rollup -cw"
-	},
-	"dependencies": {
-		"@evernest/tokens": "^0.0.0"
-	},
-	"devDependencies": {}
+		"clean": "rimraf dist"
+	}
 }

@@ -9,8 +9,8 @@ export default create({
 	// UI
 	appBg: "#fff",
 	appContentBg: "#fff",
-	appBorderColor: "#000",
-	appBorderRadius: 3,
+	appBorderColor: "#ddd",
+	appBorderRadius: 0,
 
 	// Typography
 	fontBase: "sans-serif",
@@ -21,18 +21,18 @@ export default create({
 	textInverseColor: "#fff",
 
 	// Toolbar default and active colors
-	barTextColor: "#fff",
-	barSelectedColor: "#fff",
-	barBg: "#000",
+	barTextColor: "#000",
+	barSelectedColor: "#000",
+	barBg: "#fff",
 
 	// Form colors
 	inputBg: "#fff",
 	inputBorder: "#ddd",
 	inputTextColor: "#000",
-	inputBorderRadius: 3,
+	inputBorderRadius: 0,
 
 	brandTitle: "Evernest",
-	brandUrl: "https://github.com/everdevs/rect-components",
+	brandUrl: "https://github.com/everdevs/design-system",
 	brandImage:
 		"https://raw.githubusercontent.com/everdevs/frontend/master/public/images/evernest-logo-tagline-black.png?token=AAIYLLV7P5H73GP7PNOUDIC64DT24",
 });

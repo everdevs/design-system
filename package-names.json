@@ -1,0 +1,14 @@
+{
+    "atoms": [
+        "button",
+        "icon"
+    ],
+    "molecules": [],
+    "organisms": [],
+    "utils": [
+        "icons",
+        "storybook",
+        "theme",
+        "tokens"
+    ]
+}

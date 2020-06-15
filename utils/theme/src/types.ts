@@ -1,5 +1,4 @@
-import { Token } from "@evernest/tokens";
-import { ColorObject } from "@evernest/tokens";
+import { Token, ColorObject } from "@evernest/tokens";
 
 export interface Palette {
 	red: Token<ColorObject>;

@@ -12,7 +12,6 @@ test("Icon contains text", () => {
 });
 
 test("Icon allows setting classname", () => {
-	const text = "Hello Button";
 	const className = "test";
 	const wrapper = mount(
 		<div>

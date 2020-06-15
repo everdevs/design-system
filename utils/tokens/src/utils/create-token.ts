@@ -1,7 +1,7 @@
 import omit from "lodash.omit";
 import { RawTokenObject, Token, TokenObject } from "../types";
 
-export const createToken = <T extends TokenObject = {}>(
+export const createToken = <T extends TokenObject = Record<string, unknown>>(
 	name: string,
 	value:
 		| (Partial<RawTokenObject<T>> & {
@@ -13,9 +13,7 @@ export const createToken = <T extends TokenObject = {}>(
 	description,
 	name,
 	value: {
-		...((value as RawTokenObject<T> & {
-			extends: Token<T>;
-		}).extends?.value || {}),
-		...omit((value as never) as object, "extends"),
+		...((value as TokenObject<T>).extends?.value || {}),
+		...omit((value as never) as Record<string, unknown>, "extends"),
 	} as RawTokenObject<T>,
 });

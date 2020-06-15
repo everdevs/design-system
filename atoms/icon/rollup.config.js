@@ -1,1 +1,1 @@
-module.exports = require("@evernest/toolchain/rollup.config");
+module.exports = require("../../rollup.config");

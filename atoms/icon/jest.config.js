@@ -1,1 +1,1 @@
-module.exports = require("@evernest/toolchain/jest.config");
+module.exports = require("../../jest.config");

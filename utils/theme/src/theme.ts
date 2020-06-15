@@ -80,7 +80,10 @@ export const breakpoints: Breakpoints = {
 };
 
 export const mq: Mediaqueries = Object.entries(breakpoints).reduce(
-	(previousValue, [key, value]) => ({ ...previousValue, [key]: `(min-width: ${value}px)` }),
+	(previousValue, [key, value]: [keyof Breakpoints, number]) => ({
+		...previousValue,
+		[key]: `(min-width: ${value}px)`,
+	}),
 	{}
 ) as Mediaqueries;
 

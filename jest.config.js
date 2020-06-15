@@ -1,14 +1,37 @@
+const path = require("path");
+const packages = require("./package-names.json");
+
 function makeAlias(dir, names) {
-	return names.reduce((previousValue, name) => ({
-		...previousValue,
-		[`^@evernest/${name}`]: `<rootDir>/${dir}/${name}/src`,
-	}), {});
+	return names.reduce(
+		(previousValue, name) => ({
+			...previousValue,
+			[`^@evernest/${name}`]: path.resolve(__dirname, `./${dir}/${name}/src`),
+		}),
+		{}
+	);
 }
 
 module.exports = {
-	...require("./utils/toolchain/jest.config"),
+	moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+	modulePathIgnorePatterns: ["/dist/"],
+	verbose: false,
+	setupFilesAfterEnv: ["jest-enzyme"],
+	testEnvironment: "enzyme",
 	moduleNameMapper: {
-		...makeAlias("utils", ["storybook", "theme", "tokens"]),
-		...makeAlias("atoms", ["icons", "icon", "button"]),
-	}
+		...makeAlias("utils", packages.utils),
+		...makeAlias("atoms", packages.atoms),
+		...makeAlias("molecules", packages.molecules),
+		...makeAlias("organisms", packages.organisms),
+	},
+	transformIgnorePatterns: [
+		"node_modules/(?!(jest-)?react-native|react-(native|universal|navigation)-(.*)|@react-native-community/(.*)|@react-navigation/(.*)|bs-platform)",
+	],
+	transform: {
+		"^.+\\.tsx?$": "ts-jest",
+	},
+	globals: {
+		"ts-jest": {
+			tsConfig: "./tsconfig.json",
+		},
+	},
 };

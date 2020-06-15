@@ -8,7 +8,7 @@ export const colorBlack = createToken<ColorObject>(
 );
 
 export const colorWhite = createToken<ColorObject>(
-	"Black",
+	"White",
 	{ type: ColorType.hex, value: "#FFFFFF" },
 	"White"
 );
