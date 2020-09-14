@@ -1,15 +1,19 @@
-import React from "react";
-import { Theme } from "@evernest/theme";
-import { Token, ButtonObject } from "@evernest/tokens";
+import { PropsWithTheme } from "@evernest/theme";
 
-export type ButtonAttributes = Pick<
-	React.ButtonHTMLAttributes<HTMLButtonElement>,
-	"className" | "disabled" | "name" | "type"
->;
+export enum Size {
+	small = "small",
+	medium = "medium",
+	large = "large",
+}
 
-export interface ButtonProps extends ButtonAttributes {
-	/** The theme is injected via a ThemeProvider */
-	theme?: Theme;
-	/** A custom button-token */
-	token?: Token<ButtonObject>;
+export enum Variation {
+	primary = "primary",
+	secondary = "secondary",
+	tertiary = "tertiary",
+	default = "default",
+}
+
+export interface ButtonProps extends PropsWithTheme<HTMLButtonElement> {
+	variation?: Variation;
+	size?: Size;
 }

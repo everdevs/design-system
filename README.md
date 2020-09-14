@@ -16,9 +16,20 @@ yarn build
 ```
 
 ### Develop
+This project uses storybook. Several steps ensure that everything has been linked and set up
+correctly. The following script will ensure that everything works "out of the box".
 
 ```bash
 yarn dev
+```
+
+### Setup
+
+This project requires various configurations to be generated. To make sure everything has been set up
+correctly you can run the following script. 
+
+```bash
+yarn setup
 ```
 
 ### Test
@@ -26,6 +37,24 @@ yarn dev
 ```bash
 yarn test
 ```
+
+### Add new packages (atomic components)
+
+Adding new packages can be a tedious task of copy & paste followed by renaming of files and identifiers.  
+To make it easier to create new packages we added a script that does the job for you.
+It is similar to `lerna create <package-name>` but uses a custom template instead.
+
+```
+Usage
+  $ yarn add-component <input>
+
+Options
+  --atomic, -a  Atomic type of component
+
+Examples
+  $ yarn add-component "My Component" --atomic atoms
+```
+
 
 [docs]: https://everdevs.github.io/design-system/
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge

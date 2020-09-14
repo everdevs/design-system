@@ -2,6 +2,7 @@
   "npmClient": "yarn",
   "packages": [
     "atoms/*",
+    "ions/*",
     "molecules/*",
     "organisms/*",
     "utils/*"

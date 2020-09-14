@@ -12,16 +12,16 @@ function makeAlias(dir, names) {
 }
 
 module.exports = {
-	stories: ["../**/stories/*.stories.(tsx|mdx)"],
+	stories: ["../**/stories/*.stories.@(tsx|mdx)"],
 	addons: [
-		"@storybook/addon-a11y/register",
-		"@storybook/addon-viewport/register",
-		"@storybook/addon-knobs/register",
-		"@storybook/addon-backgrounds/register",
-		"@storybook/addon-jest/register",
-		"@storybook/addon-links/register",
+		"@storybook/addon-a11y",
+		"@storybook/addon-viewport",
+		// "@storybook/addon-knobs/register",
+		"@storybook/addon-backgrounds",
+		"@storybook/addon-jest",
+		"@storybook/addon-links",
 		"@storybook/addon-docs",
-		"storybook-mobile",
+		// "storybook-mobile",
 	],
 	webpackFinal: async config => {
 		config.module.rules.push({
@@ -35,7 +35,7 @@ module.exports = {
 							"@babel/preset-typescript",
 							"@babel/preset-react",
 						],
-						plugins: ["@emotion/babel-plugin"],
+						// plugins: ["@emotion/babel-plugin"],
 					},
 				},
 				{
@@ -51,6 +51,7 @@ module.exports = {
 		config.resolve.alias = {
 			...(config.resolve.alias || {}),
 			...makeAlias("utils", packages.utils),
+			...makeAlias("ions", packages.ions),
 			...makeAlias("atoms", packages.atoms),
 			...makeAlias("molecules", packages.molecules),
 			...makeAlias("organisms", packages.organisms),

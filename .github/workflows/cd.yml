@@ -1,50 +1,50 @@
 name: CD
 
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
 
 jobs:
-    tests:
-        name: Deploy
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout working branch
-              uses: actions/checkout@v1
+  tests:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout working branch
+        uses: actions/checkout@v1
 
-            - name: Set up Node 12
-              uses: actions/setup-node@v1
-              with:
-                  node-version: 12.18.0
+      - name: Set up Node 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.18.0
 
-            - name: Get npm cache directory
-              id: npm-cache
-              run: |
-                  echo "::set-output name=dir::$(npm config get cache)"
-            - uses: actions/cache@v1
-              with:
-                  path: ${{ steps.npm-cache.outputs.dir }}
-                  key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node-
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-            - name: Install dependencies
-              run: yarn install
+      - name: Install dependencies
+        run: yarn install
 
-            - name: Run Tests
-              run: yarn test
+      - name: Run Tests
+        run: yarn test
 
-            - name: Upload Coverage
-              run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
-              env:
-                CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+      - name: Upload Coverage
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
 
-            - name: Predeploy
-              run: yarn predeploy
+      - name: Predeploy
+        run: yarn predeploy
 
-            - name: Deploy on gh-pages
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./build
+      - name: Deploy on gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

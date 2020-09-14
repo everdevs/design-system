@@ -19,6 +19,7 @@ module.exports = {
 	testEnvironment: "enzyme",
 	moduleNameMapper: {
 		...makeAlias("utils", packages.utils),
+		...makeAlias("ions", packages.ions),
 		...makeAlias("atoms", packages.atoms),
 		...makeAlias("molecules", packages.molecules),
 		...makeAlias("organisms", packages.organisms),

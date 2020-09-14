@@ -1,0 +1,32 @@
+{
+	"name": "@evernest/tpl",
+	"version": "0.0.0",
+	"license": "MIT",
+	"author": {
+		"name": "Gregor Adams",
+		"email": "gregor.adams@evernest.com"
+	},
+	"main": "index.js",
+	"module": "dist/esm/index.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"index.js"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"clean": "rimraf dist stories/tpl.testresults.json",
+		"test:generate-output": "jest --json --outputFile=stories/tpl.testresults.json"
+	},
+	"dependencies": {
+		"@emotion/core": "^10.0.35",
+		"@emotion/styled": "^10.0.27",
+		"@evernest/theme": "^0.0.0",
+		"@evernest/tokens": "^0.0.0",
+		"@types/react": "^16.9.48",
+		"react": "^16.13.1"
+	},
+	"devDependencies": {
+		"@evernest/dev-helpers": "^0.0.0"
+	}
+}

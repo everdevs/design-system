@@ -1,0 +1,30 @@
+{
+	"name": "@evernest/normalize-css",
+	"version": "0.0.0",
+	"license": "MIT",
+	"author": {
+		"name": "Gregor Adams",
+		"email": "gregor.adams@evernest.com"
+	},
+	"main": "index.js",
+	"module": "dist/esm/index.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"index.js"
+	],
+	"scripts": {
+		"bin": "babel-node ./bin/prepare-normalize.ts --extensions='.ts'",
+		"prebuild": "yarn bin",
+		"build": "rollup -c",
+		"clean": "rimraf dist; rimraf src/normalize-css.ts"
+	},
+	"dependencies": {
+		"@types/node": "^14.6.2",
+		"normalize.css": "^8.0.1",
+		"ts-node": "^9.0.0"
+	},
+	"devDependencies": {
+		"pify": "^5.0.0"
+	}
+}

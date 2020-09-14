@@ -27,19 +27,28 @@
                 "./utils/dev-helpers/src"
             ],
             "@evernest/icons": [
-                "./utils/icons/src"
+                "./ions/icons/src"
+            ],
+            "@evernest/normalize-css": [
+                "./ions/normalize-css/src"
             ],
             "@evernest/theme": [
-                "./utils/theme/src"
+                "./ions/theme/src"
             ],
             "@evernest/tokens": [
-                "./utils/tokens/src"
+                "./ions/tokens/src"
             ],
             "@evernest/button": [
                 "./atoms/button/src"
             ],
+            "@evernest/grid": [
+                "./atoms/grid/src"
+            ],
             "@evernest/icon": [
                 "./atoms/icon/src"
+            ],
+            "@evernest/menu": [
+                "./molecules/menu/src"
             ]
         }
     },

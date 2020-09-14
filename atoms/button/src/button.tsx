@@ -1,43 +1,22 @@
-import { css } from "@emotion/react";
+import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { ButtonProps } from "./types";
-import { buttonBase, getColor, getRadius, getBoxShadow, px } from "@evernest/tokens";
+import { ButtonProps, Size, Variation } from "./types";
 
 const Button = styled("button", {
-	shouldForwardProp: (propName: string) => !["token"].includes(propName),
+	shouldForwardProp: (propName: string) => !["theme"].includes(propName),
 })<ButtonProps>`
 	cursor: pointer;
 	border: 0;
-	${({
-		token: {
-			value: {
-				spaces,
-				colors: { text, background },
-				font: { value: font },
-				radius,
-				shadow,
-			},
-		},
-	}) =>
-		css`
-			padding: ${spaces.map(x => px(x)).join(" ")};
-			background: ${getColor(background)};
-			color: ${getColor(text)};
-			box-shadow: ${getBoxShadow(shadow)};
-			border-radius: ${getRadius(radius)};
-			font-family: ${font.family};
-			font-size: ${px(font.size)};
-			font-weight: ${font.weight};
-			font-style: ${font.style};
-			&:focus {
-				outline: 0;
-			}
-		`};
+	${({ theme, size, variation }) => css`
+		box-shadow: ${theme.tokens.shadow.medium.css};
+		height: ${size === Size.small ? "20px" : "40px"};
+	`};
 `;
 
 Button.defaultProps = {
 	type: "button",
-	token: buttonBase,
+	size: Size.medium,
+	variation: Variation.default,
 };
 
 export { Button };

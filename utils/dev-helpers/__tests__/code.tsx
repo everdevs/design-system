@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { Wrapper, Code } from "../src";
+import { Code, Wrapper } from "../src";
 
 test("Wrapper renders children", () => {
 	const code = "const a = 'a'";

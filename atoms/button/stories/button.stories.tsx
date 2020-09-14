@@ -1,39 +1,32 @@
-import { Wrapper } from "@evernest/dev-helpers";
-import { text } from "@storybook/addon-knobs";
+import { withWrapper } from "@evernest/dev-helpers";
 import { withTests } from "@storybook/addon-jest";
+import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { Button } from "../src";
 import results from "./button.testresults.json";
-import {
-	buttonS,
-	buttonPrimary,
-	buttonSecondary,
-	buttonSecondaryS,
-	buttonPrimaryS,
-} from "@evernest/tokens";
 
-export const simple: React.FC = () => {
-	const label = text("Button Label", "Default Button");
-	return (
-		<Wrapper>
-			<Button>{label}</Button>
-			<Button token={buttonS}>{label}</Button>
-			<br />
-			<Button token={buttonPrimary}>{label}</Button>
-			<Button token={buttonPrimaryS}>{label}</Button>
-			<br />
-			<Button token={buttonSecondary}>{label}</Button>
-			<Button token={buttonSecondaryS}>{label}</Button>
-		</Wrapper>
-	);
+const Template: Story = args => {
+	return <Button {...args} />;
 };
 
-const story = {
+export const WithLabel = Template.bind({});
+
+WithLabel.args = {
+	children: "I am a Button",
+};
+
+const story: Meta = {
 	component: Button,
 	title: "Design System/Atoms/Button",
-	decorators: [withTests({ results })],
+	decorators: [withTests({ results }), withWrapper()],
 	parameters: {
 		jest: ["button"],
+	},
+	argTypes: {
+		children: { control: "text" },
+		variation: { control: "select" },
+		size: { control: "select" },
+		theme: { control: false },
 	},
 };
 
