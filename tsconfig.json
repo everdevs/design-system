@@ -41,11 +41,11 @@
             "@evernest/button": [
                 "./atoms/button/src"
             ],
-            "@evernest/icon": [
-                "./atoms/icon/src"
-            ],
             "@evernest/header-link": [
                 "./atoms/header-link/src"
+            ],
+            "@evernest/icon": [
+                "./atoms/icon/src"
             ],
             "@evernest/menu": [
                 "./molecules/menu/src"
