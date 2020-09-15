@@ -29,26 +29,29 @@
             "@evernest/icons": [
                 "./ions/icons/src"
             ],
-            "@evernest/normalize-css": [
-                "./ions/normalize-css/src"
-            ],
             "@evernest/theme": [
                 "./ions/theme/src"
             ],
             "@evernest/tokens": [
                 "./ions/tokens/src"
             ],
+            "@evernest/normalize-css": [
+                "./ions/normalize-css/src"
+            ],
             "@evernest/button": [
                 "./atoms/button/src"
-            ],
-            "@evernest/grid": [
-                "./atoms/grid/src"
             ],
             "@evernest/icon": [
                 "./atoms/icon/src"
             ],
+            "@evernest/header-link": [
+                "./atoms/header-link/src"
+            ],
             "@evernest/menu": [
                 "./molecules/menu/src"
+            ],
+            "@evernest/grid": [
+                "./layout/grid/src"
             ]
         }
     },

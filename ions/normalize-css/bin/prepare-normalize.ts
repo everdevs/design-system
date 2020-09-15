@@ -22,7 +22,8 @@ async function prepare() {
 		.replace(cleanRegexp, "")
 		.replace(/^\s*\n/gm, "")
 		.replace(/\s+$/gm, "");
-	writeFile(outFile, createModule(css));
+	await writeFile(outFile, createModule(css));
+	console.log("Generated normalize-css.ts");
 }
 
 void prepare();

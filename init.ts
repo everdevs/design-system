@@ -15,23 +15,22 @@ function makeAlias(dir, names) {
 	);
 }
 
+function getLast<T = unknown>(arr: T[]): T {
+	return arr.reverse()[0];
+}
+
+function getLastDir(pathName: string): string {
+	return getLast<string>(path.parse(pathName).dir.split("/"));
+}
+
 async function getNames() {
-	const atoms = (await globby("./atoms/*/package.json")).map(
-		atom => path.parse(atom).dir.split("/").reverse()[0]
-	);
-	const ions = (await globby("./ions/*/package.json")).map(
-		ion => path.parse(ion).dir.split("/").reverse()[0]
-	);
-	const molecules = (await globby("./molecules/*/package.json")).map(
-		molecule => path.parse(molecule).dir.split("/").reverse()[0]
-	);
-	const organisms = (await globby("./organisms/*/package.json")).map(
-		organism => path.parse(organism).dir.split("/").reverse()[0]
-	);
-	const utils = (await globby("./utils/*/package.json")).map(
-		util => path.parse(util).dir.split("/").reverse()[0]
-	);
-	return { atoms, ions, molecules, organisms, utils };
+	const atoms = (await globby("./atoms/*/package.json")).map(item => getLastDir(item));
+	const ions = (await globby("./ions/*/package.json")).map(item => getLastDir(item));
+	const layout = (await globby("./layout/*/package.json")).map(item => getLastDir(item));
+	const molecules = (await globby("./molecules/*/package.json")).map(item => getLastDir(item));
+	const organisms = (await globby("./organisms/*/package.json")).map(item => getLastDir(item));
+	const utils = (await globby("./utils/*/package.json")).map(item => getLastDir(item));
+	return { atoms, ions, layout, molecules, organisms, utils };
 }
 
 getNames().then(async names => {
@@ -51,6 +50,7 @@ getNames().then(async names => {
 						...makeAlias("atoms", names.atoms),
 						...makeAlias("molecules", names.molecules),
 						...makeAlias("organisms", names.organisms),
+						...makeAlias("layout", names.layout),
 					},
 				},
 			},

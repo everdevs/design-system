@@ -2,26 +2,25 @@ import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
 import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
-import { Tpl } from "../src";
-import results from "./tpl.testresults.json";
-import { Button } from "@evernest/button";
+import { HeaderLink } from "../src";
+import results from "./header-link.testresults.json";
 
 const Template: Story = args => {
-	return <Button {...args} />;
+	return <HeaderLink {...args} />;
 };
 
 export const Simple = Template.bind({});
 
 Simple.args = {
-	children: "I am a Tpl",
+	children: "I am a HeaderLink",
 };
 
 const story: Meta = {
-	component: Tpl,
-	title: "Design System/{type}/{tpl}",
+	component: HeaderLink,
+	title: "Design System/Atoms/Header link",
 	decorators: [withTests({ results }), withWrapper()],
 	parameters: {
-		jest: ["tpl"],
+		jest: ["header-link"],
 	},
 	argTypes: {
 		children: { control: "text" },

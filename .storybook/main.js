@@ -55,6 +55,7 @@ module.exports = {
 			...makeAlias("atoms", packages.atoms),
 			...makeAlias("molecules", packages.molecules),
 			...makeAlias("organisms", packages.organisms),
+			...makeAlias("layout", packages.layout),
 		};
 		config.resolve.extensions.push(".ts", ".tsx");
 		return config;

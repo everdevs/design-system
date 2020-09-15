@@ -1,6 +1,8 @@
 import { Except } from "type-fest";
 
-export interface TokenObject<T = Record<string, unknown>> {
+export type EmptyToken = Record<string, unknown>;
+
+export interface TokenObject<T = EmptyToken> {
 	extends?: Token<T>;
 }
 
@@ -11,6 +13,6 @@ export interface TokenBase {
 	description?: string;
 }
 
-export interface Token<T extends TokenObject = Record<string, unknown>> extends TokenBase {
+export interface Token<T extends TokenObject = EmptyToken> extends TokenBase {
 	value: RawTokenObject<T>;
 }

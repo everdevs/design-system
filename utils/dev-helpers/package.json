@@ -22,7 +22,7 @@
 		"@emotion/core": "^10.0.35",
 		"@emotion/styled": "^10.0.27",
 		"@evernest/theme": "^0.0.0",
-		"@types/react": "^16.9.48",
+		"@types/react": "^16.9.49",
 		"@types/react-syntax-highlighter": "^11.0.5",
 		"emotion-theming": "^10.0.27",
 		"fs-extra": "^9.0.1",
@@ -30,7 +30,7 @@
 		"meow": "^7.1.1",
 		"param-case": "^3.0.3",
 		"react": "^16.13.1",
-		"react-syntax-highlighter": "^13.5.1"
+		"react-syntax-highlighter": "^13.5.3"
 	},
 	"devDependencies": {}
 }

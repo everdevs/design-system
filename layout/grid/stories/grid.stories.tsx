@@ -3,6 +3,8 @@ import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { ColorBox, withWrapper } from "@evernest/dev-helpers";
 import { PropsWithTheme } from "@evernest/theme";
+import { HeaderLink } from "@evernest/header-link";
+import { Menu } from "@evernest/menu";
 import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import {
@@ -92,34 +94,6 @@ const DemoFooter = styled.div`
 	height: 300px;
 `;
 
-const Nav = styled.nav<PropsWithTheme>`
-	display: none;
-	${({ theme: { mq } }) => css`
-		@media ${mq.l} {
-			display: flex;
-		}
-	`};
-`;
-
-const Link = styled.a`
-	display: inline-flex;
-	font-family: sans-serif;
-	color: currentColor;
-	text-decoration: none;
-	padding: 10px 8px;
-	margin-left: 16px;
-	font-size: 14px;
-	font-weight: lighter;
-	line-height: 28px;
-	border-radius: 2px;
-	background-color: rgba(255, 255, 255, 0);
-	transition: background-color 0.3s ease-in-out;
-
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.1);
-	}
-`;
-
 export const WithGrid: React.FC = () => {
 	return (
 		<>
@@ -167,13 +141,13 @@ export const WithLayout: Story = () => {
 								<Column raw>
 									<Flex>
 										<Logo />
-										<Nav>
-											<Link href="#">Verkaufen</Link>
-											<Link href="#">Kaufen</Link>
-											<Link href="#">Makler werden</Link>
-											<Link href="#">Unsere Makler</Link>
-											<Link href="#">Kontakt</Link>
-										</Nav>
+										<Menu>
+											<HeaderLink href="#">Verkaufen</HeaderLink>
+											<HeaderLink href="#">Kaufen</HeaderLink>
+											<HeaderLink href="#">Makler werden</HeaderLink>
+											<HeaderLink href="#">Unsere Makler</HeaderLink>
+											<HeaderLink href="#">Kontakt</HeaderLink>
+										</Menu>
 									</Flex>
 								</Column>
 							</Row>
@@ -313,11 +287,16 @@ export const WithLayout: Story = () => {
 
 const story: Meta = {
 	component: Grid,
-	title: "Design System/Atoms/Grid",
+	title: "Design System/Layout/Grid",
 	decorators: [withTests({ results }), withWrapper()],
 	parameters: {
 		jest: ["grid"],
-		docs: { page: null },
+		docs: {
+			inlineStories: false,
+			story: {
+				iframeHeight: 500,
+			},
+		},
 	},
 };
 

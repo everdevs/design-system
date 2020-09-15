@@ -47,13 +47,13 @@ interface File {
 }
 type Files = Record<string, File>;
 
-async function createComponent(name, pathToTpl, type, options?) {
+async function createComponent(name, { atomic }) {
 	const pascalName = pascalcase(name);
 	const paramName = paramCase(name);
 	const humanName = humanizeString(name);
 	const cwd = process.cwd();
 	const tpl = path.join(cwd, ".tpl/tpl");
-	const dir = path.join(cwd, type, paramName);
+	const dir = path.join(cwd, atomic, paramName);
 	const filesToCopy = [
 		{ origin: path.join(tpl, "index.js"), destination: path.join(dir, "index.js") },
 		{ origin: path.join(tpl, "jest.config.js"), destination: path.join(dir, "jest.config.js") },
@@ -95,7 +95,7 @@ async function createComponent(name, pathToTpl, type, options?) {
 			path: path.join(dir, `stories/${paramName}.stories.tsx`),
 			content: story
 				.replace(patterns.human, humanName)
-				.replace(patterns.type, pascalcase(type))
+				.replace(patterns.type, pascalcase(atomic))
 				.replace(patterns.Tpl, pascalName)
 				.replace(patterns.tpl, paramName),
 		},
@@ -116,5 +116,5 @@ async function createComponent(name, pathToTpl, type, options?) {
 	);
 }
 
-console.log(componentName, { template, atomic });
-void createComponent(componentName, template, atomic);
+console.log("Creating:", componentName, { atomic });
+void createComponent(componentName, { atomic });

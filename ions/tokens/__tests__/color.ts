@@ -38,7 +38,7 @@ test("rgb handles alpha values < 1", () => {
 
 test("getColor returns a hex color from a token", () => {
 	const expected = "#F00";
-	const red = createToken<ColorObject>("Red", { type: ColorType.hex, value: expected });
+	const red = createToken<ColorObject>("Red", { type: ColorType.hex, value: "F00" });
 	const actual = getColor(red);
 	expect(actual).toEqual(expected);
 });

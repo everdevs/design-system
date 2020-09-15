@@ -3,6 +3,7 @@
   "packages": [
     "atoms/*",
     "ions/*",
+    "layout/*",
     "molecules/*",
     "organisms/*",
     "utils/*"
