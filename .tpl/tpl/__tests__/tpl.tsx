@@ -2,9 +2,9 @@ import { createTree, withTheme } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 import { mount } from "enzyme";
 import React from "react";
-import { Tpl } from "../src";
+import { Tpl, StyledTplProps } from "../src";
 
-const ThemedTpl = withTheme(Tpl, theme);
+const ThemedTpl = withTheme<StyledTplProps>(Tpl, theme);
 
 test("Tpl renders children", () => {
 	const text = "Hello World!";
