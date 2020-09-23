@@ -1,25 +1,19 @@
-import React from "react";
+import { withTheme } from "@evernest/dev-helpers";
+import { theme } from "@evernest/theme";
 import { mount } from "enzyme";
+import React from "react";
 import { Button } from "../src";
-import { Wrapper } from "@evernest/dev-helpers";
+
+const ThemedButton = withTheme(Button, theme);
 
 test("Button renders children", () => {
 	const text = "Hello Button";
-	const wrapper = mount(
-		<Wrapper>
-			<Button>{text}</Button>
-		</Wrapper>
-	);
-	expect(wrapper.find(Button).text()).toEqual(text);
+	const wrapper = mount(<ThemedButton>{text}</ThemedButton>);
+	expect(wrapper.text()).toEqual(text);
 });
 
 test("Button allows setting classname", () => {
-	const text = "Hello Button";
 	const className = "test";
-	const wrapper = mount(
-		<Wrapper>
-			<Button className={className}>{text}</Button>
-		</Wrapper>
-	);
-	expect(wrapper.find(Button)).toHaveClassName(className);
+	const wrapper = mount(<ThemedButton className={className} />);
+	expect(wrapper).toHaveClassName(className);
 });
