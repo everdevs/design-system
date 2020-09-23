@@ -16,7 +16,9 @@
 	"scripts": {
 		"build": "rollup -c",
 		"clean": "rimraf dist stories/tpl.testresults.json",
-		"test:generate-output": "jest --json --outputFile=stories/tpl.testresults.json"
+		"test:generate-output": "jest --json --outputFile=stories/tpl.testresults.json",
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch --coverage"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.35",
