@@ -5,6 +5,7 @@ export function createTree(component: React.ReactNode): JSON {
 	return renderer.create(component).toJSON();
 }
 
-export function withTheme(Component, theme) {
-	return props => <Component {...props} theme={theme} />;
+export function withTheme<T = {}>(Component, theme) {
+	const ThemedComponent: React.FC<T> = props => <Component {...props} theme={theme} />;
+	return ThemedComponent;
 }
