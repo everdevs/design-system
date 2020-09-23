@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel can anchored to different positions 1`] = `
+Array [
+  <div
+    className="css-1koqh7r"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+  />,
+  <aside
+    className="css-1nlatv0"
+    data-test-id="styled-panel"
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can anchored to different positions 2`] = `
+Array [
+  <div
+    className="css-1koqh7r"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+  />,
+  <aside
+    className="css-163o052"
+    data-test-id="styled-panel"
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can anchored to different positions 3`] = `
+Array [
+  <div
+    className="css-1koqh7r"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+  />,
+  <aside
+    className="css-1ip9n93"
+    data-test-id="styled-panel"
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can anchored to different positions 4`] = `
+Array [
+  <div
+    className="css-1koqh7r"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+  />,
+  <aside
+    className="css-yxi8ai"
+    data-test-id="styled-panel"
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can anchored to different positions 5`] = `
+Array [
+  <div
+    className="css-1jiefal"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+    open={true}
+  />,
+  <aside
+    className="css-2u1nv6"
+    data-test-id="styled-panel"
+    open={true}
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can anchored to different positions 6`] = `
+Array [
+  <div
+    className="css-1jiefal"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+    open={true}
+  />,
+  <aside
+    className="css-jwa4by"
+    data-test-id="styled-panel"
+    open={true}
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can anchored to different positions 7`] = `
+Array [
+  <div
+    className="css-1jiefal"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+    open={true}
+  />,
+  <aside
+    className="css-ofyx3r"
+    data-test-id="styled-panel"
+    open={true}
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can anchored to different positions 8`] = `
+Array [
+  <div
+    className="css-1jiefal"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+    open={true}
+  />,
+  <aside
+    className="css-1srzxjj"
+    data-test-id="styled-panel"
+    open={true}
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can be open or closed 1`] = `
+Array [
+  <div
+    className="css-1jiefal"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+    open={true}
+  />,
+  <aside
+    className="css-2u1nv6"
+    data-test-id="styled-panel"
+    open={true}
+    width="295px"
+  />,
+]
+`;
+
+exports[`Panel can be open or closed 2`] = `
+Array [
+  <div
+    className="css-1koqh7r"
+    data-test-id="styled-backdrop"
+    onClick={[Function]}
+  />,
+  <aside
+    className="css-1nlatv0"
+    data-test-id="styled-panel"
+    width="295px"
+  />,
+]
+`;

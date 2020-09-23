@@ -47,16 +47,6 @@ export const StyledPanel = styled.aside<StyledPanelProps>`
 					transform: translate3d(0, ${open ? 0 : "100%"}, 0);
 				`;
 			}
-			case Anchor.left: {
-				return css`
-					bottom: 0;
-					left: 0;
-					top: 0;
-					width: ${width};
-					max-width: calc(100vw - 80px);
-					transform: translate3d(${open ? 0 : "-100%"}, 0, 0);
-				`;
-			}
 			case Anchor.right: {
 				return css`
 					bottom: 0;
@@ -75,8 +65,16 @@ export const StyledPanel = styled.aside<StyledPanelProps>`
 					transform: translate3d(0, ${open ? 0 : "-100%"}, 0);
 				`;
 			}
+			case Anchor.left:
 			default: {
-				break;
+				return css`
+					bottom: 0;
+					left: 0;
+					top: 0;
+					width: ${width};
+					max-width: calc(100vw - 80px);
+					transform: translate3d(${open ? 0 : "-100%"}, 0, 0);
+				`;
 			}
 		}
 	}};
@@ -90,15 +88,30 @@ const blockScroll = css`
 `;
 
 export const Panel = React.forwardRef<PanelElement, StyledPanelProps>(
-	({ open, onClose, ...props }, ref) => {
+	({ anchor, children, className, open, onClose, width, ...props }, ref) => {
 		const handleClick = React.useCallback(() => {
 			open && onClose();
 		}, [open, onClose]);
 		return (
 			<>
 				{open && <Global styles={blockScroll} />}
-				<StyledBackdrop open={open} onClick={handleClick} />
-				<StyledPanel {...props} open={open} ref={ref} />
+				<StyledBackdrop
+					{...props}
+					open={open}
+					onClick={handleClick}
+					data-test-id={"styled-backdrop"}
+				/>
+				<StyledPanel
+					{...props}
+					anchor={anchor}
+					width={width}
+					open={open}
+					className={className}
+					ref={ref}
+					data-test-id={"styled-panel"}
+				>
+					{children}
+				</StyledPanel>
 			</>
 		);
 	}

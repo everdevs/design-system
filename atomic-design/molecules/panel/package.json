@@ -17,7 +17,8 @@
 		"build": "rollup -c",
 		"clean": "rimraf dist stories/panel.testresults.json",
     "test:generate-output": "jest --json --outputFile=stories/panel.testresults.json",
-    "test:watch": "jest --watch"
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch --coverage"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.35",
