@@ -43,6 +43,7 @@
 		"pretest:generate-output": "yarn setup",
     "test:generate-output": "lerna run test:generate-output --parallel",
     "test:watch": "lerna run test:watch --parallel",
+    "test:update": "lerna run test:update --parallel",
 		"xo": "xo"
 	},
 	"lint-staged": {
