@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel can be open or closed 1`] = `
+<button
+  className="css-aulye4"
+  open={true}
+>
+  <div
+    className="css-1twxhdo"
+  >
+    <span
+      className="css-oo1k7y"
+      style={
+        Object {
+          "transform": "translate3d(0, 0, 0) rotate3d(0,0,1,45deg)",
+        }
+      }
+    />
+    <span
+      className="css-oo1k7y"
+      style={
+        Object {
+          "transform": "translate3d(0, 0, 0) rotate3d(0,0,1,-45deg)",
+        }
+      }
+    />
+  </div>
+  <span
+    className="css-obzl7d"
+  >
+    close
+     Menu
+  </span>
+</button>
+`;
+
+exports[`Panel can be open or closed 2`] = `
+<button
+  className="css-aulye4"
+>
+  <div
+    className="css-1twxhdo"
+  >
+    <span
+      className="css-oo1k7y"
+      style={
+        Object {
+          "transform": "translate3d(0, -4px, 0) rotate3d(0,0,0,0deg)",
+        }
+      }
+    />
+    <span
+      className="css-oo1k7y"
+      style={
+        Object {
+          "transform": "translate3d(0, 4px, 0) rotate3d(0,0,0,0deg)",
+        }
+      }
+    />
+  </div>
+  <span
+    className="css-obzl7d"
+  >
+    open
+     Menu
+  </span>
+</button>
+`;
