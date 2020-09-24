@@ -36,7 +36,7 @@ const story: Meta = {
 	title: "Design System/Molecules/Panel",
 	decorators: [withWrapper()],
 	parameters: {
-		jest: ["panel"],
+		jest: ["panel", "toggle"],
 		docs: {
 			inlineStories: false,
 			iframeHeight: 500,

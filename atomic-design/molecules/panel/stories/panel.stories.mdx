@@ -1,0 +1,66 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Docs/Panel" />
+
+## Usage
+
+A Panel is an offscreen area that can be shown or hidden and anchored to different positions.
+
+## Simple
+
+```jsx
+function MyComponent() {
+	return (
+		<Panel
+				open={true}
+			/>
+	);
+}
+```
+
+## With Callback
+
+Panel allows setting a callback function whenever the panel closes. This allows controlling the state.
+
+```jsx
+function MyComponent() {
+	  const [open, setOpen] = React.useState(false);
+return (
+			<Panel
+				open={open}
+				onClose={() => {
+					setOpen(state => !state);
+				}}
+			/>
+	);
+}
+```
+
+
+## With Toggle
+
+Panel provides a Toggle with a burger-icon. I can be used to toggle the state of the panel. Any other
+interaction element could also be used fo the same purpose.
+
+```jsx
+function MyComponent() {
+  const [open, setOpen] = React.useState(false);
+	return (
+		<>
+			<Toggle
+				open={open}
+				onClick={() => {
+					setOpen(state => !state);
+				}}
+			/>
+			<Panel
+				{...args}
+				open={open}
+				onClose={() => {
+					setOpen(state => !state);
+				}}
+			/>
+		</>
+	);
+}
+```
