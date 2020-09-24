@@ -1,106 +1,41 @@
-import { Wrapper } from "@evernest/dev-helpers";
+import { withTheme, createTree } from "@evernest/dev-helpers";
+import { theme } from "@evernest/theme";
 import { mount } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
-import { Anchor, Panel, StyledBackdrop } from "../src";
-import { theme } from "@evernest/theme";
+import { Anchor, Panel, StyledPanelProps } from "../src";
+
+const ThemedPanel = withTheme<StyledPanelProps>(Panel, theme);
 
 test("Panel renders children", () => {
 	const text = "Hello World!";
-	const wrapper = mount(
-		<Wrapper>
-			<Panel anchor={Anchor.left}>{text}</Panel>
-		</Wrapper>
-	);
-	expect(wrapper.find(Panel).text()).toEqual(text);
+	const wrapper = mount(<ThemedPanel anchor={Anchor.left}>{text}</ThemedPanel>);
+	expect(wrapper.text()).toEqual(text);
 });
 
 test("Panel allows setting classname", () => {
 	const className = "test";
-	const wrapper = mount(
-		<Wrapper>
-			<Panel anchor={Anchor.left} className={className} />
-		</Wrapper>
-	);
-	expect(wrapper.find(Panel)).toHaveClassName(className);
+	const wrapper = mount(<ThemedPanel anchor={Anchor.left} className={className} />);
+	expect(wrapper).toHaveClassName(className);
 });
 
 test("Panel can be open or closed", () => {
-	const opened = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.left} open />
-			</Wrapper>
-		)
-		.toJSON();
-	const closed = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.left} />
-			</Wrapper>
-		)
-		.toJSON();
+	const opened = renderer.create(<ThemedPanel anchor={Anchor.left} open />).toJSON();
+	const closed = renderer.create(<ThemedPanel anchor={Anchor.left} />).toJSON();
 	expect(opened).toMatchSnapshot();
 	expect(closed).toMatchSnapshot();
 });
 
 test("Panel can anchored to different positions", () => {
-	const leftClosed = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.left} />
-			</Wrapper>
-		)
-		.toJSON();
-	const rightClosed = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.right} />
-			</Wrapper>
-		)
-		.toJSON();
-	const topClosed = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.top} />
-			</Wrapper>
-		)
-		.toJSON();
-	const bottomClosed = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.bottom} />
-			</Wrapper>
-		)
-		.toJSON();
-	const leftOpen = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.left} open />
-			</Wrapper>
-		)
-		.toJSON();
-	const rightOpen = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.right} open />
-			</Wrapper>
-		)
-		.toJSON();
-	const topOpen = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.top} open />
-			</Wrapper>
-		)
-		.toJSON();
-	const bottomOpen = renderer
-		.create(
-			<Wrapper>
-				<Panel anchor={Anchor.bottom} open />
-			</Wrapper>
-		)
-		.toJSON();
+	const leftClosed = createTree(<ThemedPanel anchor={Anchor.left} />);
+	const rightClosed = createTree(<ThemedPanel anchor={Anchor.right} />);
+	const topClosed = createTree(<ThemedPanel anchor={Anchor.top} />);
+	const bottomClosed = createTree(<ThemedPanel anchor={Anchor.bottom} />);
+	const leftOpen = createTree(<ThemedPanel anchor={Anchor.left} open />);
+	const rightOpen = createTree(<ThemedPanel anchor={Anchor.right} open />);
+	const topOpen = createTree(<ThemedPanel anchor={Anchor.top} open />);
+	const bottomOpen = createTree(<ThemedPanel anchor={Anchor.bottom} open />);
+
 	expect(leftClosed).toMatchSnapshot();
 	expect(rightClosed).toMatchSnapshot();
 	expect(topClosed).toMatchSnapshot();
