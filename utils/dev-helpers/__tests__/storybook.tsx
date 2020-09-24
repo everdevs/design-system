@@ -8,13 +8,13 @@ test("random generates an integer", () => {
 	expect(r).toEqual(int);
 });
 
-test("random generates has a max value", () => {
+test("random has a max value", () => {
 	const max = 10;
 	const r = random(max);
 	expect(r).toBeLessThanOrEqual(max);
 });
 
-test("random generates has a min value", () => {
+test("random has a min value", () => {
 	const max = 10;
 	const min = 5;
 	const r = random(max, min);
@@ -40,11 +40,6 @@ test("Wrapper renders children", () => {
 });
 
 test("Wrapper renders correctly", () => {
-	const tree = createTree(<Wrapper />);
-	expect(tree).toMatchSnapshot();
-});
-
-test("withWrapper returns a new ", () => {
 	const tree = createTree(<Wrapper />);
 	expect(tree).toMatchSnapshot();
 });
