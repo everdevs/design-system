@@ -50,7 +50,7 @@ export const StyledEvernestLogo = styled.span<StyledEvernestLogoProps>`
 `;
 
 export const EvernestLogo = React.forwardRef<EvernestLogoElement, StyledEvernestLogoProps>(
-	({ children, size, ...props }, ref) => {
+	({ children, className, size, ...props }, ref) => {
 		switch (size) {
 			case LogoSize.small:
 				return <LogoS />;
@@ -59,9 +59,9 @@ export const EvernestLogo = React.forwardRef<EvernestLogoElement, StyledEvernest
 			case LogoSize.responsive:
 			default:
 				return (
-					<StyledEvernestLogo {...props} ref={ref}>
-						<StyledLogoS />
-						<StyledLogoL />
+					<StyledEvernestLogo {...props} className={className} ref={ref}>
+						<StyledLogoS {...props} />
+						<StyledLogoL {...props} />
 					</StyledEvernestLogo>
 				);
 		}
