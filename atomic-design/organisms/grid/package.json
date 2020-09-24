@@ -11,11 +11,13 @@
 	"typings": "dist/index.d.ts",
 	"files": [
 		"dist",
-      "index.js"
+		"index.js"
 	],
 	"scripts": {
 		"build": "rollup -c",
-		"clean": "rimraf dist"
+		"clean": "rimraf dist",
+		"test:update": "jest --updateSnapshot",
+		"test:watch": "jest --watch --coverage"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.35",
