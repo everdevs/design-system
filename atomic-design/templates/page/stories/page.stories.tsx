@@ -7,7 +7,7 @@ import { Column, Flex, Grid, GridOverlay, Hidden, Row } from "@evernest/grid";
 import { Header } from "@evernest/header";
 import { HeaderLink } from "@evernest/header-link";
 import { Menu, MenuDirection } from "@evernest/menu";
-import { Icon } from "@evernest/icon";
+import { Icon, Size } from "@evernest/icon";
 import styled from "@emotion/styled";
 import { Anchor, Panel, Toggle } from "@evernest/panel";
 import { PropsWithTheme } from "@evernest/theme";
@@ -186,25 +186,25 @@ export const PageLayout: Story = () => {
 											href="https://www.instagram.com/evernest.official/"
 											target="_blank"
 										>
-											<Icon icon="instagram" />
+											<Icon size={Size.medium} icon="instagram" />
 										</a>
 										<a
 											href="https://www.facebook.com/Evernest.Official"
 											target="_blank"
 										>
-											<Icon icon="facebook" />
+											<Icon size={Size.medium} icon="facebook" />
 										</a>
 										<a
 											href="https://www.linkedin.com/company/42171409"
 											target="_blank"
 										>
-											<Icon icon="linkedIn" />
+											<Icon size={Size.medium} icon="linkedIn" />
 										</a>
 										<a
 											href="https://www.xing.com/companies/evernest"
 											target="_blank"
 										>
-											<Icon icon="xing" />
+											<Icon size={Size.medium} icon="xing" />
 										</a>
 									</IconGrid>
 								</Column>
