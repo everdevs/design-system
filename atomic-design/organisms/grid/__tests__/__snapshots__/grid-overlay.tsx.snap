@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridOverlay can be initially active 1`] = `
+<div
+  className="css-1jpbipk"
+  position="fixed"
+>
+  <div
+    className="css-yrxebj"
+    justify="flex-start"
+  >
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+    <div
+      className="css-13b9fqp"
+      s={1}
+      suppressHydrationWarning={true}
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`GridOverlay can have a toggle button 1`] = `
+<button
+  className="css-vacqy9"
+  data-test-id="grid-toggle"
+  onClick={[Function]}
+>
+  grid
+</button>
+`;
+
+exports[`GridOverlay can have position absolute 1`] = `null`;

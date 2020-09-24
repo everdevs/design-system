@@ -53,7 +53,7 @@ export interface GridContextProps {
 	grid: GridConfig;
 }
 
-export interface BoxProps {
+export interface BoxProps extends PropsWithTheme {
 	removePadding?: boolean;
 	addPadding?: boolean;
 	removeGutter?: boolean;

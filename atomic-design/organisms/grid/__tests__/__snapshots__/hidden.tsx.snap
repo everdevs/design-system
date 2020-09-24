@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hidden can show/hide content on different viewports 1`] = `
+<div
+  className="css-1kxevuh"
+  display="block"
+/>
+`;
+
+exports[`Hidden can show/hide content on different viewports 2`] = `
+<div
+  className="css-1kxevuh"
+  display="block"
+/>
+`;
+
+exports[`Hidden can show/hide content on different viewports 3`] = `
+<div
+  className="css-1kxevuh"
+  display="block"
+/>
+`;
+
+exports[`Hidden can show/hide content on different viewports 4`] = `
+<div
+  className="css-ma58ml"
+  display="block"
+/>
+`;
+
+exports[`Hidden can show/hide content on different viewports 5`] = `
+<div
+  className="css-htmqiz"
+  display="block"
+/>
+`;
+
+exports[`Hidden can show/hide content on different viewports 6`] = `
+<div
+  className="css-38ugts"
+  display="block"
+/>
+`;

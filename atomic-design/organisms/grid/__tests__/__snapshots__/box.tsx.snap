@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box can add gutter 1`] = `
+<div
+  className="css-xogh0g"
+/>
+`;
+
+exports[`Box can add gutter 2`] = `
+<div
+  className="css-xogh0g"
+/>
+`;
+
+exports[`Box can add padding and gutter 1`] = `
+<div
+  className="css-j6442t"
+/>
+`;
+
+exports[`Box can be flex 1`] = `
+<div
+  className="css-o7lact"
+/>
+`;
+
+exports[`Box can remove gutter 1`] = `
+<div
+  className="css-7xe97a"
+/>
+`;
+
+exports[`Box can remove padding 1`] = `
+<div
+  className="css-1v4bfap"
+/>
+`;
+
+exports[`Box can remove padding and gutter 1`] = `
+<div
+  className="css-3un3s3"
+/>
+`;

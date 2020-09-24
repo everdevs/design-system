@@ -1,9 +1,9 @@
 import React from "react";
 import { mount } from "enzyme";
 import { Column, Grid, Row } from "../src";
-import { Wrapper } from "@evernest/dev-helpers";
+import { createTree, Wrapper } from "@evernest/dev-helpers";
 
-test("Grid only renders Rows", () => {
+test("Grid renders Rows", () => {
 	const text = "Hello Grid";
 	const wrapper = mount(
 		<Wrapper>
@@ -14,7 +14,7 @@ test("Grid only renders Rows", () => {
 			</Grid>
 		</Wrapper>
 	);
-	expect(wrapper.find(Grid).text()).toEqual(text);
+	expect(wrapper.text()).toEqual(text);
 });
 
 test("Grid allows setting classname", () => {
@@ -29,4 +29,27 @@ test("Grid allows setting classname", () => {
 		</Wrapper>
 	);
 	expect(wrapper.find(Grid)).toHaveClassName(className);
+});
+
+test("Grid can show overflow or hide it", () => {
+	const overflow = createTree(
+		<Wrapper>
+			<Grid overflow>
+				<Row>
+					<Column>1</Column>
+				</Row>
+			</Grid>
+		</Wrapper>
+	);
+	const hidden = createTree(
+		<Wrapper>
+			<Grid>
+				<Row>
+					<Column>1</Column>
+				</Row>
+			</Grid>
+		</Wrapper>
+	);
+	expect(overflow).toMatchSnapshot();
+	expect(hidden).toMatchSnapshot();
 });

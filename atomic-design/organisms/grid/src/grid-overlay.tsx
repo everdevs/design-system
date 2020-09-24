@@ -61,21 +61,21 @@ export const GridLayer: React.FC<GridOverlayProps> = ({ position }) => {
 	);
 };
 
-export const GridOverlay: React.FC<GridOverlayProps> = ({
-	initialActive,
-	toggle,
-	position = "fixed",
-}) => {
+export const GridOverlay: React.FC<GridOverlayProps> = ({ initialActive, toggle, position }) => {
 	const [active, setActive] = React.useState(initialActive);
 	const handleClick = React.useCallback(() => setActive(state => !state), []);
 	return (
 		<>
 			{toggle && (
-				<Toggle onClick={handleClick} position={position}>
+				<Toggle onClick={handleClick} position={position} data-test-id="grid-toggle">
 					{active ? "gridOff" : "grid"}
 				</Toggle>
 			)}
 			{active && <GridLayer position={position} />}
 		</>
 	);
+};
+
+GridOverlay.defaultProps = {
+	position: "fixed",
 };

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid can show overflow or hide it 1`] = `
+<div
+  className="css-1ewmkw0"
+>
+  <div
+    className="css-10185dy"
+    justify="flex-start"
+  >
+    <div
+      className="css-hz6nyv"
+      s="var(--grid-colcount)"
+      suppressHydrationWarning={true}
+    >
+      1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid can show overflow or hide it 2`] = `
+<div
+  className="css-1dh5pml"
+>
+  <div
+    className="css-1ewmkw0"
+  >
+    <div
+      className="css-10185dy"
+      justify="flex-start"
+    >
+      <div
+        className="css-hz6nyv"
+        s="var(--grid-colcount)"
+        suppressHydrationWarning={true}
+      >
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;

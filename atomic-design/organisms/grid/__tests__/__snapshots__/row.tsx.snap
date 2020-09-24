@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row can be noWrap 1`] = `
+<div
+  className="css-1dh5pml"
+>
+  <div
+    className="css-1ewmkw0"
+  >
+    <div
+      className="css-1r0d2vh"
+      justify="flex-start"
+      noWrap={true}
+    >
+      <div
+        className="css-hz6nyv"
+        s="var(--grid-colcount)"
+        suppressHydrationWarning={true}
+      >
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Row can be raw 1`] = `
+<div
+  className="css-1dh5pml"
+>
+  <div
+    className="css-1ewmkw0"
+  >
+    <div
+      className="css-121iaff"
+      justify="flex-start"
+      raw={true}
+    >
+      <div
+        className="css-hz6nyv"
+        s="var(--grid-colcount)"
+        suppressHydrationWarning={true}
+      >
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Row can be reverse 1`] = `
+<div
+  className="css-1dh5pml"
+>
+  <div
+    className="css-1ewmkw0"
+  >
+    <div
+      className="css-16uh2fg"
+      justify="flex-start"
+      reverse={true}
+    >
+      <div
+        className="css-hz6nyv"
+        s="var(--grid-colcount)"
+        suppressHydrationWarning={true}
+      >
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Row can have different alignment 1`] = `
+<div
+  className="css-1dh5pml"
+>
+  <div
+    className="css-1ewmkw0"
+  >
+    <div
+      className="css-10185dy"
+      justify="flex-start"
+    >
+      <div
+        className="css-hz6nyv"
+        s="var(--grid-colcount)"
+        suppressHydrationWarning={true}
+      >
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Row can have different alignment 2`] = `
+<div
+  className="css-1dh5pml"
+>
+  <div
+    className="css-1ewmkw0"
+  >
+    <div
+      className="css-19lkl2e"
+      justify="flex-end"
+    >
+      <div
+        className="css-hz6nyv"
+        s="var(--grid-colcount)"
+        suppressHydrationWarning={true}
+      >
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Row can have different alignment 3`] = `
+<div
+  className="css-1dh5pml"
+>
+  <div
+    className="css-1ewmkw0"
+  >
+    <div
+      className="css-kkrs14"
+      justify="center"
+    >
+      <div
+        className="css-hz6nyv"
+        s="var(--grid-colcount)"
+        suppressHydrationWarning={true}
+      >
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;
