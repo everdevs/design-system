@@ -186,7 +186,7 @@ const story: Meta = {
 	title: "Design System/Organisms/Grid",
 	decorators: [withWrapper()],
 	parameters: {
-		jest: ["grid"],
+		jest: ["box", "column", "grid", "grid-overlay", "hidden", "row"],
 		docs: {
 			inlineStories: false,
 			iframeHeight: 500,
