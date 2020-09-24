@@ -15,8 +15,7 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
-		"clean": "rimraf dist stories/header-link.testresults.json",
-		"test:generate-output": "jest --json --outputFile=stories/header-link.testresults.json"
+		"clean": "rimraf dist"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.35",

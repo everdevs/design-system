@@ -3,7 +3,6 @@ import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { Button } from "../src";
-import results from "./button.testresults.json";
 
 const Template: Story = args => {
 	return <Button {...args} />;
@@ -18,7 +17,7 @@ WithLabel.args = {
 const story: Meta = {
 	component: Button,
 	title: "Design System/Atoms/Button",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["button"],
 	},

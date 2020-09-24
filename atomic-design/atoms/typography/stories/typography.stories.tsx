@@ -1,9 +1,7 @@
 import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
-import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import { Typography, TypographyVariant } from "../src";
-import results from "./typography.testresults.json";
 
 const AllTemplate: Story = args => {
 	return (
@@ -50,7 +48,7 @@ Headline3.args = {
 const story: Meta = {
 	component: Typography,
 	title: "Design System/Atoms/Typography",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["typography"],
 	},

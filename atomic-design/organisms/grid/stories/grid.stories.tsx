@@ -1,9 +1,7 @@
 import React from "react";
 import { withWrapper, range } from "@evernest/dev-helpers";
-import { withTests } from "@storybook/addon-jest";
 import { Meta } from "@storybook/react";
 import { Box, Column, Grid, GridOverlay, Row, Stage } from "../src";
-import results from "./grid.testresults.json";
 import { CustomColorBox } from "./shared";
 
 export const Simple: React.FC = () => {
@@ -186,7 +184,7 @@ export const Nesting: React.FC = () => {
 const story: Meta = {
 	component: Grid,
 	title: "Design System/Organisms/Grid",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["grid"],
 		docs: {

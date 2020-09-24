@@ -1,9 +1,7 @@
 import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
-import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import { HeaderLink } from "../src";
-import results from "./header-link.testresults.json";
 
 const Template: Story = args => {
 	return <HeaderLink {...args} />;
@@ -19,7 +17,7 @@ Simple.args = {
 const story: Meta = {
 	component: HeaderLink,
 	title: "Design System/Atoms/Header link",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["header-link"],
 	},

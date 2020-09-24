@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { EvernestLogo, LogoSize, StyledEvernestLogoProps } from "../src";
-import { createTree, withTheme, Wrapper } from "@evernest/dev-helpers";
+import { createTree, withTheme } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 
 const ThemedLogo = withTheme<StyledEvernestLogoProps>(EvernestLogo, theme);

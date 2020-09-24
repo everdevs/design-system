@@ -120,6 +120,7 @@ storybook-static
 
 # tests
 *.testresults.json
+.jest-testresults.json
 
 # This project uses Yarn
 # ignore package-lock.json

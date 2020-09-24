@@ -13,7 +13,6 @@ import { Anchor, Panel, Toggle } from "@evernest/panel";
 import { PropsWithTheme } from "@evernest/theme";
 import { css } from "@emotion/core";
 import { Typography, TypographyVariant } from "@evernest/typography";
-import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import {
 	Footer as FooterArea,
@@ -21,7 +20,6 @@ import {
 	Main as MainArea,
 	PageWithStyles as Page,
 } from "../src";
-import results from "./page.testresults.json";
 
 const IconGrid = styled.div`
 	display: grid;
@@ -220,7 +218,7 @@ export const PageLayout: Story = () => {
 const story: Meta = {
 	component: Grid,
 	title: "Design System/Templates/Page",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["page"],
 		docs: {

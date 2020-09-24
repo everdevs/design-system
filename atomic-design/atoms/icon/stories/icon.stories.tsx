@@ -1,9 +1,7 @@
-import { withTests } from "@storybook/addon-jest";
 import React from "react";
-import { Icon, IconProps, Size } from "../src";
-import results from "./icon.testresults.json";
 import { Story } from "@storybook/react";
 import { withWrapper } from "@evernest/dev-helpers";
+import { Icon, IconProps, Size } from "../src";
 
 const Template: Story<IconProps> = args => {
 	return <Icon {...args} />;
@@ -19,7 +17,7 @@ Simple.args = {
 const story = {
 	component: Icon,
 	title: "Design System/Atoms/Icon",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["icon"],
 	},

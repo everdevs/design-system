@@ -1,9 +1,7 @@
 import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
-import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import { Header } from "../src";
-import results from "./header.testresults.json";
 
 const Template: Story = args => {
 	return <Header {...args} />;
@@ -18,7 +16,7 @@ Simple.args = {
 const story: Meta = {
 	component: Header,
 	title: "Design System/Organisms/Header",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["header"],
 	},

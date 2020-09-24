@@ -1,9 +1,7 @@
 import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
-import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import { Anchor, Panel, StyledPanelProps, Toggle } from "../src";
-import results from "./panel.testresults.json";
 
 const Template: Story<StyledPanelProps> = args => {
 	const [open, setOpen] = React.useState(false);
@@ -36,7 +34,7 @@ Simple.args = {
 const story: Meta = {
 	component: Panel,
 	title: "Design System/Molecules/Panel",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["panel"],
 		docs: {

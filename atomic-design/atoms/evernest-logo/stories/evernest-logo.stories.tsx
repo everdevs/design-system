@@ -1,9 +1,7 @@
 import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
-import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import { EvernestLogo, LogoSize } from "../src";
-import results from "./evernest-logo.testresults.json";
 
 const Template: Story = args => {
 	return <EvernestLogo {...args} />;
@@ -30,7 +28,7 @@ Responsive.args = {
 const story: Meta = {
 	component: EvernestLogo,
 	title: "Design System/Atoms/Evernest logo",
-	decorators: [withTests({ results }), withWrapper()],
+	decorators: [withWrapper()],
 	parameters: {
 		jest: ["evernest-logo"],
 	},
