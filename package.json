@@ -2,6 +2,20 @@
 	"name": "design-system",
 	"version": "0.0.1",
 	"private": true,
+	"keywords": [
+		"a11y",
+		"component library",
+		"design system"
+	],
+	"homepage": "https://everdevs.github.io/design-system",
+	"bugs": {
+		"url": "https://github.com/everdevs/design-system/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/everdevs/design-system.git"
+	},
+	"license": "MIT",
 	"author": {
 		"name": "Gregor Adams",
 		"email": "gregor.adams@evernest.com"
@@ -9,10 +23,10 @@
 	"workspaces": [
 		"atomic-design/atoms/*",
 		"atomic-design/ions/*",
-    "atomic-design/molecules/*",
-    "atomic-design/organisms/*",
-    "atomic-design/templates/*",
-    "utils/*"
+		"atomic-design/molecules/*",
+		"atomic-design/organisms/*",
+		"atomic-design/templates/*",
+		"utils/*"
 	],
 	"scripts": {
 		"add-component": "babel-node bin/add-component.ts --extensions='.ts'",
@@ -22,15 +36,18 @@
 		"prebuild:storybook": "yarn test:generate-output",
 		"build:storybook": "build-storybook -c .storybook -o storybook-static/ -s ./public",
 		"clean": "lerna run clean",
-    "clean:gh-pages": "rimraf node_modules/gh-pages/.cache node_modules/.cache/gh-pages",
-    "predeploy": "yarn clean:gh-pages && yarn build:storybook",
+		"clean:gh-pages": "rimraf node_modules/gh-pages/.cache node_modules/.cache/gh-pages",
+		"predeploy": "yarn clean:gh-pages && yarn build:storybook",
 		"deploy": "gh-pages -d storybook-static/",
 		"predev": "yarn setup",
 		"dev": "yarn storybook",
 		"lint": "yarn stylelint",
 		"ncu": "ncu -u; yarn lerna exec 'ncu -u -x \"/^@evernest/.*$/\"'",
 		"prettier": "prettier 'atomic-design/{atoms,ions,molecules,organisms}/**/*.[jt]s(x)?' 'utils/**/*.[jt]s(x)?'",
+		"prepublish": "yarn build",
 		"refresh": "rimraf node_modules '**/node_modules' yarn.lock && yarn install",
+		"prerelease": "yarn build",
+		"release": "lerna publish --conventional-commits",
 		"run:bin": "lerna run bin",
 		"setup": "yarn run:bin; babel-node init.ts --extensions='.ts'",
 		"snapshot": "yarn build:storybook && dotenv percy-storybook --widths=320,640,960,1280",
@@ -41,9 +58,9 @@
 		"pretest": "yarn setup && yarn lint",
 		"test": "jest --coverage",
 		"pretest:generate-output": "yarn setup",
-    "test:generate-output": "jest --json --outputFile=.jest-testresults.json",
-    "test:watch": "lerna run test:watch --parallel",
-    "test:update": "lerna run test:update --parallel",
+		"test:generate-output": "jest --json --outputFile=.jest-testresults.json",
+		"test:update": "lerna run test:update --parallel",
+		"test:watch": "lerna run test:watch --parallel",
 		"xo": "xo"
 	},
 	"lint-staged": {
@@ -98,8 +115,8 @@
 		"@types/react-dom": "^16.9.8",
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.1.0",
+		"babel-plugin-emotion": "^10.0.33",
 		"babel-plugin-istanbul": "^6.0.0",
-    "babel-plugin-emotion": "^10.0.33",
 		"camelcase": "^6.0.0",
 		"cross-env": "^7.0.2",
 		"dotenv-cli": "^4.0.0",
@@ -130,7 +147,7 @@
 		"react-docgen-typescript-loader": "^3.7.2",
 		"react-dom": "^16.13.1",
 		"react-is": "^16.13.1",
-    "react-test-renderer": "^16.13.1",
+		"react-test-renderer": "^16.13.1",
 		"regenerator-runtime": "^0.13.7",
 		"rimraf": "^3.0.2",
 		"rollup": "^2.28.1",

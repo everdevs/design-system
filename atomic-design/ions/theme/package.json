@@ -1,6 +1,19 @@
 {
 	"name": "@evernest/theme",
 	"version": "0.0.0",
+	"keywords": [
+		"a11y",
+		"component library",
+		"design system"
+	],
+	"homepage": "https://everdevs.github.io/design-system",
+	"bugs": {
+		"url": "https://github.com/everdevs/design-system/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/everdevs/design-system.git"
+	},
 	"license": "MIT",
 	"author": {
 		"name": "Gregor Adams",
@@ -11,7 +24,7 @@
 	"typings": "dist/index.d.ts",
 	"files": [
 		"dist",
-      "index.js"
+		"index.js"
 	],
 	"scripts": {
 		"build": "rollup -c",
@@ -21,5 +34,7 @@
 	"dependencies": {
 		"@evernest/tokens": "^0.0.0"
 	},
-	"devDependencies": {}
+	"publishConfig": {
+		"access": "public"
+	}
 }

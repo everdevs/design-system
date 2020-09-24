@@ -1,6 +1,20 @@
 {
 	"name": "@evernest/button",
 	"version": "0.0.0",
+	"keywords": [
+		"a11y",
+		"component library",
+		"design system",
+		"button"
+	],
+	"homepage": "https://everdevs.github.io/design-system",
+	"bugs": {
+		"url": "https://github.com/everdevs/design-system/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/everdevs/design-system.git"
+	},
 	"license": "MIT",
 	"author": {
 		"name": "Gregor Adams",
@@ -11,23 +25,28 @@
 	"typings": "dist/index.d.ts",
 	"files": [
 		"dist",
-      "index.js"
+		"index.js"
 	],
 	"scripts": {
 		"build": "rollup -c",
 		"clean": "rimraf dist",
-    "test:update": "jest --updateSnapshot",
-    "test:watch": "jest --watch --coverage"
+		"test:update": "jest --updateSnapshot",
+		"test:watch": "jest --watch --coverage"
 	},
 	"dependencies": {
+		"@evernest/theme": "^0.0.0",
+		"@evernest/tokens": "^0.0.0"
+	},
+	"devDependencies": {
 		"@emotion/core": "^10.0.35",
 		"@emotion/styled": "^10.0.27",
-		"@evernest/theme": "^0.0.0",
-		"@evernest/tokens": "^0.0.0",
+		"@evernest/dev-helpers": "^0.0.0",
 		"@types/react": "^16.9.49",
 		"react": "^16.13.1"
 	},
-	"devDependencies": {
-		"@evernest/dev-helpers": "^0.0.0"
+	"peerDependencies": {
+		"@emotion/core": ">=10.0.35",
+		"@emotion/styled": ">=10.0.27",
+		"react": ">=16.13.1"
 	}
 }

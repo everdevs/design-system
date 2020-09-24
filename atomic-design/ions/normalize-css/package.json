@@ -1,6 +1,19 @@
 {
 	"name": "@evernest/normalize-css",
 	"version": "0.0.0",
+	"keywords": [
+		"a11y",
+		"component library",
+		"design system"
+	],
+	"homepage": "https://everdevs.github.io/design-system",
+	"bugs": {
+		"url": "https://github.com/everdevs/design-system/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/everdevs/design-system.git"
+	},
 	"license": "MIT",
 	"author": {
 		"name": "Gregor Adams",
@@ -11,7 +24,7 @@
 	"typings": "dist/index.d.ts",
 	"files": [
 		"dist",
-      "index.js"
+		"index.js"
 	],
 	"scripts": {
 		"bin": "babel-node bin/prepare-normalize.ts --extensions='.ts'",
@@ -20,11 +33,14 @@
 		"clean": "rimraf dist; rimraf src/normalize-css.ts"
 	},
 	"dependencies": {
-		"@types/node": "^14.11.1",
-		"normalize.css": "^8.0.1",
-		"ts-node": "^9.0.0"
+		"normalize.css": "^8.0.1"
 	},
 	"devDependencies": {
-		"pify": "^5.0.0"
+		"@types/node": "^14.11.1",
+		"pify": "^5.0.0",
+		"ts-node": "^9.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
