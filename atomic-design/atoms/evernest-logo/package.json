@@ -16,7 +16,9 @@
 	"scripts": {
 		"build": "rollup -c",
 		"clean": "rimraf dist stories/evernest-logo.testresults.json",
-		"test:generate-output": "jest --json --outputFile=stories/evernest-logo.testresults.json"
+		"test:generate-output": "jest --json --outputFile=stories/evernest-logo.testresults.json",
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch --coverage"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.35",
