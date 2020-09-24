@@ -7,6 +7,7 @@ import React from "react";
 export function random(max: number, min: number = 0): number {
 	return Math.floor(Math.random() * max) + min;
 }
+
 export function randomColor(): string {
 	return `hsla(${random(359)},50%,50%,0.5)`;
 }
@@ -36,6 +37,7 @@ export const Wrapper: React.FC = ({ children }) => (
 	</ThemeProvider>
 );
 
+/* istanbul ignore next */
 export const withWrapper = () => storyFn => <Wrapper>{storyFn()}</Wrapper>;
 
 export const ColorBox = styled.div<{

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorBox can change have top/bottom margins 1`] = `
+<div
+  className="css-1he52jg"
+  color="white"
+  height="2em"
+/>
+`;
+
+exports[`ColorBox can change the background 1`] = `
+<div
+  className="css-uzy64j"
+  color="white"
+  height="2em"
+/>
+`;
+
+exports[`ColorBox can change the color 1`] = `
+<div
+  className="css-198z4ts"
+  color="red"
+  height="2em"
+/>
+`;
+
+exports[`ColorBox can change the height 1`] = `
+<div
+  className="css-bt35fh"
+  color="white"
+  height="10px"
+/>
+`;
+
+exports[`Wrapper renders correctly 1`] = `null`;
+
+exports[`withWrapper returns a new  1`] = `null`;
