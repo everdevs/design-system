@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu can be vertical or horizontal 1`] = `
+<nav
+  className="css-1a2ujo1"
+  direction="vertical"
+/>
+`;
+
+exports[`Menu can be vertical or horizontal 2`] = `
+<nav
+  className="css-qts83a"
+  direction="horizontal"
+/>
+`;
