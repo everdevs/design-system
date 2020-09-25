@@ -1,5 +1,5 @@
 import { css, Global } from "@emotion/core";
-import { theme } from "@evernest/theme";
+import { PropsWithTheme, theme } from "@evernest/theme";
 import styled from "@emotion/styled";
 import { ThemeProvider } from "emotion-theming";
 import React from "react";
@@ -30,10 +30,33 @@ export const globalStyle = css`
 	}
 `;
 
+export const StyledWrapper = styled.div<PropsWithTheme>`
+	${({ theme: { mq, layout, spaces } }) => css`
+		--spacing-xxxs: ${spaces.xxxs}px;
+		--spacing-xxs: ${spaces.xxs}px;
+		--spacing-xs: ${spaces.xs}px;
+		--spacing-s: ${spaces.s}px;
+		--spacing-m: ${spaces.m}px;
+		--spacing-l: ${spaces.l}px;
+		--spacing-xl: ${spaces.xl}px;
+		--spacing-xxl: ${spaces.xxl}px;
+		--spacing-xxxl: ${spaces.xxxl}px;
+		--header-height: ${layout.header.height.s}px;
+		@media ${mq.m} {
+			--header-height: ${layout.header.height.m}px;
+		}
+		@media ${mq.l} {
+			--header-height: ${layout.header.height.l}px;
+		}
+	`};
+`;
+
 export const Wrapper: React.FC = ({ children }) => (
 	<ThemeProvider theme={theme}>
-		<Global styles={globalStyle} />
-		{children}
+		<StyledWrapper>
+			<Global styles={globalStyle} />
+			{children}
+		</StyledWrapper>
 	</ThemeProvider>
 );
 
