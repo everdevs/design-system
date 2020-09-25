@@ -2,26 +2,7 @@
 
 exports[`Grid can show overflow or hide it 1`] = `
 <div
-  className="css-1ewmkw0"
->
-  <div
-    className="css-10185dy"
-    justify="flex-start"
-  >
-    <div
-      className="css-hz6nyv"
-      s="var(--grid-colcount)"
-      suppressHydrationWarning={true}
-    >
-      1
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Grid can show overflow or hide it 2`] = `
-<div
-  className="css-1dh5pml"
+  className="css-qmizr8"
 >
   <div
     className="css-1ewmkw0"
@@ -36,6 +17,33 @@ exports[`Grid can show overflow or hide it 2`] = `
         suppressHydrationWarning={true}
       >
         1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid can show overflow or hide it 2`] = `
+<div
+  className="css-qmizr8"
+>
+  <div
+    className="css-1dh5pml"
+  >
+    <div
+      className="css-1ewmkw0"
+    >
+      <div
+        className="css-10185dy"
+        justify="flex-start"
+      >
+        <div
+          className="css-hz6nyv"
+          s="var(--grid-colcount)"
+          suppressHydrationWarning={true}
+        >
+          1
+        </div>
       </div>
     </div>
   </div>
