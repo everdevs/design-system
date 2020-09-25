@@ -1,17 +1,6 @@
 {
 	"name": "@evernest/accordion",
 	"version": "0.0.0",
-	"license": "MIT",
-	"author": {
-		"name": "Adrian Payne",
-		"email": "adrian.payne@evernest.com"
-	},
-	"maintainers": [
-		{
-			"name": "Gregor Adams",
-			"email": "gregor.adams@evernest.com"
-		}
-	],
 	"keywords": [
 		"a11y",
 		"component library",
@@ -25,6 +14,11 @@
 		"type": "git",
 		"url": "git+https://github.com/everdevs/design-system.git"
 	},
+	"license": "MIT",
+	"author": {
+		"name": "Adrian Payne",
+		"email": "adrian.payne@evernest.com"
+	},
 	"main": "index.js",
 	"module": "dist/esm/index.js",
 	"typings": "dist/index.d.ts",
@@ -34,21 +28,23 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
-		"clean": "rimraf dist stories/accordion.testresults.json",
+		"clean": "rimraf dist",
 		"test:update": "jest --updateSnapshot",
 		"test:watch": "jest --watch --coverage"
 	},
 	"dependencies": {
-		"@evernest/theme": "^0.0.0",
-		"@evernest/tokens": "^0.0.0",
+		"@evernest/icon": "^0.0.1",
+		"@evernest/theme": "^0.0.1",
+		"@evernest/tokens": "^0.0.1",
 		"uuid": "^8.3.0"
 	},
 	"devDependencies": {
 		"@emotion/core": "^10.0.35",
 		"@emotion/styled": "^10.0.27",
-		"@evernest/dev-helpers": "^0.0.0",
+		"@evernest/dev-helpers": "^0.0.1",
 		"@types/react": "^16.9.48",
-		"@types/uuid": "^8.3.0"
+		"@types/uuid": "^8.3.0",
+		"react": "^16.13.1"
 	},
 	"peerDependencies": {
 		"@emotion/core": ">=10.0.35",
