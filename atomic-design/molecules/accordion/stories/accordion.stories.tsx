@@ -4,11 +4,11 @@ import { Meta, Story } from "@storybook/react";
 import { Accordion, StyledAccordionProps } from "../src";
 
 const Template: Story<StyledAccordionProps> = args => {
-	return <Accordion {...args} />;
+	return <Accordion title={args.title} {...args} />;
 };
 
 const MultipleTemplate: Story = ({ items }) => {
-	return items.map((args, i) => <Accordion key={i} {...args} />);
+	return items.map((args, i) => <Accordion key={i} title={args.title} {...args} />);
 };
 
 export const Simple = Template.bind({});
@@ -16,14 +16,7 @@ export const Multiple = MultipleTemplate.bind({});
 
 Simple.args = {
 	title: "Heading",
-	children: (
-		<ul>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-		</ul>
-	),
+	children: <p>Some content that is now visible.</p>,
 };
 
 Multiple.args = {
