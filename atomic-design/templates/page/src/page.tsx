@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 import { PropsWithTheme, theme } from "@evernest/theme";
 import { ThemeProvider } from "emotion-theming";
-import { FontFaces, GlobalStyles, Normalize } from "./styles";
+import { GlobalStyles, Normalize } from "./styles";
 
 export const Page = styled.div<PropsWithTheme>`
 	display: grid;
@@ -36,7 +36,6 @@ export const PageWithStyles: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 	<>
 		<Normalize />
 		<GlobalStyles />
-		<FontFaces />
 		<Page className={className}>{children}</Page>
 	</>
 );
