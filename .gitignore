@@ -127,4 +127,5 @@ storybook-static
 package-lock.json
 
 ## Generated files
-package-names.json
+/package-names.json
+/tsconfig.json
