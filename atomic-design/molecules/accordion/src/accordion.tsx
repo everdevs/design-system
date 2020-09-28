@@ -15,9 +15,9 @@ import {
 export const StyledAccordion = styled("div", {
 	shouldForwardProp: (propName: string) => !["theme"].includes(propName),
 })<StyledAccordionProps>`
-	${({ theme }) => css`
-		color: ${theme.palette.white.css};
-		border-bottom: 1px solid ${theme.palette.brightGrey.css};
+	${({ theme: { palette } }) => css`
+		color: ${palette.white.css};
+		border-bottom: 1px solid ${palette.brightGrey.css};
 	`};
 `;
 
@@ -68,7 +68,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 						onClick={handleOnClick}
 					>
 						<StyledInnerButtonWrapper>
-							{title}
+							<span data-test-id="styled-inner-button-wrapper-label">{title}</span>
 							<Icon aria-hidden="true" size={Size.medium} icon="chevronDown" />
 						</StyledInnerButtonWrapper>
 					</StyledButton>

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion matches snapshot 1`] = `
+<div
+  className="css-j9ap8e"
+>
+  <div>
+    <button
+      aria-controls="fakeId-panel"
+      aria-expanded={false}
+      className="css-nakaqc"
+      id="fakeId"
+      onClick={[Function]}
+    >
+      <div
+        className="css-xgqrj6"
+      >
+        <span
+          data-test-id="styled-inner-button-wrapper-label"
+        >
+          Title
+        </span>
+        <svg
+          className="css-1mvn3rv"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+        >
+          <title>
+            Chevron down
+          </title>
+          <path
+            className="css-1mvn3rv"
+            d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+          />
+        </svg>
+      </div>
+    </button>
+  </div>
+  <div
+    aria-labelledby="fakeId"
+    className="css-zjm8z1"
+    id="fakeId-panel"
+    role="region"
+  >
+    content
+  </div>
+</div>
+`;
