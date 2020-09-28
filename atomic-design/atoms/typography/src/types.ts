@@ -6,14 +6,12 @@ export enum TypographyVariant {
 	h1 = "h1",
 	h2 = "h2",
 	h3 = "h3",
+	h4 = "h4",
 	body = "body",
+	body2 = "body2",
 }
 
-export interface RawStyledTypographyProps extends PropsWithTheme<TypographyElement> {
-	/** Add types */
-}
-
-export interface StyledTypographyProps extends RawStyledTypographyProps {
+export interface StyledTypographyProps extends PropsWithTheme<TypographyElement> {
 	/** Add types */
 	/** @default TypographyVariant.body */
 	variant?: TypographyVariant;
