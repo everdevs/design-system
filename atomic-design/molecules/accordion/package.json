@@ -4,7 +4,10 @@
 	"keywords": [
 		"a11y",
 		"component library",
-		"design system"
+		"design system",
+		"accordion",
+		"collapsable",
+		"expandable"
 	],
 	"homepage": "https://everdevs.github.io/design-system",
 	"bugs": {
