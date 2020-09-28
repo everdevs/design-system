@@ -2,7 +2,7 @@ import { withTheme, createTree } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 import { mount } from "enzyme";
 import React from "react";
-import { Accordion, AccordionProps, StyledPanel, StyledButton, StyledAccordion } from "../src";
+import { Accordion, AccordionProps, StyledPanel, StyledButton } from "../src";
 
 const ThemedAccordion = withTheme<AccordionProps>(Accordion, theme);
 
