@@ -51,7 +51,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 	({ children, title, headerComponent, ...props }, ref) => {
 		const [expanded, setExpanded] = React.useState(false);
 
-		const handleOnClick = () => setExpanded(!expanded);
+		const handleClick = () => setExpanded(!expanded);
 
 		const buttonId = React.useMemo(() => uuid(), []);
 		const panelId = `${buttonId}-panel`;
@@ -65,7 +65,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 						aria-controls={panelId}
 						aria-expanded={expanded}
 						id={buttonId}
-						onClick={handleOnClick}
+						onClick={handleClick}
 					>
 						<StyledInnerButtonWrapper>
 							<span data-test-id="styled-inner-button-wrapper-label">{title}</span>

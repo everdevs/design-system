@@ -9,16 +9,8 @@ export interface AccordionProps extends PropsWithTheme {
 
 export interface StyledAccordionProps extends PropsWithTheme<AccordionElement> {}
 
-export interface StyledButtonProps extends PropsWithTheme<HTMLButtonElement> {
-	"aria-expanded": boolean;
-	"aria-controls": string;
-	id: string;
-	onClick: () => void;
-}
+export interface StyledButtonProps extends PropsWithTheme<HTMLButtonElement> {}
 
 export interface StyledPanelProps extends PropsWithTheme<AccordionElement> {
-	"aria-labelledby": string;
 	expanded: boolean;
-	id: string;
-	role: string;
 }
