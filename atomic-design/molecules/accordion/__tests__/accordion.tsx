@@ -2,9 +2,7 @@ import { withTheme, createTree } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 import { mount } from "enzyme";
 import React from "react";
-import { Accordion, AccordionProps, StyledPanel } from "../src";
-
-jest.mock("uuid");
+import { Accordion, AccordionProps, StyledPanel, StyledButton, StyledAccordion } from "../src";
 
 const ThemedAccordion = withTheme<AccordionProps>(Accordion, theme);
 
@@ -25,4 +23,15 @@ test("Accordion renders children", () => {
 test("Accordion matches snapshot", () => {
 	const closed = createTree(<ThemedAccordion title="Title">content</ThemedAccordion>);
 	expect(closed).toMatchSnapshot();
+});
+
+test("Accordion prop 'expanded' toggles on click", () => {
+	const wrapper = mount(<ThemedAccordion title="Title" />);
+	const button = wrapper.find(StyledButton);
+
+	button.simulate("click");
+	expect(wrapper.find(StyledPanel).props().expanded).toEqual(true);
+
+	button.simulate("click");
+	expect(wrapper.find(StyledPanel).props().expanded).toEqual(false);
 });
