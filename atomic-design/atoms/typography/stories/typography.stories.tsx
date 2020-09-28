@@ -6,10 +6,22 @@ import { Typography, TypographyVariant } from "../src";
 const AllTemplate: Story = args => {
 	return (
 		<>
+			<hr />
+			<Typography {...args} variant={TypographyVariant.h3}>
+				Headlines
+			</Typography>
+			<hr />
 			<Typography {...args} variant={TypographyVariant.h1} />
 			<Typography {...args} variant={TypographyVariant.h2} />
 			<Typography {...args} variant={TypographyVariant.h3} />
+			<Typography {...args} variant={TypographyVariant.h4} />
+			<hr />
+			<Typography {...args} variant={TypographyVariant.h3}>
+				Copy
+			</Typography>
+			<hr />
 			<Typography {...args} variant={TypographyVariant.body} />
+			<Typography {...args} variant={TypographyVariant.body2} />
 		</>
 	);
 };
@@ -43,6 +55,27 @@ export const Headline3 = Template.bind({});
 Headline3.args = {
 	children: "Headline 3",
 	variant: TypographyVariant.h3,
+};
+
+export const Headline4 = Template.bind({});
+
+Headline4.args = {
+	children: "Headline 4",
+	variant: TypographyVariant.h4,
+};
+
+export const Body = Template.bind({});
+
+Body.args = {
+	children: "Body",
+	variant: TypographyVariant.body,
+};
+
+export const Body2 = Template.bind({});
+
+Body2.args = {
+	children: "Body 2",
+	variant: TypographyVariant.body2,
 };
 
 const story: Meta = {
