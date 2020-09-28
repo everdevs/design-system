@@ -49,7 +49,7 @@
 		"prerelease": "yarn build",
 		"release": "lerna publish --conventional-commits",
 		"run:bin": "lerna run bin",
-		"setup": "yarn run:bin; babel-node init.ts --extensions='.ts'",
+		"setup": "babel-node init.ts --extensions='.ts' && yarn run:bin",
 		"snapshot": "yarn build:storybook && dotenv percy-storybook --widths=320,640,960,1280",
 		"spj": "sort-package-json; lerna exec sort-package-json && prettier '**/package.json' --write",
 		"prestorybook": "yarn test:generate-output",

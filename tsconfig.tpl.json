@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "alwaysStrict": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "lib": [
+            "dom",
+            "esnext"
+        ],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "jsx": "react",
+        "sourceMap": true,
+        "strict": false,
+        "target": "es6",
+        "types": [
+            "jest",
+            "jest-enzyme"
+        ],
+        "baseUrl": "./"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

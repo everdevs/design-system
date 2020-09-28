@@ -58,7 +58,7 @@ async function getNames() {
 getNames().then(async names => {
 	await writeFile(path.resolve(__dirname, "package-names.json"), JSON.stringify(names, null, 4));
 	console.log("Generated package names as JSON");
-	const tsconfig = require("./tsconfig.json");
+	const tsconfig = await import("./tsconfig.tpl.json");
 	const paths = {
 		...makeAlias("utils", names.utils),
 		...makeAlias("ions", names.ions, true),
