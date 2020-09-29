@@ -5,13 +5,13 @@ exports[`Accordion matches snapshot 1`] = `
   className="css-qmizr8"
 >
   <div
-    className="css-j9ap8e"
+    className="css-dq2y9"
   >
     <div>
       <button
         aria-controls="fakeId-panel"
         aria-expanded={false}
-        className="css-nakaqc"
+        className="css-6b2ku1"
         id="fakeId"
         onClick={[Function]}
       >
