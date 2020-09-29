@@ -29,7 +29,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
 	color: currentColor;
 	font-family: inherit;
 	font-size: inherit;
-	padding: 0;
+	padding: 0 0 var(--spacing-xs);
 	width: 100%;
 `;
 
