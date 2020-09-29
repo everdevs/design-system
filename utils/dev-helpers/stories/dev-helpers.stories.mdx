@@ -29,9 +29,9 @@ Since most components need a theme to render correctly you might have to wrap yo
 
 ```js
 import { Wrapper } from "@evernest/dev-helpers";
-import { Accordion, AccordionPops } from "@evernest/accordion";
+import { Accordion, AccordionProps } from "@evernest/accordion";
 
-const WrappedAccordion: React.FC<AccordionPops> = (props) => <Wrapper><Accordion {...props}/></Wrapper>
+const WrappedAccordion: React.FC<AccordionProps> = (props) => <Wrapper><Accordion {...props}/></Wrapper>
 
 test("Accordion can do something", () => {
 	const wrapper = mount(<WrappedAccordion/>);
@@ -48,9 +48,9 @@ create a themed version of your component with `withTheme`.
 ```js
 import { withTheme } from "@evernest/dev-helpers";
 import {theme } from "@evernest/theme";
-import { Button, ButtonPops } from "@evernest/button";
+import { Button, ButtonProps } from "@evernest/button";
 
-const ThemedButton = withTheme<ButtonPops>(Button, theme)
+const ThemedButton = withTheme<ButtonProps>(Button, theme)
 
 test("Button can do something", () => {
 	const wrapper = mount(<ThemedButton/>);
