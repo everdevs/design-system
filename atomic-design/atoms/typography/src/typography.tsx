@@ -19,7 +19,6 @@ export const StyledHeadline3 = styled.h3<StyledTypographyProps>`
 	font-weight: normal;
 	font-size: 24px;
 	line-height: 36px;
-	margin: 0 0 var(--spacing-xs);
 `;
 
 export const StyledHeadline4 = styled.h4<StyledTypographyProps>`
@@ -27,7 +26,7 @@ export const StyledHeadline4 = styled.h4<StyledTypographyProps>`
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 24px;
-	margin: 0 0 var(--spacing-xs);
+	margin: 0;
 `;
 
 export const Body = styled.div<StyledTypographyProps>`
