@@ -1,6 +1,7 @@
 import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
 import { Meta, Story } from "@storybook/react";
+import { Typography, TypographyVariant } from "@evernest/typography";
 import { Accordion, StyledAccordionProps } from "../src";
 
 const Template: Story<StyledAccordionProps> = args => {
@@ -12,15 +13,21 @@ const MultipleTemplate: Story = ({ items }) => {
 };
 
 export const Simple = Template.bind({});
-export const Multiple = MultipleTemplate.bind({});
-
 Simple.args = {
 	title: "Heading",
 	children: <p>Some content that is now visible.</p>,
 };
 
+export const Multiple = MultipleTemplate.bind({});
 Multiple.args = {
 	items: [Simple.args, Simple.args],
+};
+
+export const WithHeaderComponent = Template.bind({});
+WithHeaderComponent.args = {
+	title: "Heading",
+	children: <p>Some content that is now visible.</p>,
+	headerComponent: props => <Typography {...props} variant={TypographyVariant.h4} />,
 };
 
 const story: Meta = {
