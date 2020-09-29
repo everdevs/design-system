@@ -1,0 +1,60 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Docs/Dev Helpers" />
+
+# Dev Helpers
+
+The `dev-helpers` package provides several components and utilities to help during the development process.
+
+## Install
+
+### NPM
+
+```bash
+npm install @evernest/dev-helpers --save
+```
+
+### Yarn
+
+```bash
+yarn add @evernest/dev-helpers
+```
+
+## Ensure theme injection
+
+### Wrapper
+
+Since most components need a theme to render correctly you might have to wrap your component in a
+`ThemeProvider`. You can use `Wrapper` to make sure everything renders as expected.
+
+```js
+import { Wrapper } from "@evernest/dev-helpers";
+import { Accordion, AccordionPops } from "@evernest/accordion";
+
+const WrappedAccordion: React.FC<AccordionPops> = (props) => <Wrapper><Accordion {...props}/></Wrapper>
+
+test("Accordion can do something", () => {
+	const wrapper = mount(<WrappedAccordion/>);
+	expect(wrapper.find(Accordion)); // Add expectations
+});
+```
+
+### withTheme
+
+In some cases, enzyme methods must be run on the root component, and you cannot use `Wrapper` or
+`ThemeProvider`. To make ensure that your component has access to the theme, you can manually add it or
+create a themed version of your component with `withTheme`.
+
+```js
+import { withTheme } from "@evernest/dev-helpers";
+import {theme } from "@evernest/theme";
+import { Button, ButtonPops } from "@evernest/button";
+
+const ThemedButton = withTheme<ButtonPops>(Button, theme)
+
+test("Button can do something", () => {
+	const wrapper = mount(<ThemedButton/>);
+	expect(wrapper); // Add expectations
+});
+```
+
