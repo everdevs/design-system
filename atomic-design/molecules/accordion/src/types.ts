@@ -4,7 +4,7 @@ export type AccordionElement = HTMLDivElement;
 
 export interface AccordionProps extends PropsWithTheme {
 	title: string;
-	headerComponent?: keyof JSX.IntrinsicElements | any;
+	headerComponent?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
 
 export interface StyledAccordionProps extends PropsWithTheme<AccordionElement> {}
