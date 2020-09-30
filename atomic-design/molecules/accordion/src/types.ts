@@ -1,16 +1,12 @@
 import { PropsWithTheme } from "@evernest/theme";
+import { SpringConfig } from "react-spring";
 
 export type AccordionElement = HTMLDivElement;
 
 export interface AccordionProps extends PropsWithTheme {
 	title: string;
+	springConfig?: SpringConfig;
 	headerComponent?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
 
-export interface StyledAccordionProps extends PropsWithTheme<AccordionElement> {}
-
-export interface StyledButtonProps extends PropsWithTheme<HTMLButtonElement> {}
-
-export interface StyledPanelProps extends PropsWithTheme<AccordionElement> {
-	expanded: boolean;
-}
+export interface StyledAccordionProps extends PropsWithTheme<HTMLDivElement> {}
