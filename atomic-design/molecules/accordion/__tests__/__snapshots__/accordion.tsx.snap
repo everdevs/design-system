@@ -11,12 +11,12 @@ exports[`Accordion matches snapshot 1`] = `
       <button
         aria-controls="fakeId-panel"
         aria-expanded={false}
-        className="css-6b2ku1"
+        className="css-fvv6jt"
         id="fakeId"
         onClick={[Function]}
       >
         <div
-          className="css-xgqrj6"
+          className="css-hqn8lg"
         >
           <span
             data-test-id="styled-inner-button-wrapper-label"
@@ -41,12 +41,21 @@ exports[`Accordion matches snapshot 1`] = `
       </button>
     </div>
     <div
-      aria-labelledby="fakeId"
-      className="css-zjm8z1"
-      id="fakeId-panel"
-      role="region"
+      className="css-zlrsjy"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
     >
-      content
+      <div
+        aria-labelledby="fakeId"
+        className="css-15kpvws"
+        id="fakeId-panel"
+        role="region"
+      >
+        content
+      </div>
     </div>
   </div>
 </div>

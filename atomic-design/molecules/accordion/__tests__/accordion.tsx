@@ -1,7 +1,7 @@
-import { Wrapper, createTree } from "@evernest/dev-helpers";
+import { createTree, Wrapper } from "@evernest/dev-helpers";
 import { mount } from "enzyme";
 import React from "react";
-import { Accordion, AccordionProps, StyledPanel, StyledButton } from "../src";
+import { Accordion, AccordionProps, StyledButton, StyledPanel } from "../src";
 
 const WrappedAccordion: React.FC<AccordionProps> = props => (
 	<Wrapper>
@@ -33,8 +33,8 @@ test("Accordion prop 'expanded' toggles on click", () => {
 	const button = wrapper.find(StyledButton);
 
 	button.simulate("click");
-	expect(wrapper.find(StyledPanel).props().expanded).toEqual(true);
+	expect(wrapper.find(StyledButton).props()["aria-expanded"]).toEqual(true);
 
 	button.simulate("click");
-	expect(wrapper.find(StyledPanel).props().expanded).toEqual(false);
+	expect(wrapper.find(StyledButton).props()["aria-expanded"]).toEqual(false);
 });
