@@ -2,7 +2,10 @@ import { Icons } from "./types";
 
 export const icons: Icons = {
 	"24": {
+		/* @todo: replace with custom icon */
 		chevronDown: "M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z",
+		/* @todo: replace with custom icon */
+		chevronUp: "M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z",
 		facebook:
 			"M14.74 6.24h1.57V3.5A19.66 19.66 0 0014 3.38c-2.27 0-3.83 1.42-3.83 4.05v2.41H7.69v3.07h2.5v7.71h3.07v-7.71h2.41l.38-3.07h-2.79V7.73c0-.88.24-1.49 1.48-1.49z",
 		instagram:
