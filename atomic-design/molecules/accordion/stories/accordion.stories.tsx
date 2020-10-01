@@ -1,11 +1,12 @@
-import { withWrapper } from "@evernest/dev-helpers";
+import { withWrapper, ColorBox } from "@evernest/dev-helpers";
+import { theme } from "@evernest/theme";
 import { Typography, TypographyVariant } from "@evernest/typography";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { Accordion, StyledAccordionProps } from "../src";
 
 const ExampleAccordionContent = (
-	<div style={{ color: "#ffffff" }}>
+	<div>
 		<p>Some content that is now visible.</p>
 		<ul>
 			<li>List Item</li>
@@ -17,9 +18,9 @@ const ExampleAccordionContent = (
 
 const Template: Story<StyledAccordionProps> = args => {
 	return (
-		<div style={{ color: "#ffffff" }}>
+		<ColorBox background={theme.palette.darkGrey.css} color={theme.palette.white.css}>
 			<Accordion title={args.title} {...args} />
-		</div>
+		</ColorBox>
 	);
 };
 
@@ -59,7 +60,6 @@ const story: Meta = {
 	title: "Design System/Molecules/Accordion",
 	decorators: [withWrapper()],
 	parameters: {
-		backgrounds: { default: "dark" },
 		jest: ["accordion"],
 	},
 	argTypes: {
