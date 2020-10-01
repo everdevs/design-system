@@ -23,8 +23,17 @@ test("Accordion renders children", () => {
 	expect(wrapper.find(StyledPanel).text()).toEqual(text);
 });
 
-test("Accordion matches snapshot", () => {
+test("Accordion with title matches snapshot ", () => {
 	const closed = createTree(<WrappedAccordion title="Title">content</WrappedAccordion>);
+	expect(closed).toMatchSnapshot();
+});
+
+test("Accordion with springConfig matches snapshot", () => {
+	const closed = createTree(
+		<WrappedAccordion title="Title" springConfig={{ friction: 3, mass: 4 }}>
+			content
+		</WrappedAccordion>
+	);
 	expect(closed).toMatchSnapshot();
 });
 
