@@ -4,7 +4,7 @@ import { HeaderElement, StyledHeaderProps } from "./types";
 import { css } from "@emotion/core";
 import { useWindowScroll } from "react-use";
 import { PropsWithTheme } from "@evernest/theme";
-import { toProgress } from "./utils";
+import { toOpacityValue } from "./utils";
 
 export const StyledHeader = styled.div<StyledHeaderProps>`
 	height: var(--header-height, inherit);
@@ -43,7 +43,7 @@ export const StyledHeaderContent = styled.div<PropsWithTheme>`
 export const Header = React.forwardRef<HeaderElement, StyledHeaderProps>(
 	({ children, translucent, fadeOffset, ...props }, ref) => {
 		const { y } = useWindowScroll();
-		const opacity = toProgress(translucent ? y : fadeOffset, fadeOffset);
+		const opacity = toOpacityValue(translucent ? y : fadeOffset, fadeOffset);
 		return (
 			<StyledHeader {...props} ref={ref}>
 				<StyledHeaderBackground {...props} style={{ opacity }} />
