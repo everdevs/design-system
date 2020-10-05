@@ -1,24 +1,58 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { StyledHeaderProps, HeaderElement } from "./types";
+import { HeaderElement, StyledHeaderProps } from "./types";
 import { css } from "@emotion/core";
+import { useWindowScroll } from "react-use";
+import { PropsWithTheme } from "@evernest/theme";
+import { toProgress } from "./utils";
 
 export const StyledHeader = styled.div<StyledHeaderProps>`
 	height: var(--header-height, inherit);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
 	${({ theme: { palette }, fixed, plain, sticky }) => css`
 		position: ${fixed ? "fixed" : sticky ? "sticky" : "absolute"};
-		background: ${plain ? "inherit" : palette.darkGrey.css};
+		background: ${plain ? "inherit" : "none"};
 		color: ${plain ? "currentColor" : palette.white.css};
 	`};
 `;
 
-export const Header = React.forwardRef<HeaderElement, StyledHeaderProps>((props, ref) => (
-	<StyledHeader {...props} ref={ref} />
-));
+export const StyledHeaderBackground = styled.div<StyledHeaderProps>`
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	${({ theme: { palette }, plain }) => css`
+		background: ${plain ? "inherit" : palette.darkGrey.css};
+	`};
+`;
+export const StyledHeaderContent = styled.div<PropsWithTheme>`
+	height: inherit;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 1;
+	position: relative;
+`;
+
+export const Header = React.forwardRef<HeaderElement, StyledHeaderProps>(
+	({ children, translucent, fadeOffset, ...props }, ref) => {
+		const { y } = useWindowScroll();
+		const opacity = toProgress(translucent ? y : fadeOffset, fadeOffset);
+		return (
+			<StyledHeader {...props} ref={ref}>
+				<StyledHeaderBackground {...props} style={{ opacity }} />
+				<StyledHeaderContent {...props}>{children}</StyledHeaderContent>
+			</StyledHeader>
+		);
+	}
+);
+
+Header.defaultProps = {
+	fadeOffset: 0,
+};
