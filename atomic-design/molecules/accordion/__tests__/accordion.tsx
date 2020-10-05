@@ -2,7 +2,7 @@ import { createTree, Wrapper } from "@evernest/dev-helpers";
 import { mount } from "enzyme";
 import React from "react";
 import { Accordion, AccordionProps, StyledButton, StyledPanel } from "../src";
-import MockedResizeObserver from "../__mocks__/resizeObserver";
+import MockedResizeObserver from "../__mocks__/resize-observer";
 
 const WrappedAccordion: React.FC<AccordionProps> = props => (
 	<Wrapper>

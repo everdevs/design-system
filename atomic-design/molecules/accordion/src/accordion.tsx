@@ -5,7 +5,7 @@ import React from "react";
 import { animated, useSpring } from "react-spring";
 import { v4 as uuid } from "uuid";
 import { AccordionElement, AccordionProps, StyledAccordionProps } from "./types";
-import useMeasure from "./useMeasure";
+import useMeasure from "./use-measure";
 
 /* @todo: revisit border style with token refactor */
 export const StyledAccordion = styled("div", {
