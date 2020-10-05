@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accordion matches snapshot 1`] = `
+exports[`Accordion with springConfig matches snapshot 1`] = `
 <div
   className="css-qmizr8"
 >
@@ -11,7 +11,68 @@ exports[`Accordion matches snapshot 1`] = `
       <button
         aria-controls="fakeId-panel"
         aria-expanded={false}
-        className="css-fvv6jt"
+        className="css-1h9i0hj"
+        id="fakeId"
+        onClick={[Function]}
+      >
+        <div
+          className="css-hqn8lg"
+        >
+          <span
+            data-test-id="styled-inner-button-wrapper-label"
+          >
+            Title
+          </span>
+          <svg
+            className="css-1mvn3rv"
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <title>
+              Chevron down
+            </title>
+            <path
+              className="css-1mvn3rv"
+              d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+            />
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div
+      className="css-zlrsjy"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        aria-labelledby="fakeId"
+        className="css-15kpvws"
+        id="fakeId-panel"
+        role="region"
+      >
+        content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Accordion with title matches snapshot  1`] = `
+<div
+  className="css-qmizr8"
+>
+  <div
+    className="css-dq2y9"
+  >
+    <div>
+      <button
+        aria-controls="fakeId-panel"
+        aria-expanded={false}
+        className="css-1h9i0hj"
         id="fakeId"
         onClick={[Function]}
       >
