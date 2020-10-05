@@ -11,11 +11,11 @@ test("ThemedPageWithStyles renders children", () => {
 
 test("ThemedPageWithStyles allows setting classname", () => {
 	const className = "test";
-	const wrapper = mount(<ThemedPageWithStyles className={className}>1</ThemedPageWithStyles>);
+	const wrapper = mount(<ThemedPageWithStyles className={className} />);
 	expect(wrapper).toHaveClassName(className);
 });
 
-test("Page allows setting classname", () => {
+test("Page renders correctly", () => {
 	const tree = createTree(<ThemedPageWithStyles />);
 	expect(tree).toMatchSnapshot();
 });
