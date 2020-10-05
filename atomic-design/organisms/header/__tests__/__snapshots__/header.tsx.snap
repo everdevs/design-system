@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header can be fixed 1`] = `
+<div
+  className="css-es0qts"
+>
+  <div
+    className="css-sfg84s"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <div
+    className="css-1fxu3in"
+  />
+</div>
+`;
+
+exports[`Header can be plain 1`] = `
+<div
+  className="css-rzbc7y"
+>
+  <div
+    className="css-1m3uhup"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <div
+    className="css-1fxu3in"
+  />
+</div>
+`;
+
+exports[`Header can be sticky 1`] = `
+<div
+  className="css-1y5m4me"
+>
+  <div
+    className="css-sfg84s"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <div
+    className="css-1fxu3in"
+  />
+</div>
+`;
+
+exports[`Header can be translucent 1`] = `
+<div
+  className="css-e45j2r"
+>
+  <div
+    className="css-sfg84s"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <div
+    className="css-1fxu3in"
+  />
+</div>
+`;
