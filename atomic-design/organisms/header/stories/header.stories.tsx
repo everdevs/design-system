@@ -18,7 +18,7 @@ const story: Meta = {
 	title: "Design System/Organisms/Header",
 	decorators: [withWrapper()],
 	parameters: {
-		jest: ["header"],
+		jest: ["header", "utils"],
 	},
 	argTypes: {
 		children: { control: "text" },
