@@ -2,12 +2,17 @@ import { createTree, Wrapper } from "@evernest/dev-helpers";
 import { mount } from "enzyme";
 import React from "react";
 import { Accordion, AccordionProps, StyledButton, StyledPanel } from "../src";
+import MockedResizeObserver from "../__mocks__/resizeObserver";
 
 const WrappedAccordion: React.FC<AccordionProps> = props => (
 	<Wrapper>
 		<Accordion {...props} />
 	</Wrapper>
 );
+
+beforeAll(() => {
+	window.ResizeObserver = MockedResizeObserver;
+});
 
 test("Accordion renders title", () => {
 	const text = "Title";
