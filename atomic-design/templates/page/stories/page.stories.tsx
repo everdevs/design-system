@@ -1,7 +1,7 @@
 import React from "react";
 import { withWrapper } from "@evernest/dev-helpers";
 import { Footer } from "@evernest/footer";
-import { Grid, Hidden } from "@evernest/grid";
+import { Hidden } from "@evernest/grid";
 import { Header } from "@evernest/header";
 import { ClassNames } from "@emotion/core";
 import { Anchor, Panel, Toggle } from "@evernest/panel";
@@ -12,8 +12,6 @@ import {
 	Main as MainArea,
 	PageWithStyles as Page,
 } from "../src";
-import { mq } from "@evernest/theme";
-import { css } from "@emotion/core";
 
 export const PageLayout: Story = () => {
 	return (
@@ -68,11 +66,11 @@ export const WithTranslucentHeader: Story = () => {
 export const WithResponsiveTranslucentHeader: Story = () => {
 	return (
 		<ClassNames>
-			{({ css, cx }) => (
+			{({ css, theme }) => (
 				<Page
 					className={css`
 						--header-height-ref: 0;
-						@media ${mq.l} {
+						@media ${theme.mq.l} {
 							--header-height-ref: var(--header-height);
 						}
 					`}
@@ -137,7 +135,7 @@ export const WithMobileMenu: Story = () => {
 };
 
 const story: Meta = {
-	component: Grid,
+	component: Page,
 	title: "Design System/Templates/Page",
 	decorators: [withWrapper()],
 	parameters: {
