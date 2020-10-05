@@ -20,6 +20,7 @@ export const Page = styled.div<PropsWithTheme>`
 		--spacing-xxl: ${spaces.xxl}px;
 		--spacing-xxxl: ${spaces.xxxl}px;
 		--header-height: ${layout.header.height.s}px;
+		--header-height-ref: var(--header-height);
 		@media ${mq.m} {
 			--header-height: ${layout.header.height.m}px;
 		}

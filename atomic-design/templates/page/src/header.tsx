@@ -6,5 +6,5 @@ export const Header = styled.header<PropsWithTheme>`
 	top: 0;
 	left: 0;
 	right: 0;
-	height: var(--header-height);
+	height: var(--header-height-ref);
 `;
