@@ -5,8 +5,9 @@ import React from "react";
 import { animated, useSpring } from "react-spring";
 import { v4 as uuid } from "uuid";
 import { AccordionElement, AccordionProps, StyledAccordionProps } from "./types";
+import useMeasure from "./useMeasure";
 
-/* @todo: revisit border style if component on lighter backgrounds */
+/* @todo: revisit border style with token refactor */
 export const StyledAccordion = styled("div", {
 	shouldForwardProp: (propName: string) => !["theme"].includes(propName),
 })<StyledAccordionProps>`
@@ -21,7 +22,6 @@ export const StyledButton = styled.button`
 	border-radius: 0;
 	border: none;
 	color: currentColor;
-	cursor: pointer;
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0 0 var(--spacing-xs);
@@ -45,27 +45,26 @@ export const StyledAnimatedPanelWrapper = styled(animated.div)`
 
 export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 	({ children, title, headerComponent, springConfig, ...props }, ref) => {
-		const styledPanelRef = React.useRef<HTMLDivElement>(null);
 		const [expanded, setExpanded] = React.useState(false);
-		const [panelContentHeight, setPanelContentHeight] = React.useState<number>(null);
 
 		const handleClick = () => setExpanded(!expanded);
 
 		const buttonId = React.useMemo(() => uuid(), []);
 		const panelId = `${buttonId}-panel`;
 
+		const [
+			useMeasureRef,
+			{
+				borderBoxSize: { blockSize: styledPanelHeight },
+			},
+		] = useMeasure();
+
 		const springProps = useSpring({
 			config: springConfig,
-			height: expanded ? panelContentHeight : 0,
+			height: expanded ? styledPanelHeight : 0,
 		});
 
 		const HeaderComponent = React.useMemo(() => headerComponent, [headerComponent]);
-
-		React.useEffect(() => {
-			if (styledPanelRef && styledPanelRef.current) {
-				setPanelContentHeight(styledPanelRef.current.offsetHeight);
-			}
-		}, []);
 
 		return (
 			<StyledAccordion {...props} ref={ref}>
@@ -88,9 +87,9 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 				</HeaderComponent>
 				<StyledAnimatedPanelWrapper style={springProps}>
 					<StyledPanel
+						ref={useMeasureRef}
 						aria-labelledby={buttonId}
 						id={panelId}
-						ref={styledPanelRef}
 						role="region"
 					>
 						{children}
@@ -103,5 +102,5 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 
 Accordion.defaultProps = {
 	headerComponent: "div",
-	springConfig: {},
+	springConfig: undefined,
 };
