@@ -39,6 +39,7 @@
 		"@evernest/icon": "^0.0.4",
 		"@evernest/theme": "^0.0.4",
 		"@evernest/tokens": "^0.0.4",
+		"react-spring": "^8.0.27",
 		"uuid": "^8.3.0"
 	},
 	"devDependencies": {
