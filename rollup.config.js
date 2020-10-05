@@ -5,7 +5,7 @@ const commonjs = require("@rollup/plugin-commonjs");
 const typescript = require("rollup-plugin-typescript2");
 
 const createBanner = ({ name, version, author, repository, license }) => `/*!
- * Copyright (c) ${typeof author === "object" ? author.name : author}
+ * Copyright (c) Evernest GmbH
  * @author ${typeof author === "object" ? author.name : author}
  * @license ${license}
  * @name ${name}
@@ -25,7 +25,12 @@ module.exports = () => {
 	return [
 		...inputs.map(input => ({
 			input: `src/${input}`.replace(".js", ".ts"),
-			external: [...Object.keys(pkg.dependencies || {}), "path", "fs"],
+			external: [
+				...Object.keys(pkg.dependencies || {}),
+				...Object.keys(pkg.peerDependencies || {}),
+				"path",
+				"fs",
+			],
 			output: [
 				{
 					banner: createBanner(pkg),
@@ -48,7 +53,12 @@ module.exports = () => {
 		...bins.map(bin => {
 			return {
 				input: `src/${bin}`.replace(".js", ".ts"),
-				external: [...Object.keys(pkg.dependencies || {}), "path", "fs"],
+				external: [
+					...Object.keys(pkg.dependencies || {}),
+					...Object.keys(pkg.peerDependencies || {}),
+					"path",
+					"fs",
+				],
 				output: [
 					{
 						banner: `#!/usr/bin/env node\n${createBanner(pkg)}`,
