@@ -45,6 +45,7 @@
 		"lint": "yarn stylelint",
 		"ncu": "ncu -u; yarn lerna exec 'ncu -u -x \"/^@evernest/.*$/\"'",
 		"prettier": "prettier 'atomic-design/{atoms,ions,molecules,organisms}/**/*.[jt]s(x)?' 'utils/**/*.[jt]s(x)?'",
+		"prettier:tsconfig": "prettier '**/tsconfig.json' --write",
 		"prepublish": "yarn build",
 		"refresh": "rimraf node_modules '**/node_modules' yarn.lock && yarn install",
 		"prerelease": "yarn build",
