@@ -16,6 +16,8 @@ const createBanner = ({ name, version, author, repository, license }) => `/*!
 			: "/"
  }`;
 
+const tsconfigOverride = { compilerOptions: { declaration: false } };
+
 module.exports = () => {
 	const cwd = process.cwd();
 	const pkg = require(path.resolve(cwd, "package.json"));
@@ -37,6 +39,23 @@ module.exports = () => {
 					file: `dist/${input}`,
 					format: "cjs",
 				},
+			],
+			plugins: [
+				commonjs(),
+				json(),
+				babel({ babelHelpers: "bundled" }),
+				typescript({ tsconfig }),
+			],
+		})),
+		...inputs.map(input => ({
+			input: `src/${input}`.replace(".js", ".ts"),
+			external: [
+				...Object.keys(pkg.dependencies || {}),
+				...Object.keys(pkg.peerDependencies || {}),
+				"path",
+				"fs",
+			],
+			output: [
 				{
 					banner: createBanner(pkg),
 					file: `dist/esm/${input}`,
@@ -47,7 +66,7 @@ module.exports = () => {
 				commonjs(),
 				json(),
 				babel({ babelHelpers: "bundled" }),
-				typescript({ tsconfig }),
+				typescript({ tsconfig, tsconfigOverride }),
 			],
 		})),
 		...bins.map(bin => {
@@ -66,7 +85,14 @@ module.exports = () => {
 						format: "cjs",
 					},
 				],
-				plugins: [commonjs(), babel({ babelHelpers: "bundled" }), typescript({ tsconfig })],
+				plugins: [
+					commonjs(),
+					babel({ babelHelpers: "bundled" }),
+					typescript({
+						tsconfig,
+						tsconfigOverride,
+					}),
+				],
 			};
 		}),
 	];

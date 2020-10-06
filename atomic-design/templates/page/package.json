@@ -44,11 +44,13 @@
 		"@evernest/footer": "^0.0.5",
 		"@evernest/header": "^0.0.5",
 		"@types/react": "^16.9.49",
+		"emotion-theming": "^10.0.27",
 		"react": "^16.13.1"
 	},
 	"peerDependencies": {
 		"@emotion/core": ">=10.0.35",
 		"@emotion/styled": ">=10.0.27",
+		"emotion-theming": ">=10.0.27",
 		"react": ">=16.13.1"
 	},
 	"publishConfig": {

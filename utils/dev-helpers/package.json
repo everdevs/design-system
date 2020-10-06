@@ -34,7 +34,8 @@
 		"watch": "rollup -cw"
 	},
 	"dependencies": {
-		"@evernest/theme": "^0.0.5"
+		"@evernest/theme": "^0.0.5",
+		"react-test-renderer": "^16.13.1"
 	},
 	"devDependencies": {
 		"@emotion/core": "^10.0.35",

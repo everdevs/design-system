@@ -2,7 +2,9 @@ import globby from "globby";
 import pify from "pify";
 import path from "path";
 import fs from "fs";
+import meow from "meow";
 
+const { input, flags } = meow();
 const writeFile = pify(fs.writeFile);
 
 function sort(arr: string[]): string[] {
@@ -59,27 +61,36 @@ getNames().then(async names => {
 	await writeFile(path.resolve(__dirname, "package-names.json"), JSON.stringify(names, null, 4));
 	console.log("Generated package names as JSON");
 	const tsconfig = await import("./tsconfig.tpl.json");
-	const paths = {
-		...makeAlias("utils", names.utils),
-		...makeAlias("ions", names.ions, true),
-		...makeAlias("atoms", names.atoms, true),
-		...makeAlias("molecules", names.molecules, true),
-		...makeAlias("organisms", names.organisms, true),
-		...makeAlias("templates", names.templates, true),
-	};
-	await writeFile(
-		path.resolve(__dirname, "tsconfig.json"),
-		JSON.stringify(
-			{
-				...tsconfig,
-				compilerOptions: {
-					...tsconfig.compilerOptions,
-					paths,
+	if (!flags.build) {
+		const paths = {
+			...makeAlias("utils", names.utils),
+			...makeAlias("ions", names.ions, true),
+			...makeAlias("atoms", names.atoms, true),
+			...makeAlias("molecules", names.molecules, true),
+			...makeAlias("organisms", names.organisms, true),
+			...makeAlias("templates", names.templates, true),
+		};
+		await writeFile(
+			path.resolve(__dirname, "tsconfig.json"),
+			JSON.stringify(
+				{
+					...tsconfig,
+					compilerOptions: {
+						...tsconfig.compilerOptions,
+						baseUrl: "./",
+						paths,
+					},
 				},
-			},
-			null,
-			4
-		)
-	);
+				null,
+				4
+			)
+		);
+	} else {
+		await writeFile(
+			path.resolve(__dirname, "tsconfig.json"),
+			JSON.stringify(tsconfig, null, 4)
+		);
+	}
+
 	console.log("Added package aliases to tsconfig");
 });

@@ -31,7 +31,7 @@
 	"scripts": {
 		"add-component": "babel-node bin/add-component.ts --extensions='.ts'",
 		"bootstrap": "lerna bootstrap",
-		"prebuild": "yarn clean && yarn setup",
+		"prebuild": "yarn clean && yarn setup:build",
 		"build": "lerna run build --stream",
 		"prebuild:storybook": "yarn test:generate-output",
 		"build:storybook": "build-storybook -c .storybook -o storybook-static/ -s ./public",
@@ -51,6 +51,7 @@
 		"release": "lerna publish --conventional-commits",
 		"run:bin": "lerna run bin",
 		"setup": "babel-node init.ts --extensions='.ts' && yarn run:bin",
+		"setup:build": "babel-node init.ts --extensions='.ts' --build && yarn run:bin",
 		"snapshot": "yarn build:storybook && dotenv percy-storybook --widths=320,640,960,1280",
 		"spj": "sort-package-json; lerna exec sort-package-json && prettier '**/package.json' --write",
 		"prestorybook": "yarn test:generate-output",

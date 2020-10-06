@@ -1,3 +1,4 @@
+import React from "react";
 import { PropsWithTheme } from "@evernest/theme";
 import { SpringConfig } from "react-spring";
 
@@ -9,4 +10,4 @@ export interface AccordionProps extends PropsWithTheme {
 	headerComponent?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
 
-export interface StyledAccordionProps extends PropsWithTheme<HTMLDivElement> {}
+export interface StyledAccordionProps extends PropsWithTheme<AccordionElement> {}
