@@ -11,7 +11,7 @@ const WrappedAccordion: React.FC<AccordionProps> = props => (
 
 test("Accordion renders title", () => {
 	const text = "Title";
-	const wrapper = mount(<WrappedAccordion title="Title" />);
+	const wrapper = mount(<WrappedAccordion id="test-id" title="Title" />);
 	expect(wrapper.find("[data-test-id='styled-inner-button-wrapper-label']").at(0).text()).toEqual(
 		text
 	);
@@ -19,18 +19,26 @@ test("Accordion renders title", () => {
 
 test("Accordion renders children", () => {
 	const text = "Hello World!";
-	const wrapper = mount(<WrappedAccordion title="Title">{text}</WrappedAccordion>);
+	const wrapper = mount(
+		<WrappedAccordion id="test-id" title="Title">
+			{text}
+		</WrappedAccordion>
+	);
 	expect(wrapper.find(StyledPanel).text()).toEqual(text);
 });
 
 test("Accordion with title matches snapshot ", () => {
-	const closed = createTree(<WrappedAccordion title="Title">content</WrappedAccordion>);
+	const closed = createTree(
+		<WrappedAccordion id="test-id" title="Title">
+			content
+		</WrappedAccordion>
+	);
 	expect(closed).toMatchSnapshot();
 });
 
 test("Accordion with springConfig matches snapshot", () => {
 	const closed = createTree(
-		<WrappedAccordion title="Title" springConfig={{ friction: 3, mass: 4 }}>
+		<WrappedAccordion id="test-id" title="Title" springConfig={{ friction: 3, mass: 4 }}>
 			content
 		</WrappedAccordion>
 	);
@@ -38,7 +46,7 @@ test("Accordion with springConfig matches snapshot", () => {
 });
 
 test("Accordion prop 'expanded' toggles on click", () => {
-	const wrapper = mount(<WrappedAccordion title="Title" />);
+	const wrapper = mount(<WrappedAccordion id="test-id" title="Title" />);
 	const button = wrapper.find(StyledButton);
 
 	button.simulate("click");

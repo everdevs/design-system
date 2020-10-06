@@ -9,10 +9,10 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
   >
     <div>
       <button
-        aria-controls="fakeId-panel"
+        aria-controls="test-id-panel"
         aria-expanded={false}
         className="css-1h9i0hj"
-        id="fakeId"
+        id="test-id"
         onClick={[Function]}
       >
         <div
@@ -49,9 +49,9 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
       }
     >
       <div
-        aria-labelledby="fakeId"
+        aria-labelledby="test-id"
         className="css-15kpvws"
-        id="fakeId-panel"
+        id="test-id-panel"
         role="region"
       >
         content
@@ -70,10 +70,10 @@ exports[`Accordion with title matches snapshot  1`] = `
   >
     <div>
       <button
-        aria-controls="fakeId-panel"
+        aria-controls="test-id-panel"
         aria-expanded={false}
         className="css-1h9i0hj"
-        id="fakeId"
+        id="test-id"
         onClick={[Function]}
       >
         <div
@@ -110,9 +110,9 @@ exports[`Accordion with title matches snapshot  1`] = `
       }
     >
       <div
-        aria-labelledby="fakeId"
+        aria-labelledby="test-id"
         className="css-15kpvws"
-        id="fakeId-panel"
+        id="test-id-panel"
         role="region"
       >
         content
