@@ -62,6 +62,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 
 		React.useEffect(() => {
 			const panelEl = document.getElementById(panelId);
+			/* istanbul ignore next */
 			if (panelEl) {
 				const paddingBottom = getComputedStyle(panelEl).paddingBottom;
 				setPanelBottomPadding(parseInt(paddingBottom));
