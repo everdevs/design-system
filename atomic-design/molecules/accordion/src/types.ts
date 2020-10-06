@@ -5,6 +5,7 @@ import { SpringConfig } from "react-spring";
 export type AccordionElement = HTMLDivElement;
 
 export interface AccordionProps extends PropsWithTheme {
+	id: string;
 	title: string;
 	springConfig?: SpringConfig;
 	headerComponent?: keyof JSX.IntrinsicElements | React.ComponentType<any>;

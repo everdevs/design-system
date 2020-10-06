@@ -4,7 +4,6 @@ import { Icon, Size } from "@evernest/icon";
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import { useMeasure } from "react-use";
-import { v4 as uuid } from "uuid";
 import { AccordionElement, AccordionProps, StyledAccordionProps } from "./types";
 
 /* @todo: revisit border style with token refactor */
@@ -44,14 +43,13 @@ export const StyledAnimatedPanelWrapper = styled(animated.div)`
 `;
 
 export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
-	({ children, title, headerComponent, springConfig, ...props }, ref) => {
+	({ id, children, title, headerComponent, springConfig, ...props }, ref) => {
 		const [expanded, setExpanded] = React.useState(false);
 		const [panelBottomPadding, setPanelBottomPadding] = React.useState(0);
 
 		const handleClick = () => setExpanded(!expanded);
 
-		const buttonId = React.useMemo(() => uuid(), []);
-		const panelId = `${buttonId}-panel`;
+		const panelId = `${id}-panel`;
 
 		const [useMeasureRef, { height }] = useMeasure<HTMLDivElement>();
 
@@ -67,7 +65,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 				const paddingBottom = getComputedStyle(panelEl).paddingBottom;
 				setPanelBottomPadding(parseInt(paddingBottom));
 			}
-		}, [height]);
+		}, [panelId, setPanelBottomPadding]);
 
 		const HeaderComponent = React.useMemo(() => headerComponent, [headerComponent]);
 
@@ -77,7 +75,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 					<StyledButton
 						aria-controls={panelId}
 						aria-expanded={expanded}
-						id={buttonId}
+						id={id}
 						onClick={handleClick}
 					>
 						<StyledInnerButtonWrapper>
@@ -93,7 +91,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 				<StyledAnimatedPanelWrapper style={springProps}>
 					<StyledPanel
 						ref={useMeasureRef}
-						aria-labelledby={buttonId}
+						aria-labelledby={id}
 						id={panelId}
 						role="region"
 					>
