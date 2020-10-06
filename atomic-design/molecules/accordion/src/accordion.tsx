@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 import { Icon, Size } from "@evernest/icon";
 import React from "react";
 import { animated, useSpring } from "react-spring";
+import { useMeasure } from "react-use";
 import { v4 as uuid } from "uuid";
 import { AccordionElement, AccordionProps, StyledAccordionProps } from "./types";
-import useMeasure from "./use-measure";
 
 /* @todo: revisit border style with token refactor */
 export const StyledAccordion = styled("div", {
@@ -46,23 +46,27 @@ export const StyledAnimatedPanelWrapper = styled(animated.div)`
 export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 	({ children, title, headerComponent, springConfig, ...props }, ref) => {
 		const [expanded, setExpanded] = React.useState(false);
+		const [panelBottomPadding, setPanelBottomPadding] = React.useState(0);
 
 		const handleClick = () => setExpanded(!expanded);
 
 		const buttonId = React.useMemo(() => uuid(), []);
 		const panelId = `${buttonId}-panel`;
 
-		const [
-			useMeasureRef,
-			{
-				borderBoxSize: { blockSize: styledPanelHeight },
-			},
-		] = useMeasure();
+		const [useMeasureRef, { height }] = useMeasure<HTMLDivElement>();
 
 		const springProps = useSpring({
 			config: springConfig,
-			height: expanded ? styledPanelHeight : 0,
+			height: expanded ? height + panelBottomPadding : 0,
 		});
+
+		React.useEffect(() => {
+			const panelEl = document.getElementById(panelId);
+			if (panelEl) {
+				const paddingBottom = getComputedStyle(panelEl).paddingBottom;
+				setPanelBottomPadding(parseInt(paddingBottom));
+			}
+		}, [height]);
 
 		const HeaderComponent = React.useMemo(() => headerComponent, [headerComponent]);
 
