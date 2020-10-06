@@ -3,7 +3,7 @@ import { theme } from "@evernest/theme";
 import { Typography, TypographyVariant } from "@evernest/typography";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
-import { Accordion, StyledAccordionProps } from "../src";
+import { Accordion, AccordionProps } from "../src";
 
 const ExampleAccordionContent = (
 	<div>
@@ -16,10 +16,10 @@ const ExampleAccordionContent = (
 	</div>
 );
 
-const Template: Story<StyledAccordionProps> = args => {
+const Template: Story<AccordionProps> = args => {
 	return (
 		<ColorBox background={theme.palette.darkGrey.css} color={theme.palette.white.css}>
-			<Accordion title={args.title} {...args} />
+			<Accordion id={args.id} title={args.title} {...args} />
 		</ColorBox>
 	);
 };
@@ -30,6 +30,7 @@ const MultipleTemplate: Story = ({ items }) => {
 
 export const Simple = Template.bind({});
 Simple.args = {
+	id: "test-id",
 	title: "Heading",
 	children: ExampleAccordionContent,
 };
@@ -38,10 +39,12 @@ export const Multiple = MultipleTemplate.bind({});
 Multiple.args = {
 	items: [
 		{
+			id: "test-id-1",
 			title: "Heading",
 			children: ExampleAccordionContent,
 		},
 		{
+			id: "test-id-2",
 			title: "Another Heading",
 			children: ExampleAccordionContent,
 		},
@@ -50,6 +53,7 @@ Multiple.args = {
 
 export const WithHeaderComponent = Template.bind({});
 WithHeaderComponent.args = {
+	id: "test-id",
 	title: "Heading",
 	children: ExampleAccordionContent,
 	headerComponent: props => <Typography {...props} variant={TypographyVariant.h4} />,
