@@ -7,40 +7,45 @@ export const StyledHeadline1 = styled.h1<StyledTypographyProps>`
 	font-weight: normal;
 	font-size: 55px;
 	line-height: 63px;
+	margin: 0;
 `;
 export const StyledHeadline2 = styled.h2<StyledTypographyProps>`
 	font-family: var(--font-face-serif);
 	font-weight: normal;
 	font-size: 36px;
 	line-height: 45px;
+	margin: 0;
 `;
 export const StyledHeadline3 = styled.h3<StyledTypographyProps>`
-	font-family: var(--font-face-serif);
+	font-family: var(--font-face-sans-serif);
 	font-weight: normal;
 	font-size: 24px;
 	line-height: 36px;
+	margin: 0;
 `;
 
 export const StyledHeadline4 = styled.h4<StyledTypographyProps>`
-	font-family: var(--font-face-serif);
+	font-family: var(--font-face-sans-serif);
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 24px;
 	margin: 0;
 `;
 
-export const Body = styled.div<StyledTypographyProps>`
+export const Body = styled.p<StyledTypographyProps>`
 	font-family: var(--font-face-sans-serif);
 	font-weight: lighter;
 	font-size: 16px;
 	line-height: 28px;
+	margin: 0;
 `;
 
-export const Body2 = styled.div<StyledTypographyProps>`
-	font-family: var(--font-face-sans-serif);
+export const Body2 = styled.p<StyledTypographyProps>`
+	font-family: var(--font-face-serif);
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 30px;
+	margin: 0;
 `;
 
 const variants = {
