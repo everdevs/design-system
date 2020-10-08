@@ -2,20 +2,20 @@
 
 exports[`Column can be flex 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 >
   <div
     className="css-1dh5pml"
   >
     <div
-      className="css-1ewmkw0"
+      className="css-bq8tod"
     >
       <div
         className="css-10185dy"
         justify="flex-start"
       >
         <div
-          className="css-98u3d9"
+          className="css-kn5xgs"
           flex={true}
           s="var(--grid-colcount)"
           suppressHydrationWarning={true}
@@ -30,20 +30,20 @@ exports[`Column can be flex 1`] = `
 
 exports[`Column can be hidden 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 >
   <div
     className="css-1dh5pml"
   >
     <div
-      className="css-1ewmkw0"
+      className="css-bq8tod"
     >
       <div
         className="css-10185dy"
         justify="flex-start"
       >
         <div
-          className="css-d0exl2"
+          className="css-tlwpc7"
           s={0}
           suppressHydrationWarning={true}
         >
@@ -57,20 +57,20 @@ exports[`Column can be hidden 1`] = `
 
 exports[`Column can be raw 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 >
   <div
     className="css-1dh5pml"
   >
     <div
-      className="css-1ewmkw0"
+      className="css-bq8tod"
     >
       <div
         className="css-10185dy"
         justify="flex-start"
       >
         <div
-          className="css-7pp4ub"
+          className="css-ff4wkt"
           raw={true}
           s="var(--grid-colcount)"
           suppressHydrationWarning={true}
@@ -85,20 +85,20 @@ exports[`Column can be raw 1`] = `
 
 exports[`Column can have colspan 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 >
   <div
     className="css-1dh5pml"
   >
     <div
-      className="css-1ewmkw0"
+      className="css-bq8tod"
     >
       <div
         className="css-10185dy"
         justify="flex-start"
       >
         <div
-          className="css-1eghgw8"
+          className="css-1bh48o"
           l={3}
           m={2}
           s={1}
@@ -114,20 +114,20 @@ exports[`Column can have colspan 1`] = `
 
 exports[`Column have order 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 >
   <div
     className="css-1dh5pml"
   >
     <div
-      className="css-1ewmkw0"
+      className="css-bq8tod"
     >
       <div
         className="css-10185dy"
         justify="flex-start"
       >
         <div
-          className="css-1oacmb5"
+          className="css-11ffjwm"
           order={-1}
           s="var(--grid-colcount)"
           suppressHydrationWarning={true}

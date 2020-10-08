@@ -2,10 +2,10 @@
 
 exports[`GridOverlay can be initially active 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 >
   <div
-    className="css-1jpbipk"
+    className="css-18l4hrw"
     position="fixed"
   >
     <div
@@ -13,84 +13,84 @@ exports[`GridOverlay can be initially active 1`] = `
       justify="flex-start"
     >
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
          
       </div>
       <div
-        className="css-13b9fqp"
+        className="css-12ofh7r"
         s={1}
         suppressHydrationWarning={true}
       >
@@ -103,7 +103,7 @@ exports[`GridOverlay can be initially active 1`] = `
 
 exports[`GridOverlay can have a toggle button 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 >
   <button
     className="css-vacqy9"
@@ -117,6 +117,6 @@ exports[`GridOverlay can have a toggle button 1`] = `
 
 exports[`GridOverlay can have position absolute 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 />
 `;

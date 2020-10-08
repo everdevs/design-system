@@ -2,42 +2,42 @@
 
 exports[`Hidden can show/hide content on different viewports 1`] = `
 <div
-  className="css-1kxevuh"
+  className="css-1kvm6ra"
   display="block"
 />
 `;
 
 exports[`Hidden can show/hide content on different viewports 2`] = `
 <div
-  className="css-1kxevuh"
+  className="css-1kvm6ra"
   display="block"
 />
 `;
 
 exports[`Hidden can show/hide content on different viewports 3`] = `
 <div
-  className="css-1kxevuh"
+  className="css-1kvm6ra"
   display="block"
 />
 `;
 
 exports[`Hidden can show/hide content on different viewports 4`] = `
 <div
-  className="css-ma58ml"
+  className="css-a383ft"
   display="block"
 />
 `;
 
 exports[`Hidden can show/hide content on different viewports 5`] = `
 <div
-  className="css-htmqiz"
+  className="css-zqakw9"
   display="block"
 />
 `;
 
 exports[`Hidden can show/hide content on different viewports 6`] = `
 <div
-  className="css-38ugts"
+  className="css-10ekhzz"
   display="block"
 />
 `;

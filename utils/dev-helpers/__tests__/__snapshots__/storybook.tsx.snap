@@ -34,6 +34,6 @@ exports[`ColorBox can change the height 1`] = `
 
 exports[`Wrapper renders correctly 1`] = `
 <div
-  className="css-qmizr8"
+  className="css-sj66hz"
 />
 `;
