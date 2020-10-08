@@ -1,7 +1,7 @@
 import React from "react";
 import { withWrapper, range } from "@evernest/dev-helpers";
 import { Meta } from "@storybook/react";
-import { Box, Column, Grid, GridOverlay, Row, Stage } from "../src";
+import { Alignment, Box, COLUMN, Column, Grid, GridOverlay, Row, Stage } from "../src";
 import { CustomColorBox } from "./shared";
 
 export const Simple: React.FC = () => {
@@ -114,6 +114,72 @@ export const WithBox: React.FC = () => {
 								</Box>
 							</CustomColorBox>
 						</Box>
+					</Column>
+				</Row>
+			</Grid>
+		</>
+	);
+};
+
+export const SplitColumn: React.FC = () => {
+	return (
+		<>
+			<GridOverlay toggle />
+			<Grid overflow>
+				<Row justify={Alignment.center}>
+					<Column l={10}>
+						<Row>
+							<Column l={COLUMN.THREE}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.THREE}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.THREE}>
+								<CustomColorBox />
+							</Column>
+						</Row>
+						<Row justify={Alignment.center}>
+							<Column l={COLUMN.THREE}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.THREE}>
+								<CustomColorBox />
+							</Column>
+						</Row>
+						<Row justify={Alignment.center}>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+						</Row>
+						<Row justify={Alignment.center}>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+						</Row>
+						<Row justify={Alignment.center}>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+							<Column l={COLUMN.FOUR}>
+								<CustomColorBox />
+							</Column>
+						</Row>
 					</Column>
 				</Row>
 			</Grid>
