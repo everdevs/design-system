@@ -87,23 +87,26 @@ const padding = {
 export const breakpoints: Breakpoints = {
 	s: 320,
 	m: 768,
-	l: 1128,
-	xl: 1440,
+	l: 1200,
+	xl: 1200,
 };
 
-export const mq: Mediaqueries = Object.entries(breakpoints).reduce(
-	(previousValue, [key, value]: [keyof Breakpoints, number]) => ({
-		...previousValue,
-		[key]: `(min-width: ${value}px)`,
-	}),
-	{}
-) as Mediaqueries;
+export const getMediaqueries = (b: Breakpoints) =>
+	Object.entries(b).reduce(
+		(previousValue, [key, value]) => ({
+			...previousValue,
+			[key]: `(min-width: ${value}px)`,
+		}),
+		{}
+	) as Mediaqueries;
+
+export const mq: Mediaqueries = getMediaqueries(breakpoints);
 
 export const grid: GridConfig = {
 	gutter,
 	gridPadding,
 	padding,
-	maxWidth: breakpoints.xl - gridPadding.l * 2,
+	maxWidth: breakpoints.xl - (gridPadding.l + gutter.l) * 2,
 	colSpan: {
 		s: 4,
 		m: 8,
