@@ -32,7 +32,7 @@ yarn dev
 ### Setup
 
 This project requires various configurations to be generated. To make sure everything has been set up
-correctly you can run the following script. (You don't need these steps when you run `yarn dev`)
+correctly you can run the following script (you don't need these steps when you run `yarn dev`).
 
 ```bash
 yarn setup
@@ -43,7 +43,7 @@ yarn setup
 We use [Jest](https://jestjs.io/) with [Enzyme](https://enzymejs.github.io/enzyme/) for testing.
 
 Tests can be run in each package (add required scripts to your package). Per default you can run
-`yarn test:watch` and `yarn test:update`. 
+`yarn test:watch` and `yarn test:update`.
 
 To run all tests you can use the root scripts:
 
