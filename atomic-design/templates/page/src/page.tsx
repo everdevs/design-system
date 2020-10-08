@@ -6,8 +6,6 @@ import { ThemeProvider } from "emotion-theming";
 import { GlobalStyles, Normalize } from "./styles";
 
 export const Page = styled.div<PropsWithTheme>`
-	display: grid;
-	grid-template-areas: "Header" "Main" "Footer";
 	min-height: 100vh;
 	${({ theme: { mq, layout, spaces } }) => css`
 		--spacing-xxxs: ${spaces.xxxs}px;
