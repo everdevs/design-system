@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResponsiveImage renders 1`] = `
+<div
+  className="css-sj66hz"
+>
+  <span
+    className="css-vz2f82"
+  >
+    <img
+      alt="placeholder image"
+      className="css-bk0hd7"
+      height={667}
+      loading="lazy"
+      src="//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fl=progressive&fm=jpg&q=10&w=320"
+      width={1000}
+    />
+    <picture
+      className="css-snvx98"
+    >
+      <source
+        sizes="(min-width: 1200px) 1200px,(min-width: 1200px) 1200px,(min-width: 768px) 768px,320px"
+        srcSet="//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fm=webp&w=320 320w,//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fm=webp&w=768 768w,//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fm=webp&w=1200 1200w,//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fm=webp&w=1200 1200w"
+        type="image/webp"
+      />
+      <source
+        sizes="(min-width: 1200px) 1200px,(min-width: 1200px) 1200px,(min-width: 768px) 768px,320px"
+        srcSet="//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fl=progressive&fm=jpg&w=320 320w,//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fl=progressive&fm=jpg&w=768 768w,//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fl=progressive&fm=jpg&w=1200 1200w,//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fl=progressive&fm=jpg&w=1200 1200w"
+        type="image/jpeg"
+      />
+      <img
+        alt="placeholder image"
+        className="css-6s2dw2"
+        height={667}
+        loading="lazy"
+        onLoad={[Function]}
+        src="//images.ctfassets.net/vij0xfkj6nfm/65B2DBSyhcTksD4H9nuGds/a3be81862610240ee35085e63835f531/007-web-1000px.jpg?fl=progressive&fm=jpg&w=1200"
+        width={1000}
+      />
+    </picture>
+  </span>
+</div>
+`;
