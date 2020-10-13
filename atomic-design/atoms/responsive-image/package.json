@@ -35,8 +35,8 @@
 	"dependencies": {
 		"@emotion/core": "^10.0.35",
 		"@emotion/styled": "^10.0.27",
-		"@evernest/theme": "^0.0.0",
-		"@evernest/tokens": "^0.0.0",
+		"@evernest/theme": "^0.1.0",
+		"@evernest/tokens": "^0.1.0",
 		"@types/react": "^16.9.48",
 		"react": "^16.13.1"
 	},
@@ -48,7 +48,7 @@
 	"devDependencies": {
 		"@emotion/core": "^10.0.35",
 		"@emotion/styled": "^10.0.27",
-		"@evernest/dev-helpers": "^0.0.0",
+		"@evernest/dev-helpers": "^0.1.0",
 		"@types/react": "^16.9.48",
 		"react": "^16.13.1"
 	},
