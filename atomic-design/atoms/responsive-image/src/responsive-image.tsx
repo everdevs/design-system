@@ -1,8 +1,8 @@
 import { useTheme } from "emotion-theming";
 import React from "react";
-import { AssetFormat, getImageUrl } from "./utils";
+import { getImageUrl } from "./utils";
 import styled from "@emotion/styled";
-import { BuildSrcSetParams, ImageSizes, ResponsiveImageProps } from "./types";
+import { AssetFormat, BuildSrcSetParams, ImageSizes, ResponsiveImageProps } from "./types";
 
 const buildSrcSet = ({ url, sizes, fm, breakpoints }: BuildSrcSetParams): string => {
 	return Object.entries(sizes)
