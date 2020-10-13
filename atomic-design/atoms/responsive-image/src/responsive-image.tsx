@@ -72,6 +72,7 @@ const ImgWrapper = styled.span`
 export const useImageLoaded = (): [React.RefObject<HTMLImageElement>, boolean] => {
 	const [done, setDone] = React.useState(false);
 	const ref = React.useRef<HTMLImageElement>();
+	/* istanbul ignore next */
 	const current = ref?.current;
 	const complete = React.useMemo(() => current && current.complete, [current]);
 	React.useEffect(() => setDone(!!complete), [setDone, complete]);
@@ -106,6 +107,7 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
 		[setLoaded, onLoad]
 	);
 	React.useEffect(() => {
+		/* istanbul ignore next */
 		done && handleLoad({});
 	}, [done, handleLoad]);
 

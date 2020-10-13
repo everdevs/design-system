@@ -1,4 +1,5 @@
 import { createTree, Wrapper } from "@evernest/dev-helpers";
+import { mount } from "enzyme";
 import React from "react";
 import { ResponsiveImage } from "../src";
 
@@ -17,4 +18,24 @@ test("ResponsiveImage renders", () => {
 		</Wrapper>
 	);
 	expect(tree).toMatchSnapshot();
+});
+
+test("ResponsiveImage mounts", () => {
+	const wrapper = mount(
+		<Wrapper>
+			<ResponsiveImage image={image} />
+		</Wrapper>
+	);
+	expect(wrapper.find(ResponsiveImage));
+});
+
+test("ResponsiveImage calls onLoad", () => {
+	const callback = jest.fn(() => {});
+	const wrapper = mount(
+		<Wrapper>
+			<ResponsiveImage image={image} onLoad={callback} />
+		</Wrapper>
+	);
+	wrapper.find("img").at(1).simulate("load");
+	expect(callback.mock.calls.length).toBe(1);
 });
