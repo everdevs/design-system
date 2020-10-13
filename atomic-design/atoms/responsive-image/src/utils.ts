@@ -1,8 +1,5 @@
 import { stringify as queryStringify } from "query-string";
 
-export const isContentType = (obj: any): boolean =>
-	typeof obj === "object" && "fields" in obj && "sys" in obj;
-
 export enum AssetFit {
 	pad = "pad",
 	fill = "fill",
@@ -41,9 +38,5 @@ interface AssetOptions {
 	fit?: AssetFit;
 }
 
-export const getImageUrl = (url: string, options?: AssetOptions): string => {
-	if (options) {
-		return `${url}?${queryStringify(options)}`;
-	}
-	return url;
-};
+export const getImageUrl = (url: string, options: AssetOptions): string =>
+	`${url}?${queryStringify(options)}`;
