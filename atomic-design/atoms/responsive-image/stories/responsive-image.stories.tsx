@@ -26,7 +26,7 @@ const story: Meta = {
 	title: "Design System/Atoms/Responsive image",
 	decorators: [withWrapper()],
 	parameters: {
-		jest: ["responsive-img"],
+		jest: ["responsive-image"],
 	},
 	argTypes: {
 		children: { control: "text" },
