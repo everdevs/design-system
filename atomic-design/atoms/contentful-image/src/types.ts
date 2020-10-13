@@ -1,16 +1,7 @@
 import { Breakpoints } from "@evernest/theme";
 import React from "react";
 
-export interface ImageProps {
-	height: number;
-	width: number;
-	title: string;
-	url: string;
-}
-
-export interface ResponsiveImageProps extends React.HTMLProps<HTMLDivElement> {
-	image: ImageProps;
-}
+export interface ContentfulImageProps extends React.HTMLProps<HTMLDivElement> {}
 
 export type ImageSizes = {
 	[key in keyof Breakpoints]: keyof Breakpoints;

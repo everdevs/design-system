@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResponsiveImage renders 1`] = `
+exports[`ContentfulImage renders 1`] = `
 <div
   className="css-sj66hz"
 >

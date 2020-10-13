@@ -2,7 +2,7 @@ import { useTheme } from "emotion-theming";
 import React from "react";
 import { getImageUrl } from "./utils";
 import styled from "@emotion/styled";
-import { AssetFormat, BuildSrcSetParams, ImageSizes, ResponsiveImageProps } from "./types";
+import { AssetFormat, BuildSrcSetParams, ImageSizes, ContentfulImageProps } from "./types";
 
 const buildSrcSet = ({ url, sizes, fm, breakpoints }: BuildSrcSetParams): string => {
 	return Object.entries(sizes)
@@ -79,20 +79,23 @@ export const useImageLoaded = (): [React.RefObject<HTMLImageElement>, boolean] =
 	return [ref, done];
 };
 
-export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
-	image,
+export const ContentfulImage: React.FC<ContentfulImageProps> = ({
+	height,
+	width,
+	src,
+	alt,
 	className,
 	onLoad,
 	onError,
 }) => {
 	const { breakpoints, mq } = useTheme();
-	const placeholder = getImageUrl(image.url, {
+	const placeholder = getImageUrl(src, {
 		fm: AssetFormat.jpg,
 		w: breakpoints.s,
 		q: 10,
 		fl: "progressive",
 	});
-	const fallback = getImageUrl(image.url, {
+	const fallback = getImageUrl(src, {
 		fm: AssetFormat.jpg,
 		w: breakpoints.l,
 		fl: "progressive",
@@ -118,13 +121,13 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
 		xl: "xl",
 	};
 	const srcSetJpg = buildSrcSet({
-		url: image.url,
+		url: src,
 		fm: AssetFormat.jpg,
 		sizes,
 		breakpoints,
 	});
 	const srcSetWebp = buildSrcSet({
-		url: image.url,
+		url: src,
 		fm: AssetFormat.webp,
 		sizes,
 		breakpoints,
@@ -135,12 +138,11 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
 		)
 		.reverse()
 		.join(",");
-	const { height, width } = image;
 	return (
 		<ImgWrapper className={className}>
 			<Placeholder
 				src={placeholder}
-				alt={image.title}
+				alt={alt}
 				loaded={loaded}
 				loading="lazy"
 				width={width}
@@ -151,7 +153,7 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
 				<source srcSet={srcSetJpg} type="image/jpeg" sizes={sizeSet} />
 				<Img
 					src={fallback}
-					alt={image.title}
+					alt={alt}
 					onLoad={handleLoad}
 					onError={onError}
 					loaded={loaded}
