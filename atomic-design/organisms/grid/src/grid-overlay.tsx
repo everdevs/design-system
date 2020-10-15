@@ -45,9 +45,9 @@ const Toggle = styled.button<Pick<GridOverlayProps, "position">>`
 	border-radius: 50%;
 `;
 
-export const GridLayer: React.FC<GridOverlayProps> = ({ position }) => {
+export const GridLayer: React.FC<GridOverlayProps> = ({ position, className }) => {
 	return (
-		<GridOverlayGrid position={position}>
+		<GridOverlayGrid position={position} className={className}>
 			<GridOverlayRow>
 				{Array(12)
 					.fill(Boolean)
@@ -61,7 +61,12 @@ export const GridLayer: React.FC<GridOverlayProps> = ({ position }) => {
 	);
 };
 
-export const GridOverlay: React.FC<GridOverlayProps> = ({ initialActive, toggle, position }) => {
+export const GridOverlay: React.FC<GridOverlayProps> = ({
+	className,
+	initialActive,
+	toggle,
+	position,
+}) => {
 	const [active, setActive] = React.useState(initialActive);
 	const handleClick = React.useCallback(() => setActive(state => !state), []);
 	return (
@@ -71,7 +76,7 @@ export const GridOverlay: React.FC<GridOverlayProps> = ({ initialActive, toggle,
 					{active ? "gridOff" : "grid"}
 				</Toggle>
 			)}
-			{active && <GridLayer position={position} />}
+			{active && <GridLayer position={position} className={className} />}
 		</>
 	);
 };
