@@ -25,6 +25,27 @@ export const Simple: React.FC = () => {
 	);
 };
 
+export const GridOverlayClassName: React.FC = () => {
+	return (
+		<>
+			<GridOverlay toggle className={"i-am-custom"} />
+			<Grid overflow>
+				<Row>
+					<Column s={4}>
+						<CustomColorBox />
+					</Column>
+					<Column s={4}>
+						<CustomColorBox />
+					</Column>
+					<Column s={4}>
+						<CustomColorBox />
+					</Column>
+				</Row>
+			</Grid>
+		</>
+	);
+};
+
 export const RawColumns: React.FC = () => (
 	<>
 		<GridOverlay toggle />
