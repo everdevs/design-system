@@ -27,6 +27,7 @@ export interface Colors {
 }
 
 export interface Spaces {
+	xxxxs: number;
 	xxxs: number;
 	xxs: number;
 	xs: number;
@@ -36,6 +37,7 @@ export interface Spaces {
 	xl: number;
 	xxl: number;
 	xxxl: number;
+	xxxxl: number;
 }
 
 export interface Sizes {

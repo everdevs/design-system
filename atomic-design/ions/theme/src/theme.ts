@@ -57,15 +57,17 @@ const colors: Colors = {
 };
 
 export const spaces: Spaces = {
-	xxxs: 4,
+	xxxxs: 4,
+	xxxs: 8,
 	xxs: 16,
 	xs: 24,
 	s: 32,
 	m: 40,
 	l: 48,
-	xl: 80,
-	xxl: 120,
-	xxxl: 184,
+	xl: 64,
+	xxl: 80,
+	xxxl: 120,
+	xxxxl: 184,
 };
 
 const gutter = {
