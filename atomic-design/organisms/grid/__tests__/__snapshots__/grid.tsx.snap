@@ -2,7 +2,7 @@
 
 exports[`Grid can show overflow or hide it 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-bq8tod"
@@ -25,7 +25,7 @@ exports[`Grid can show overflow or hide it 1`] = `
 
 exports[`Grid can show overflow or hide it 2`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"

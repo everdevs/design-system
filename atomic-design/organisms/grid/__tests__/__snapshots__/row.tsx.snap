@@ -2,7 +2,7 @@
 
 exports[`Row can be noWrap 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -30,7 +30,7 @@ exports[`Row can be noWrap 1`] = `
 
 exports[`Row can be raw 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -58,7 +58,7 @@ exports[`Row can be raw 1`] = `
 
 exports[`Row can be reverse 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -86,7 +86,7 @@ exports[`Row can be reverse 1`] = `
 
 exports[`Row can have different alignment 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -113,7 +113,7 @@ exports[`Row can have different alignment 1`] = `
 
 exports[`Row can have different alignment 2`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -140,7 +140,7 @@ exports[`Row can have different alignment 2`] = `
 
 exports[`Row can have different alignment 3`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"

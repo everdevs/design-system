@@ -2,7 +2,7 @@
 
 exports[`Accordion with springConfig matches snapshot 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-dq2y9"
@@ -63,7 +63,7 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
 
 exports[`Accordion with title matches snapshot  1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-dq2y9"

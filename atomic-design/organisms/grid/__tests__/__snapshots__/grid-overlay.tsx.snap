@@ -2,7 +2,7 @@
 
 exports[`GridOverlay can be initially active 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-18l4hrw"
@@ -103,7 +103,7 @@ exports[`GridOverlay can be initially active 1`] = `
 
 exports[`GridOverlay can have a toggle button 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <button
     className="css-vacqy9"
@@ -117,6 +117,6 @@ exports[`GridOverlay can have a toggle button 1`] = `
 
 exports[`GridOverlay can have position absolute 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 />
 `;

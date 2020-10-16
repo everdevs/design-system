@@ -2,7 +2,7 @@
 
 exports[`Column can be flex 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -30,7 +30,7 @@ exports[`Column can be flex 1`] = `
 
 exports[`Column can be hidden 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -57,7 +57,7 @@ exports[`Column can be hidden 1`] = `
 
 exports[`Column can be raw 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -85,7 +85,7 @@ exports[`Column can be raw 1`] = `
 
 exports[`Column can have colspan 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
@@ -114,7 +114,7 @@ exports[`Column can have colspan 1`] = `
 
 exports[`Column have order 1`] = `
 <div
-  className="css-sj66hz"
+  className="css-1mo6rv1"
 >
   <div
     className="css-1dh5pml"
