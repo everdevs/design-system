@@ -42,8 +42,11 @@ export const StyledHeaderContent = styled.div<PropsWithTheme>`
 
 export const Header = React.forwardRef<HeaderElement, StyledHeaderProps>(
 	({ children, translucent, fadeOffset, ...props }, ref) => {
+		const [opacity, setOpacity] = React.useState(translucent ? 0 : 1);
 		const { y } = useWindowScroll();
-		const opacity = toOpacityValue(translucent ? y : fadeOffset, fadeOffset);
+		React.useEffect(() => {
+			setOpacity(toOpacityValue(translucent ? y : fadeOffset, fadeOffset));
+		}, [translucent, y, fadeOffset]);
 		return (
 			<StyledHeader {...props} ref={ref}>
 				<StyledHeaderBackground {...props} style={{ opacity }} />
@@ -52,7 +55,6 @@ export const Header = React.forwardRef<HeaderElement, StyledHeaderProps>(
 		);
 	}
 );
-
 Header.defaultProps = {
 	fadeOffset: 0,
 };
