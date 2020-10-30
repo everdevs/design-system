@@ -62,7 +62,7 @@ exports[`Header can be translucent 1`] = `
     className="css-sfg84s"
     style={
       Object {
-        "opacity": 1,
+        "opacity": 0,
       }
     }
   />
