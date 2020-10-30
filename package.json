@@ -149,7 +149,7 @@
 		"react": "^16.13.1",
 		"react-docgen-typescript-loader": "^3.7.2",
 		"react-dom": "^16.13.1",
-		"react-is": "^16.13.1",
+		"react-is": "^17.0.1",
 		"react-test-renderer": "^16.13.1",
 		"regenerator-runtime": "^0.13.7",
 		"rimraf": "^3.0.2",
