@@ -140,7 +140,7 @@
 		"jest-enzyme": "^7.1.2",
 		"lerna": "^3.22.1",
 		"lint-staged": "^10.4.0",
-		"meow": "^7.1.1",
+		"meow": "^8.0.0",
 		"npm-check-updates": "^9.0.1",
 		"param-case": "^3.0.3",
 		"pascalcase": "^1.0.0",
