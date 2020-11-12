@@ -45,7 +45,7 @@ export const StyledGrid = styled("div", {
 			${COLSPAN}: ${colSpan.l};
 		}
 		@media ${mq.xl} {
-			margin: auto;
+			margin: 0 auto;
 			width: 100%;
 		}
 	`};
