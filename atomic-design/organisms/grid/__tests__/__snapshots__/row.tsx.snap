@@ -8,7 +8,7 @@ exports[`Row can be noWrap 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-1r0d2vh"
@@ -36,7 +36,7 @@ exports[`Row can be raw 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-121iaff"
@@ -64,7 +64,7 @@ exports[`Row can be reverse 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-16uh2fg"
@@ -92,7 +92,7 @@ exports[`Row can have different alignment 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-10185dy"
@@ -119,7 +119,7 @@ exports[`Row can have different alignment 2`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-19lkl2e"
@@ -146,7 +146,7 @@ exports[`Row can have different alignment 3`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-kkrs14"

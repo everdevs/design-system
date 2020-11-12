@@ -8,7 +8,7 @@ exports[`Column can be flex 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-10185dy"
@@ -36,7 +36,7 @@ exports[`Column can be hidden 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-10185dy"
@@ -63,7 +63,7 @@ exports[`Column can be raw 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-10185dy"
@@ -91,7 +91,7 @@ exports[`Column can have colspan 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-10185dy"
@@ -120,7 +120,7 @@ exports[`Column have order 1`] = `
     className="css-1dh5pml"
   >
     <div
-      className="css-bq8tod"
+      className="css-o11t8y"
     >
       <div
         className="css-10185dy"
