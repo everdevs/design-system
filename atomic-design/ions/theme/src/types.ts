@@ -16,6 +16,7 @@ export interface Palette {
 	grey: ThemeValue<ColorObject>;
 	darkGrey: ThemeValue<ColorObject>;
 	brightGrey: ThemeValue<ColorObject>;
+	backgroundGrey: ThemeValue<ColorObject>;
 }
 
 export interface Colors {

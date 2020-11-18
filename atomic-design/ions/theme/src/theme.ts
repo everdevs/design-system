@@ -1,4 +1,5 @@
 import {
+	colorBackgroundGrey,
 	colorBlack,
 	colorBlue,
 	colorBrightGrey,
@@ -46,6 +47,10 @@ const palette: Palette = {
 		token: extractColor(colorBrightGrey),
 		css: getColor(colorBrightGrey),
 	},
+	backgroundGrey: {
+		token: extractColor(colorBackgroundGrey),
+		css: getColor(colorBackgroundGrey),
+	}
 };
 
 const colors: Colors = {
