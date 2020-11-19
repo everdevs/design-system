@@ -24,6 +24,7 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
             Title
           </span>
           <svg
+            aria-hidden="true"
             className="css-1mvn3rv"
             height={24}
             viewBox="0 0 24 24"
@@ -85,6 +86,7 @@ exports[`Accordion with title matches snapshot  1`] = `
             Title
           </span>
           <svg
+            aria-hidden="true"
             className="css-1mvn3rv"
             height={24}
             viewBox="0 0 24 24"

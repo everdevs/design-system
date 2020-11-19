@@ -12,9 +12,15 @@ const StyledPath = styled.path`
 	fill: currentColor;
 `;
 
-const Icon: React.FC<IconProps> = ({ className, icon, size }) => {
+const Icon: React.FC<IconProps> = ({ className, icon, size, ...props }) => {
 	return (
-		<StyledSvg viewBox={`0 0 ${size} ${size}`} height={size} width={size} className={className}>
+		<StyledSvg
+			viewBox={`0 0 ${size} ${size}`}
+			className={className}
+			height={size}
+			width={size}
+			{...props}
+		>
 			<title>{humanize(icon as string)}</title>
 			<StyledPath d={icons[size][icon]} />
 		</StyledSvg>

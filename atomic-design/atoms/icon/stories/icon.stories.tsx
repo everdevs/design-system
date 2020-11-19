@@ -14,6 +14,14 @@ Simple.args = {
 	size: Size.medium,
 };
 
+export const ARIAHidden = Template.bind({});
+
+ARIAHidden.args = {
+	icon: "chevronDown",
+	size: Size.medium,
+	"aria-hidden": true,
+};
+
 const story = {
 	component: Icon,
 	title: "Design System/Atoms/Icon",
