@@ -15,7 +15,7 @@ export const colorWhite = createToken<ColorObject>(
 
 export const colorGrey = createToken<ColorObject>(
 	"Grey",
-	{ type: ColorType.hex, value: "69758F" },
+	{ type: ColorType.hex, value: "5D6678" },
 	"Evernest Grey"
 );
 
