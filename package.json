@@ -90,7 +90,7 @@
 		"@commitlint/cli": "^11.0.0",
 		"@commitlint/config-conventional": "^11.0.0",
 		"@commitlint/config-lerna-scopes": "^11.0.0",
-		"@emotion/core": "^10.0.35",
+		"@emotion/core": "^11.0.0",
 		"@percy/storybook": "^3.3.1",
 		"@rollup/plugin-babel": "^5.2.1",
 		"@rollup/plugin-commonjs": "^15.1.0",

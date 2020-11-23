@@ -38,7 +38,7 @@
 		"@evernest/tokens": "^0.5.0"
 	},
 	"devDependencies": {
-		"@emotion/core": "^10.0.35",
+		"@emotion/core": "^11.0.0",
 		"@emotion/styled": "^10.0.27",
 		"@evernest/dev-helpers": "^0.5.0",
 		"@types/react": "^16.9.49",
