@@ -4,7 +4,7 @@ import { Meta, Story } from "@storybook/react";
 import { Tag } from "../src";
 
 const Template: Story = args => {
-	return <Tag {...args} text="New"/>;
+	return <Tag {...args} text="New" />;
 };
 
 export const Simple = Template.bind({});

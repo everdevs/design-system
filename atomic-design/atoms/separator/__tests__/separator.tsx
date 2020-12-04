@@ -2,7 +2,7 @@ import { createTree, withTheme } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 import React from "react";
 import { Separator, StyledSeparatorProps } from "../src";
-import {mount} from "enzyme";
+import { mount } from "enzyme";
 
 const ThemedSeparator = withTheme<StyledSeparatorProps>(Separator, theme);
 

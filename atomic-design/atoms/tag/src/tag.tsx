@@ -13,6 +13,10 @@ export const StyledTag = styled.span<StyledTagProps>`
 `;
 
 export const Tag = React.forwardRef<TagElement, TagProps>((props, ref) => {
-	const {text, ...rest} = props;
-	return <StyledTag {...rest} ref={ref}>{text}</StyledTag>
+	const { text, ...rest } = props;
+	return (
+		<StyledTag {...rest} ref={ref}>
+			{text}
+		</StyledTag>
+	);
 });

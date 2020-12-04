@@ -7,7 +7,8 @@ import { Tag, TagProps } from "../src";
 const ThemedTag = withTheme<TagProps>(Tag, theme);
 
 test("Tag allows setting text", () => {
-	const wrapper = mount(<ThemedTag text="New" />);expect(wrapper.text()).toEqual("New");
+	const wrapper = mount(<ThemedTag text="New" />);
+	expect(wrapper.text()).toEqual("New");
 });
 
 test("Tag matches the snapshot", () => {
