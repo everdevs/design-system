@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag matches the snapshot 1`] = `
+<span
+  className="css-19e8gv2"
+>
+  foo
+</span>
+`;
