@@ -1,8 +1,15 @@
-import { useTheme } from "emotion-theming";
 import React from "react";
-import { getImageUrl } from "./utils";
 import styled from "@emotion/styled";
-import { AssetFormat, BuildSrcSetParams, ImageSizes, ContentfulImageProps } from "./types";
+import { css } from "@emotion/core";
+import { useTheme } from "emotion-theming";
+import { getImageUrl } from "./utils";
+import {
+	AssetFormat,
+	BuildSrcSetParams,
+	ImageSizes,
+	ContentfulImageProps,
+	ImgWrapperProps,
+} from "./types";
 
 const buildSrcSet = ({ url, sizes, fm, breakpoints }: BuildSrcSetParams): string => {
 	return Object.entries(sizes)
@@ -59,14 +66,16 @@ export const Picture = styled.picture<{ loaded?: boolean }>`
 	object-position: center center;
 `;
 
-const ImgWrapper = styled.span`
+const ImgWrapper = styled.span<ImgWrapperProps>`
 	display: inline-block;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 	font-size: 0;
 	line-height: 0;
-	background: #eee;
+	${({ theme: { palette }, bgColor }) => css`
+		background: ${palette[bgColor].css};
+	`};
 `;
 
 export const useImageLoaded = (): [React.RefObject<HTMLImageElement>, boolean] => {
@@ -80,6 +89,7 @@ export const useImageLoaded = (): [React.RefObject<HTMLImageElement>, boolean] =
 };
 
 export const ContentfulImage: React.FC<ContentfulImageProps> = ({
+	bgColor,
 	height,
 	width,
 	src,
@@ -139,7 +149,7 @@ export const ContentfulImage: React.FC<ContentfulImageProps> = ({
 		.reverse()
 		.join(",");
 	return (
-		<ImgWrapper className={className}>
+		<ImgWrapper bgColor={bgColor} className={className}>
 			<Placeholder
 				src={placeholder}
 				alt={alt}
@@ -165,4 +175,8 @@ export const ContentfulImage: React.FC<ContentfulImageProps> = ({
 			</Picture>
 		</ImgWrapper>
 	);
+};
+
+ContentfulImage.defaultProps = {
+	bgColor: "brightGrey",
 };
