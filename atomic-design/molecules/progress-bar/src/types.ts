@@ -5,7 +5,7 @@ export type ProgressBarElement = HTMLDivElement;
 export interface StyledProgressBarProps extends PropsWithTheme<ProgressBarElement> {}
 
 export interface ProgressBarProps extends PropsWithTheme<ProgressBarElement> {
-	ariaLabel: string;
+	label: string;
 	current: number;
 	segments: number;
 }

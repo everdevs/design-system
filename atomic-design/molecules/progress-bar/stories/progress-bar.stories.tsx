@@ -4,7 +4,7 @@ import { Meta, Story } from "@storybook/react";
 import { ProgressBar } from "../src";
 
 const Template: Story = args => {
-	return <ProgressBar ariaLabel="Step 1 of 3" current={2} segments={3} {...args} />;
+	return <ProgressBar label="Step 1 of 3" current={2} segments={3} {...args} />;
 };
 
 export const Simple = Template.bind({});

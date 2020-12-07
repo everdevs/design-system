@@ -12,7 +12,7 @@ const StyledProgressBar = styled(animated.div)<StyledProgressBarProps>`
 `;
 
 export const ProgressBar = React.forwardRef<ProgressBarElement, ProgressBarProps>((props, ref) => {
-	const { ariaLabel, current, segments, ...rest } = props;
+	const { label, current, segments, ...rest } = props;
 	const percentage = Math.ceil((current / segments) * 100);
 	const animatedStyles = useSpring({ width: `${percentage > 100 ? 100 : percentage}%` });
 	return (
@@ -20,7 +20,7 @@ export const ProgressBar = React.forwardRef<ProgressBarElement, ProgressBarProps
 			aria-valuemin={0}
 			aria-valuemax={segments}
 			aria-valuenow={current}
-			aria-valuetext={ariaLabel}
+			aria-valuetext={label}
 			ref={ref}
 			role="progressbar"
 			style={animatedStyles}

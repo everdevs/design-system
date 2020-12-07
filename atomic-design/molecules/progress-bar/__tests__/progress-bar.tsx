@@ -6,6 +6,6 @@ import { ProgressBar, ProgressBarProps } from "../src";
 const ThemedProgressBar = withTheme<ProgressBarProps>(ProgressBar, theme);
 
 test("ProgressBar matches the snapshot", () => {
-	const tree = createTree(<ThemedProgressBar ariaLabel="Step 1 of 3" current={2} segments={3} />);
+	const tree = createTree(<ThemedProgressBar label="Step 1 of 3" current={2} segments={3} />);
 	expect(tree).toMatchSnapshot();
 });
