@@ -73,8 +73,8 @@ const ImgWrapper = styled.span<ImgWrapperProps>`
 	overflow: hidden;
 	font-size: 0;
 	line-height: 0;
-	${({ theme: { palette }, bgColor }) => css`
-		background: ${palette[bgColor].css};
+	${({ theme: { palette }, backgroundColor }) => css`
+		background: ${palette[backgroundColor].css};
 	`};
 `;
 
@@ -89,7 +89,7 @@ export const useImageLoaded = (): [React.RefObject<HTMLImageElement>, boolean] =
 };
 
 export const ContentfulImage: React.FC<ContentfulImageProps> = ({
-	bgColor,
+	backgroundColor,
 	height,
 	width,
 	src,
@@ -149,7 +149,7 @@ export const ContentfulImage: React.FC<ContentfulImageProps> = ({
 		.reverse()
 		.join(",");
 	return (
-		<ImgWrapper bgColor={bgColor} className={className}>
+		<ImgWrapper backgroundColor={backgroundColor} className={className}>
 			<Placeholder
 				src={placeholder}
 				alt={alt}
@@ -178,5 +178,5 @@ export const ContentfulImage: React.FC<ContentfulImageProps> = ({
 };
 
 ContentfulImage.defaultProps = {
-	bgColor: "brightGrey",
+	backgroundColor: "brightGrey",
 };

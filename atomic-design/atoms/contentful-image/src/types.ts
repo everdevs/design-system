@@ -2,11 +2,11 @@ import { Breakpoints, Palette, PropsWithTheme } from "@evernest/theme";
 import React from "react";
 
 export interface ImgWrapperProps extends PropsWithTheme {
-	bgColor: keyof Palette;
+	backgroundColor: keyof Palette;
 }
 
 export interface ContentfulImageProps extends React.HTMLProps<HTMLDivElement> {
-	bgColor?: keyof Palette;
+	backgroundColor?: keyof Palette;
 }
 
 export type ImageSizes = {
