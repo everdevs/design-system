@@ -2,7 +2,7 @@
 
 exports[`Tag matches the snapshot 1`] = `
 <span
-  className="css-19e8gv2"
+  className="css-wzpwdq"
 >
   foo
 </span>

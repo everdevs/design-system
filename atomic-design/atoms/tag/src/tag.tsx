@@ -7,7 +7,7 @@ export const StyledTag = styled.span<StyledTagProps>`
 	border-radius: 5px;
 	padding: var(--spacing-xxxs);
 	${({ theme: { palette } }) => css`
-		background: ${palette.blue.css};
+		background: ${palette.brandGreen.css};
 		color: ${palette.white.css};
 	`};
 `;
