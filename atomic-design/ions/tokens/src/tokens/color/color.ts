@@ -61,6 +61,12 @@ export const colorGreen = createToken<ColorObject>(
 	"Evernest Green"
 );
 
+export const colorBrandGreen = createToken<ColorObject>(
+	"Brand Green",
+	{ type: ColorType.hex, value: "87B792" },
+	"Evernest Brand Green"
+);
+
 export const colorBlue = createToken<ColorObject>(
 	"Blue",
 	{ type: ColorType.hex, value: "0095D8" },

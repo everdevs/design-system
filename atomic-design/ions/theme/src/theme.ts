@@ -2,6 +2,7 @@ import {
 	colorBackgroundGrey,
 	colorBlack,
 	colorBlue,
+	colorBrandGreen,
 	colorBrightGrey,
 	colorDarkGrey,
 	colorGreen,
@@ -50,7 +51,11 @@ const palette: Palette = {
 	backgroundGrey: {
 		token: extractColor(colorBackgroundGrey),
 		css: getColor(colorBackgroundGrey),
-	}
+	},
+	brandGreen: {
+		token: extractColor(colorBrandGreen),
+		css: getColor(colorBrandGreen),
+	},
 };
 
 const colors: Colors = {
