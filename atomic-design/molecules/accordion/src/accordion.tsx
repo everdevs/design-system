@@ -1,6 +1,7 @@
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { Icon, Size } from "@evernest/icon";
+import { PropsWithTheme } from "@evernest/theme";
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import { useMeasure } from "react-use";
@@ -31,15 +32,38 @@ export const StyledInnerButtonWrapper = styled.div`
 	align-items: center;
 	display: flex;
 	height: 100%;
-	justify-content: space-between;
+	overflow: hidden;
 `;
 
-export const StyledPanel = styled.div`
+export const StyledPanel = styled.div<PropsWithTheme>`
 	padding-bottom: var(--spacing-xs);
+	padding-left: var(--spacing-s);
+	${({ theme: { mq } }) => css`
+		@media ${mq.l} {
+			padding-left: var(--spacing-m);
+		}
+	`};
 `;
 
 export const StyledAnimatedPanelWrapper = styled(animated.div)`
 	overflow: hidden;
+`;
+
+export const StyledIconWrapper = styled(animated.div)<PropsWithTheme>`
+	display: inline-flex;
+	transform-origin: 50% 50%;
+	width: var(--spacing-s);
+	${({ theme: { mq } }) => css`
+		@media ${mq.l} {
+			width: var(--spacing-m);
+		}
+	`};
+`;
+
+export const StyledAnimatedIconWrapper = styled(animated.span)`
+	display: flex;
+	align-items: center;
+	transform-origin: 50% 50%;
 `;
 
 export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
@@ -53,9 +77,14 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 
 		const [useMeasureRef, { height }] = useMeasure<HTMLDivElement>();
 
-		const springProps = useSpring({
+		const springPanelProps = useSpring({
 			config: springConfig,
 			height: expanded ? height + panelBottomPadding : 0,
+		});
+
+		const springIconProps = useSpring({
+			config: springConfig,
+			transform: expanded ? "rotate(0)" : "rotate(-135deg)",
 		});
 
 		React.useEffect(() => {
@@ -79,16 +108,16 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 						onClick={handleClick}
 					>
 						<StyledInnerButtonWrapper>
+							<StyledIconWrapper>
+								<StyledAnimatedIconWrapper style={springIconProps}>
+									<Icon aria-hidden="true" icon="close" size={Size.medium} />
+								</StyledAnimatedIconWrapper>
+							</StyledIconWrapper>
 							<span data-test-id="styled-inner-button-wrapper-label">{title}</span>
-							<Icon
-								aria-hidden="true"
-								icon={expanded ? "chevronUp" : "chevronDown"}
-								size={Size.medium}
-							/>
 						</StyledInnerButtonWrapper>
 					</StyledButton>
 				</HeaderComponent>
-				<StyledAnimatedPanelWrapper style={springProps}>
+				<StyledAnimatedPanelWrapper style={springPanelProps}>
 					<StyledPanel
 						ref={useMeasureRef}
 						aria-labelledby={id}
