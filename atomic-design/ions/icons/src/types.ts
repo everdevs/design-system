@@ -1,6 +1,7 @@
 export interface IconCollection {
 	chevronDown: string;
 	chevronUp: string;
+	close: string;
 	facebook: string;
 	instagram: string;
 	linkedIn: string;
