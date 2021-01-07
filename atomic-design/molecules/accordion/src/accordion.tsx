@@ -51,7 +51,6 @@ export const StyledAnimatedPanelWrapper = styled(animated.div)`
 
 export const StyledIconWrapper = styled(animated.div)<PropsWithTheme>`
 	display: inline-flex;
-	transform-origin: 50% 50%;
 	width: var(--spacing-s);
 	${({ theme: { mq } }) => css`
 		@media ${mq.l} {
@@ -64,6 +63,7 @@ export const StyledAnimatedIconWrapper = styled(animated.span)`
 	display: flex;
 	align-items: center;
 	transform-origin: 50% 50%;
+	will-change: transform;
 `;
 
 export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
