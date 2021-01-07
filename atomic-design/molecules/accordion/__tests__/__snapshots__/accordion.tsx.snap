@@ -16,16 +16,16 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
         onClick={[Function]}
       >
         <div
-          className="css-1uzlad7"
+          className="css-1jbt2pi"
         >
           <div
-            className="css-1d5avk2"
+            className="css-1y1h1k0"
           >
             <span
-              className="css-3089xd"
+              className="css-mnpnkz"
               style={
                 Object {
-                  "transform": "rotate(-135deg)",
+                  "transform": "rotate(0deg)",
                 }
               }
             >
@@ -41,7 +41,7 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
                 </title>
                 <path
                   className="css-1mvn3rv"
-                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                 />
               </svg>
             </span>
@@ -91,16 +91,16 @@ exports[`Accordion with title matches snapshot  1`] = `
         onClick={[Function]}
       >
         <div
-          className="css-1uzlad7"
+          className="css-1jbt2pi"
         >
           <div
-            className="css-1d5avk2"
+            className="css-1y1h1k0"
           >
             <span
-              className="css-3089xd"
+              className="css-mnpnkz"
               style={
                 Object {
-                  "transform": "rotate(-135deg)",
+                  "transform": "rotate(0deg)",
                 }
               }
             >
@@ -116,7 +116,7 @@ exports[`Accordion with title matches snapshot  1`] = `
                 </title>
                 <path
                   className="css-1mvn3rv"
-                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                 />
               </svg>
             </span>

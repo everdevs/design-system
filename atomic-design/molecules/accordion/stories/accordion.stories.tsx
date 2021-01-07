@@ -18,7 +18,7 @@ const ExampleAccordionContent = (
 
 const Template: Story<AccordionProps> = args => {
 	return (
-		<ColorBox background={theme.palette.darkGrey.css} color={theme.palette.white.css}>
+		<ColorBox background={theme.palette.white.css} color={theme.palette.darkGrey.css}>
 			<Accordion id={args.id} title={args.title} {...args} />
 		</ColorBox>
 	);

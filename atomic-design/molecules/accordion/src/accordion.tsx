@@ -29,10 +29,10 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledInnerButtonWrapper = styled.div`
-	align-items: center;
 	display: flex;
 	height: 100%;
 	overflow: hidden;
+	text-align: left;
 `;
 
 export const StyledPanel = styled.div<PropsWithTheme>`
@@ -50,18 +50,15 @@ export const StyledAnimatedPanelWrapper = styled(animated.div)`
 `;
 
 export const StyledIconWrapper = styled(animated.div)<PropsWithTheme>`
-	display: inline-flex;
-	width: var(--spacing-s);
+	min-width: var(--spacing-s);
 	${({ theme: { mq } }) => css`
 		@media ${mq.l} {
-			width: var(--spacing-m);
+			min-width: var(--spacing-m);
 		}
 	`};
 `;
 
 export const StyledAnimatedIconWrapper = styled(animated.span)`
-	display: flex;
-	align-items: center;
 	transform-origin: 50% 50%;
 	will-change: transform;
 `;
@@ -84,7 +81,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 
 		const springIconProps = useSpring({
 			config: springConfig,
-			transform: expanded ? "rotate(0)" : "rotate(-135deg)",
+			transform: expanded ? "rotate(135deg)" : "rotate(0deg)",
 		});
 
 		React.useEffect(() => {
