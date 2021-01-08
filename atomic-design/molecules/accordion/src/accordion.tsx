@@ -59,6 +59,10 @@ export const StyledIconWrapper = styled(animated.div)<PropsWithTheme>`
 	`};
 `;
 
+export const StyledAnimatedIconWrapper = styled(animated.span)`
+	display: inline-flex;
+`;
+
 export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 	({ id, children, title, headerComponent, springConfig, ...props }, ref) => {
 		const [expanded, setExpanded] = React.useState(false);
@@ -102,7 +106,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 					>
 						<StyledInnerButtonWrapper>
 							<StyledIconWrapper>
-								<animated.span
+								<StyledAnimatedIconWrapper
 									style={{
 										transform: z.interpolate(
 											value => `rotate3d(0,0,1,${value}turn)`
@@ -110,7 +114,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 									}}
 								>
 									<Icon aria-hidden="true" icon="close" size={Size.medium} />
-								</animated.span>
+								</StyledAnimatedIconWrapper>
 							</StyledIconWrapper>
 							<span data-test-id="styled-inner-button-wrapper-label">{title}</span>
 						</StyledInnerButtonWrapper>
