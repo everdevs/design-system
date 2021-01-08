@@ -19,13 +19,12 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
           className="css-1jbt2pi"
         >
           <div
-            className="css-1y1h1k0"
+            className="css-151dbik"
           >
             <span
-              className="css-mnpnkz"
               style={
                 Object {
-                  "transform": "rotate(0deg)",
+                  "transform": "rotate3d(0,0,1,0turn)",
                 }
               }
             >
@@ -94,13 +93,12 @@ exports[`Accordion with title matches snapshot  1`] = `
           className="css-1jbt2pi"
         >
           <div
-            className="css-1y1h1k0"
+            className="css-151dbik"
           >
             <span
-              className="css-mnpnkz"
               style={
                 Object {
-                  "transform": "rotate(0deg)",
+                  "transform": "rotate3d(0,0,1,0turn)",
                 }
               }
             >

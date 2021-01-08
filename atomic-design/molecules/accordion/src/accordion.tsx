@@ -50,17 +50,13 @@ export const StyledAnimatedPanelWrapper = styled(animated.div)`
 `;
 
 export const StyledIconWrapper = styled(animated.div)<PropsWithTheme>`
+	display: inline-flex;
 	min-width: var(--spacing-s);
 	${({ theme: { mq } }) => css`
 		@media ${mq.l} {
 			min-width: var(--spacing-m);
 		}
 	`};
-`;
-
-export const StyledAnimatedIconWrapper = styled(animated.span)`
-	transform-origin: 50% 50%;
-	will-change: transform;
 `;
 
 export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
@@ -79,9 +75,9 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 			height: expanded ? height + panelBottomPadding : 0,
 		});
 
-		const springIconProps = useSpring({
+		const { z } = useSpring({
 			config: springConfig,
-			transform: expanded ? "rotate(135deg)" : "rotate(0deg)",
+			z: expanded ? 0.125 : 0,
 		});
 
 		React.useEffect(() => {
@@ -106,9 +102,15 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 					>
 						<StyledInnerButtonWrapper>
 							<StyledIconWrapper>
-								<StyledAnimatedIconWrapper style={springIconProps}>
+								<animated.span
+									style={{
+										transform: z.interpolate(
+											value => `rotate3d(0,0,1,${value}turn)`
+										),
+									}}
+								>
 									<Icon aria-hidden="true" icon="close" size={Size.medium} />
-								</StyledAnimatedIconWrapper>
+								</animated.span>
 							</StyledIconWrapper>
 							<span data-test-id="styled-inner-button-wrapper-label">{title}</span>
 						</StyledInnerButtonWrapper>
