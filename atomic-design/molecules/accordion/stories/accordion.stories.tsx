@@ -6,29 +6,40 @@ import React from "react";
 import { Accordion, AccordionProps } from "../src";
 
 const ExampleAccordionContent = (
-	<div>
+	<>
 		<p>Some content that is now visible.</p>
+		<a href="#">dada</a>
+		<a href="#">dada</a>
+		<a href="#">dada</a>
 		<ul>
 			<li>List Item</li>
 			<li>List Item</li>
 			<li>List Item</li>
 		</ul>
-	</div>
+	</>
 );
 
-const Template: Story<AccordionProps> = args => {
+const LightTemplate: Story<AccordionProps> = args => {
 	return (
-		<ColorBox background={theme.palette.white.css} color={theme.palette.darkGrey.css}>
+		<ColorBox background={theme.palette.white.css} color={theme.palette.black.css}>
 			<Accordion id={args.id} title={args.title} {...args} />
 		</ColorBox>
 	);
 };
 
-const MultipleTemplate: Story = ({ items }) => {
-	return items.map((args, i) => <Template key={i} {...args} />);
+const DarkTemplate: Story<AccordionProps> = args => {
+	return (
+		<ColorBox background={theme.palette.darkGrey.css} color={theme.palette.white.css}>
+			<Accordion id={args.id} title={args.title} {...args} dark />
+		</ColorBox>
+	);
 };
 
-export const Simple = Template.bind({});
+const MultipleTemplate: Story = ({ items }) => {
+	return items.map((args, i) => <LightTemplate key={i} {...args} />);
+};
+
+export const Simple = LightTemplate.bind({});
 Simple.args = {
 	id: "test-id",
 	title: "Heading",
@@ -51,10 +62,18 @@ Multiple.args = {
 	],
 };
 
-export const WithHeaderComponent = Template.bind({});
+export const WithHeaderComponent = LightTemplate.bind({});
 WithHeaderComponent.args = {
 	id: "test-id",
 	title: "Heading",
+	children: ExampleAccordionContent,
+	headerComponent: props => <Typography {...props} variant={TypographyVariant.h4} />,
+};
+
+export const WithDarkBackground = DarkTemplate.bind({});
+WithDarkBackground.args = {
+	id: "test-id",
+	title: "Elements are white",
 	children: ExampleAccordionContent,
 	headerComponent: props => <Typography {...props} variant={TypographyVariant.h4} />,
 };

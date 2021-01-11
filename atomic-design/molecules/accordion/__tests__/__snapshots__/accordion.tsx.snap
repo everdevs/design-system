@@ -5,7 +5,8 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
   className="css-1mo6rv1"
 >
   <div
-    className="css-dq2y9"
+    className="css-1l9i93m"
+    dark={false}
   >
     <div>
       <button
@@ -19,7 +20,8 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
           className="css-1jbt2pi"
         >
           <div
-            className="css-151dbik"
+            className="css-nlltu0"
+            dark={false}
           >
             <span
               className="css-1mmv0yt"
@@ -64,9 +66,14 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
     >
       <div
         aria-labelledby="test-id"
-        className="css-53qqi3"
+        className="css-1v5eul"
         id="test-id-panel"
         role="region"
+        style={
+          Object {
+            "visibility": "hidden",
+          }
+        }
       >
         content
       </div>
@@ -80,7 +87,8 @@ exports[`Accordion with title matches snapshot  1`] = `
   className="css-1mo6rv1"
 >
   <div
-    className="css-dq2y9"
+    className="css-1l9i93m"
+    dark={false}
   >
     <div>
       <button
@@ -94,7 +102,8 @@ exports[`Accordion with title matches snapshot  1`] = `
           className="css-1jbt2pi"
         >
           <div
-            className="css-151dbik"
+            className="css-nlltu0"
+            dark={false}
           >
             <span
               className="css-1mmv0yt"
@@ -139,9 +148,14 @@ exports[`Accordion with title matches snapshot  1`] = `
     >
       <div
         aria-labelledby="test-id"
-        className="css-53qqi3"
+        className="css-1v5eul"
         id="test-id-panel"
         role="region"
+        style={
+          Object {
+            "visibility": "hidden",
+          }
+        }
       >
         content
       </div>
