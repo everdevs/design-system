@@ -38,11 +38,11 @@ export const StyledInnerButtonWrapper = styled.div`
 export const StyledPanel = styled.div<PropsWithTheme>`
 	padding-bottom: var(--spacing-xs);
 	padding-left: var(--spacing-s);
-	> :first-of-type {
+	> :first-child {
 		margin-top: 0;
 	}
 
-	> :last-of-type {
+	> :last-child {
 		margin-bottom: 0;
 	}
 
