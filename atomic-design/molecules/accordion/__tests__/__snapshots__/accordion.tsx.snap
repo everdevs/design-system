@@ -1,5 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Accordion renders with dark 1`] = `
+<div
+  className="css-1mo6rv1"
+>
+  <div
+    className="css-11ph2lp"
+    dark={true}
+  >
+    <div>
+      <button
+        aria-controls="test-id-panel"
+        aria-expanded={false}
+        className="css-1h9i0hj"
+        id="test-id"
+        onClick={[Function]}
+      >
+        <div
+          className="css-1jbt2pi"
+        >
+          <div
+            className="css-1b4t3rd"
+            dark={true}
+          >
+            <span
+              className="css-1mmv0yt"
+              style={
+                Object {
+                  "transform": "rotate3d(0,0,1,0turn)",
+                }
+              }
+            >
+              <svg
+                aria-hidden="true"
+                className="css-1mvn3rv"
+                height={24}
+                viewBox="0 0 24 24"
+                width={24}
+              >
+                <title>
+                  Close
+                </title>
+                <path
+                  className="css-1mvn3rv"
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                />
+              </svg>
+            </span>
+          </div>
+          <span
+            data-test-id="styled-inner-button-wrapper-label"
+          >
+            Title
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      className="css-zlrsjy"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        aria-labelledby="test-id"
+        className="css-1kchnz3"
+        id="test-id-panel"
+        role="region"
+      >
+        content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Accordion with springConfig matches snapshot 1`] = `
 <div
   className="css-1mo6rv1"
@@ -66,14 +143,9 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
     >
       <div
         aria-labelledby="test-id"
-        className="css-n12ue"
+        className="css-1kchnz3"
         id="test-id-panel"
         role="region"
-        style={
-          Object {
-            "visibility": "hidden",
-          }
-        }
       >
         content
       </div>
@@ -148,14 +220,9 @@ exports[`Accordion with title matches snapshot  1`] = `
     >
       <div
         aria-labelledby="test-id"
-        className="css-n12ue"
+        className="css-1kchnz3"
         id="test-id-panel"
         role="region"
-        style={
-          Object {
-            "visibility": "hidden",
-          }
-        }
       >
         content
       </div>

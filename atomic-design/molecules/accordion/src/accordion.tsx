@@ -5,7 +5,7 @@ import { PropsWithTheme } from "@evernest/theme";
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import { useMeasure } from "react-use";
-import { AccordionElement, AccordionProps, StyledAccordionProps } from "./types";
+import { AccordionElement, AccordionProps, StyledAccordionProps, StyledPanelProps } from "./types";
 
 /* @todo: revisit border style with token refactor */
 export const StyledAccordion = styled("div", {
@@ -35,7 +35,7 @@ export const StyledInnerButtonWrapper = styled.div`
 	text-align: left;
 `;
 
-export const StyledPanel = styled.div<PropsWithTheme>`
+export const StyledPanel = styled.div<StyledPanelProps>`
 	padding-bottom: var(--spacing-xs);
 	padding-left: var(--spacing-s);
 	> :first-child {
@@ -46,7 +46,8 @@ export const StyledPanel = styled.div<PropsWithTheme>`
 		margin-bottom: 0;
 	}
 
-	${({ theme: { mq } }) => css`
+	${({ theme: { mq }, expanded }) => css`
+		visibility: ${expanded ? "visible" : "hidden"};
 		@media ${mq.l} {
 			padding-left: var(--spacing-m);
 		}
@@ -131,11 +132,11 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 				</HeaderComponent>
 				<StyledAnimatedPanelWrapper style={springPanelProps}>
 					<StyledPanel
+						expanded={expanded}
 						ref={useMeasureRef}
 						aria-labelledby={id}
 						id={panelId}
 						role="region"
-						style={{ visibility: expanded ? "visible" : "hidden" }}
 					>
 						{children}
 					</StyledPanel>

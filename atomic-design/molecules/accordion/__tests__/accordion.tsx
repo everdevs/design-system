@@ -45,6 +45,15 @@ test("Accordion with springConfig matches snapshot", () => {
 	expect(closed).toMatchSnapshot();
 });
 
+test("Accordion renders with dark", () => {
+	const dark = createTree(
+		<WrappedAccordion id="test-id" title="Title" dark>
+			content
+		</WrappedAccordion>
+	);
+	expect(dark).toMatchSnapshot();
+});
+
 test("Accordion prop 'expanded' toggles on click", () => {
 	const wrapper = mount(<WrappedAccordion id="test-id" title="Title" />);
 	const button = wrapper.find(StyledButton);
