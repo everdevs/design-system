@@ -20,7 +20,7 @@ exports[`Accordion renders with dark 1`] = `
           className="css-1jbt2pi"
         >
           <div
-            className="css-1b4t3rd"
+            className="css-sze2ju"
             dark={true}
           >
             <span
@@ -98,7 +98,7 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
           className="css-1jbt2pi"
         >
           <div
-            className="css-nlltu0"
+            className="css-1k5ncad"
             dark={false}
           >
             <span
@@ -176,7 +176,7 @@ exports[`Accordion with title matches snapshot  1`] = `
           className="css-1jbt2pi"
         >
           <div
-            className="css-nlltu0"
+            className="css-1k5ncad"
             dark={false}
           >
             <span

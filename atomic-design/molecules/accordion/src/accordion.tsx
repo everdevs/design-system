@@ -58,7 +58,6 @@ export const StyledAnimatedPanelWrapper = styled(animated.div)`
 `;
 
 export const StyledIconWrapper = styled(animated.div)<PropsWithTheme & { dark: boolean }>`
-	display: inline-flex;
 	min-width: var(--spacing-s);
 	${({ theme: { mq, palette }, dark }) => css`
 		color: ${dark ? palette.white.css : palette.grey.css};
