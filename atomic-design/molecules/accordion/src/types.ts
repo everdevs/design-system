@@ -12,8 +12,6 @@ export interface AccordionProps extends PropsWithTheme {
 	headerComponent?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
 
-export interface StyledPanelProps extends PropsWithTheme {
-	expanded: boolean;
-}
+export interface StyledPanelProps extends PropsWithTheme {}
 
 export interface StyledAccordionProps extends PropsWithTheme<AccordionElement> {}

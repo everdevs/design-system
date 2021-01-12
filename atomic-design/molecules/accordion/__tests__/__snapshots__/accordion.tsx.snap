@@ -61,12 +61,13 @@ exports[`Accordion renders with dark 1`] = `
       style={
         Object {
           "height": 0,
+          "visibility": "hidden",
         }
       }
     >
       <div
         aria-labelledby="test-id"
-        className="css-1kchnz3"
+        className="css-n12ue"
         id="test-id-panel"
         role="region"
       >
@@ -138,12 +139,13 @@ exports[`Accordion with springConfig matches snapshot 1`] = `
       style={
         Object {
           "height": 0,
+          "visibility": "hidden",
         }
       }
     >
       <div
         aria-labelledby="test-id"
-        className="css-1kchnz3"
+        className="css-n12ue"
         id="test-id-panel"
         role="region"
       >
@@ -215,12 +217,13 @@ exports[`Accordion with title matches snapshot  1`] = `
       style={
         Object {
           "height": 0,
+          "visibility": "hidden",
         }
       }
     >
       <div
         aria-labelledby="test-id"
-        className="css-1kchnz3"
+        className="css-n12ue"
         id="test-id-panel"
         role="region"
       >

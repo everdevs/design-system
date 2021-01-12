@@ -46,8 +46,7 @@ export const StyledPanel = styled.div<StyledPanelProps>`
 		margin-bottom: 0;
 	}
 
-	${({ theme: { mq }, expanded }) => css`
-		visibility: ${expanded ? "visible" : "hidden"};
+	${({ theme: { mq } }) => css`
 		@media ${mq.l} {
 			padding-left: var(--spacing-m);
 		}
@@ -87,6 +86,7 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 		const springPanelProps = useSpring({
 			config: springConfig,
 			height: expanded ? height + panelBottomPadding : 0,
+			opacity: expanded ? 1 : 0,
 		});
 
 		const { z } = useSpring({
@@ -130,9 +130,16 @@ export const Accordion = React.forwardRef<AccordionElement, AccordionProps>(
 						</StyledInnerButtonWrapper>
 					</StyledButton>
 				</HeaderComponent>
-				<StyledAnimatedPanelWrapper style={springPanelProps}>
+				<StyledAnimatedPanelWrapper
+					style={{
+						height: springPanelProps.height,
+						visibility: springPanelProps.opacity.interpolate(value =>
+							/* istanbul ignore next */
+							value === 0 ? "hidden" : "visible"
+						),
+					}}
+				>
 					<StyledPanel
-						expanded={expanded}
 						ref={useMeasureRef}
 						aria-labelledby={id}
 						id={panelId}
