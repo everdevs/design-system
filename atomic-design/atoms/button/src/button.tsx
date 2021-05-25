@@ -1,6 +1,6 @@
-import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { ButtonProps, Size, Variation } from "./types";
+import { css } from "@emotion/react";
 
 const Button = styled("button", {
 	shouldForwardProp: (propName: string) => !["theme"].includes(propName),

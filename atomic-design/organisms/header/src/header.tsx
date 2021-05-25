@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import { HeaderElement, StyledHeaderProps } from "./types";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { useWindowScroll } from "react-use";
 import { PropsWithTheme } from "@evernest/theme";
 import { toOpacityValue } from "./utils";

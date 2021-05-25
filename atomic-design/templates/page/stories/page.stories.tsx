@@ -3,7 +3,7 @@ import { withWrapper } from "@evernest/dev-helpers";
 import { Footer } from "@evernest/footer";
 import { Hidden } from "@evernest/grid";
 import { Header } from "@evernest/header";
-import { ClassNames } from "@emotion/core";
+import { ClassNames } from "@emotion/react";
 import { Anchor, Panel, Toggle } from "@evernest/panel";
 import { Meta, Story } from "@storybook/react";
 import {
@@ -12,6 +12,7 @@ import {
 	Main as MainArea,
 	PageWithStyles as Page,
 } from "../src";
+import { Theme } from "@evernest/theme";
 
 export const PageLayout: Story = () => {
 	return (
@@ -70,7 +71,7 @@ export const WithResponsiveTranslucentHeader: Story = () => {
 				<Page
 					className={css`
 						--header-height-ref: 0;
-						@media ${theme.mq.l} {
+						@media ${(theme as Theme).mq.l} {
 							--header-height-ref: var(--header-height);
 						}
 					`}

@@ -2,7 +2,6 @@ import React from "react";
 import { mount } from "enzyme";
 import { GridOverlay } from "../src";
 import { createTree, Wrapper } from "@evernest/dev-helpers";
-import { Toggle } from "@evernest/panel";
 
 test("GridOverlay can be initially active", () => {
 	const tree = createTree(

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { css, Global } from "@emotion/core";
+import { css, Global } from "@emotion/react";
 import React from "react";
 import { Anchor, PanelElement, StyledBackdropProps, StyledPanelProps } from "./types";
 

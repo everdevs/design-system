@@ -1,5 +1,4 @@
 import { withWrapper } from "@evernest/dev-helpers";
-import { withTests } from "@storybook/addon-jest";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { Button } from "../src";

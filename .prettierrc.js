@@ -1,7 +1,6 @@
 module.exports = {
 	trailingComma: "es5",
 	semi: true,
-	useTabs: true,
 	singleQuote: false,
 	quoteProps: "as-needed",
 	jsxSingleQuote: false,

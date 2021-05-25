@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { range, random, randomColor, Wrapper, createTree, ColorBox } from "../src";
+import { ColorBox, createTree, random, randomColor, range, Wrapper } from "../src";
 
 test("random generates an integer", () => {
 	const r = random(10);

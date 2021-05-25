@@ -1,4 +1,4 @@
-import { withWrapper, ColorBox } from "@evernest/dev-helpers";
+import { ColorBox, withWrapper } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 import { Typography, TypographyVariant } from "@evernest/typography";
 import { Meta, Story } from "@storybook/react";

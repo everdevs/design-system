@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { StyledHeaderLinkProps, HeaderLinkElement } from "./types";
+import { HeaderLinkElement, StyledHeaderLinkProps } from "./types";
 import { PropsWithTheme } from "@evernest/theme";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 const StyledHighlight = styled.div<PropsWithTheme>`
 	pointer-events: none;

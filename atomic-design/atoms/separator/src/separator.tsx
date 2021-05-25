@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
-import { StyledSeparatorProps, SeparatorElement } from "./types";
+import { css } from "@emotion/react";
+import { SeparatorElement, StyledSeparatorProps } from "./types";
 
 export const StyledSeparator = styled.div<StyledSeparatorProps>`
 	height: 1px;

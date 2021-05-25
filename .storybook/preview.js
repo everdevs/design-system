@@ -1,9 +1,9 @@
 import { addDecorator, addParameters } from "@storybook/react";
-import { withTests } from "@storybook/addon-jest";
+// import { withTests } from "@storybook/addon-jest";
 import { withA11y } from "@storybook/addon-a11y";
 import { withKnobs } from "@storybook/addon-knobs";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-import results from "../.jest-testresults.json";
+// import results from "../.jest-testresults.json";
 
 const viewport = {
 	viewports: {
@@ -46,8 +46,8 @@ addParameters({
 addDecorator(withA11y);
 addDecorator(withKnobs);
 
-addDecorator(
-	withTests({
-		results,
-	})
-);
+// addDecorator(
+// 	withTests({
+// 		results,
+// 	})
+// );

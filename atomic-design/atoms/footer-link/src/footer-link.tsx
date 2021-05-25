@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { StyledFooterLinkProps, FooterLinkElement } from "./types";
-import { css } from "@emotion/core";
+import { FooterLinkElement, StyledFooterLinkProps } from "./types";
+import { css } from "@emotion/react";
 
 export const StyledFooterLink = styled.a<StyledFooterLinkProps>`
 	display: inline-flex;

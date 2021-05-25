@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { COLCOUNT, COLSPAN, GUTTER, PADDING } from "./constants";
 import { Alignment, RowProps } from "./types";

@@ -10,7 +10,7 @@ import {
 	colorRed,
 	colorWhite,
 	extractColor,
-	getColor,
+	getColor
 } from "@evernest/tokens";
 import { Breakpoints, Colors, GridConfig, Mediaqueries, Palette, Spaces, Theme } from "./types";
 import { tokens } from "./tokens";

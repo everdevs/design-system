@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { PropsWithTheme, theme } from "@evernest/theme";
 import { ThemeProvider } from "emotion-theming";
 import { GlobalStyles, Normalize } from "./styles";

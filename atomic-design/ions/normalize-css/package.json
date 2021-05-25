@@ -1,46 +1,46 @@
 {
-	"name": "@evernest/normalize-css",
-	"version": "0.5.0",
-	"keywords": [
-		"a11y",
-		"component library",
-		"design system"
-	],
-	"homepage": "https://everdevs.github.io/design-system",
-	"bugs": {
-		"url": "https://github.com/everdevs/design-system/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/everdevs/design-system.git"
-	},
-	"license": "MIT",
-	"author": {
-		"name": "Gregor Adams",
-		"email": "gregor.adams@evernest.com"
-	},
-	"main": "index.js",
-	"module": "dist/esm/index.js",
-	"typings": "dist/index.d.ts",
-	"files": [
-		"dist",
-		"index.js"
-	],
-	"scripts": {
-		"bin": "babel-node bin/prepare-normalize.ts --extensions='.ts'",
-		"prebuild": "yarn bin",
-		"build": "rollup -c",
-		"clean": "rimraf dist; rimraf src/normalize-css.ts"
-	},
-	"dependencies": {
-		"normalize.css": "^8.0.1"
-	},
-	"devDependencies": {
-		"@types/node": "^14.11.1",
-		"pify": "^5.0.0",
-		"ts-node": "^9.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@evernest/normalize-css",
+  "version": "0.5.0",
+  "keywords": [
+    "a11y",
+    "component library",
+    "design system"
+  ],
+  "homepage": "https://everdevs.github.io/design-system",
+  "bugs": {
+    "url": "https://github.com/everdevs/design-system/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everdevs/design-system.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Gregor Adams",
+    "email": "gregor.adams@evernest.com"
+  },
+  "main": "index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "bin": "babel-node bin/prepare-normalize.ts --extensions='.ts'",
+    "prebuild": "yarn bin",
+    "build": "rollup -c",
+    "clean": "rimraf dist; rimraf src/normalize-css.ts"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "pify": "^5.0.0",
+    "ts-node": "^10.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

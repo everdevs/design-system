@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import { StyledTagProps, TagElement, TagProps } from "./types";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 export const StyledTag = styled.span<StyledTagProps>`
 	border-radius: 5px;

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import { EvernestLogoElement, LogoSize, StyledEvernestLogoProps } from "./types";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 const LogoL = props => {
 	return (

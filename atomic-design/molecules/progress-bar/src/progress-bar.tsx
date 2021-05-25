@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { ProgressBarProps, ProgressBarElement, StyledProgressBarProps } from "./types";
+import { ProgressBarElement, ProgressBarProps, StyledProgressBarProps } from "./types";
 import { animated, useSpring } from "react-spring";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 const StyledProgressBar = styled(animated.div)<StyledProgressBarProps>`
 	height: 8px;
@@ -23,7 +23,7 @@ export const ProgressBar = React.forwardRef<ProgressBarElement, ProgressBarProps
 			aria-valuetext={label}
 			ref={ref}
 			role="progressbar"
-			style={animatedStyles}
+			style={(animatedStyles as unknown) as React.CSSProperties}
 			{...rest}
 		/>
 	);

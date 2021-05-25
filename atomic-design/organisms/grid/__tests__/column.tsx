@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { Alignment, Column, Grid, Row } from "../src";
+import { Column, Grid, Row } from "../src";
 import { createTree, Wrapper } from "@evernest/dev-helpers";
 
 test("Column renders children", () => {

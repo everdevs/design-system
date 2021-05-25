@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { useTheme } from "emotion-theming";
 import { getImageUrl } from "./utils";
 import {
 	AssetFormat,
 	BuildSrcSetParams,
-	ImageSizes,
 	ContentfulImageProps,
-	ImgWrapperProps,
+	ImageSizes,
+	ImgWrapperProps
 } from "./types";
 
 const buildSrcSet = ({ url, sizes, fm, breakpoints }: BuildSrcSetParams): string => {

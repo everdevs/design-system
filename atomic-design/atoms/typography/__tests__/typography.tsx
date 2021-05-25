@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { Typography, TypographyVariant } from "../src";
-import { Wrapper, createTree } from "@evernest/dev-helpers";
+import { Wrapper } from "@evernest/dev-helpers";
 
 const text = "Hello World!";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { Header, StyledHeaderProps } from "../src";
-import { createTree, withTheme, Wrapper } from "@evernest/dev-helpers";
+import { createTree, withTheme } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 
 const ThemedHeader = withTheme<StyledHeaderProps>(Header, theme);

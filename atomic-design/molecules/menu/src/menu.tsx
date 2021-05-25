@@ -1,7 +1,7 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import React from "react";
-import { StyledMenuProps, MenuElement, MenuDirection } from "./types";
+import { MenuDirection, MenuElement, StyledMenuProps } from "./types";
 
 export const StyledMenuTpl = styled.nav<StyledMenuProps>`
 	display: flex;

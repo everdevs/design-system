@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Icon, Size } from "@evernest/icon";
 import { PropsWithTheme } from "@evernest/theme";

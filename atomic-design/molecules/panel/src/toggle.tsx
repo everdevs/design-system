@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { ToggleElement, StyledToggleProps } from "./types";
-import { css } from "@emotion/core";
+import { StyledToggleProps, ToggleElement } from "./types";
+import { css } from "@emotion/react";
 
 export const StyledBurgerWrapper = styled.div`
 	height: 48px;

@@ -14,7 +14,7 @@
 		"sourceMap": true,
 		"strict": false,
 		"target": "es6",
-		"types": ["jest", "jest-enzyme"]
+		"types": ["jest"]
 	},
 	"exclude": ["node_modules"]
 }

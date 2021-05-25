@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { PropsWithTheme } from "@evernest/theme";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 export interface HiddenProps extends PropsWithTheme {
 	display?: string;

@@ -1,7 +1,7 @@
-import { css, Global } from "@emotion/core";
+import { css, Global } from "@emotion/react";
 import { PropsWithTheme, theme } from "@evernest/theme";
 import styled from "@emotion/styled";
-import { ThemeProvider } from "emotion-theming";
+import { ThemeProvider } from "@storybook/theming";
 import React from "react";
 
 export function random(max: number, min: number = 0): number {

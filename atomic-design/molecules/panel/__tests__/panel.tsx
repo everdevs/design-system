@@ -1,4 +1,4 @@
-import { withTheme, createTree } from "@evernest/dev-helpers";
+import { createTree, withTheme } from "@evernest/dev-helpers";
 import { theme } from "@evernest/theme";
 import { mount } from "enzyme";
 import React from "react";
