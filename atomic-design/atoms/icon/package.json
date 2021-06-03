@@ -39,7 +39,7 @@
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@evernest/dev-helpers": "^0.5.3",
-    "@types/react": "^17.0.8",
+    "@types/react": "^17.0.9",
     "react": "^17.0.2"
   },
   "peerDependencies": {

@@ -44,7 +44,7 @@
     "@evernest/dev-helpers": "^0.5.3",
     "@evernest/footer": "^0.5.3",
     "@evernest/header": "^0.5.3",
-    "@types/react": "^17.0.8",
+    "@types/react": "^17.0.9",
     "emotion-theming": "^11.0.0",
     "react": "^17.0.2"
   },

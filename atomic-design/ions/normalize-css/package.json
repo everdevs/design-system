@@ -36,7 +36,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@types/node": "^15.6.1",
+    "@types/node": "^15.9.0",
     "pify": "^5.0.0",
     "ts-node": "^10.0.0"
   },
